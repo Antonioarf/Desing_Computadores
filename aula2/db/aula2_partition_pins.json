@@ -1,0 +1,73 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Dado[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Dado[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Dado[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Dado[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Dado[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Dado[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Endereco[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Endereco[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Endereco[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Endereco[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Endereco[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Endereco[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Endereco[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Endereco[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Endereco[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Endereco[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
