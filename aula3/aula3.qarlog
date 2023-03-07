@@ -1,0 +1,24 @@
+Quartus Prime Archive log --	/home/antonio/Desktop/Desing_Computadores/aula3/aula3.qarlog
+
+Archive:	/home/antonio/Desktop/Desing_Computadores/aula3/aula3.qar
+Date:		Tue Mar  7 10:58:12 2023
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/antonio/Desktop/Desing_Computadores/aula3/ULASomaSub.vhd
+/home/antonio/Desktop/Desing_Computadores/aula3/Waveform.vwf
+/home/antonio/Desktop/Desing_Computadores/aula3/Waveform1.vwf
+/home/antonio/Desktop/Desing_Computadores/aula3/aula3.qpf
+/home/antonio/Desktop/Desing_Computadores/aula3/aula3.qsf
+/home/antonio/Desktop/Desing_Computadores/aula3/aula3.vhd
+/home/antonio/Desktop/Desing_Computadores/aula3/decoderInstru.vhd
+/home/antonio/Desktop/Desing_Computadores/aula3/edgeDetector.vhd
+/home/antonio/Desktop/Desing_Computadores/aula3/memoriaROM.vhd
+/home/antonio/Desktop/Desing_Computadores/aula3/muxGenerico2x1.vhd
+/home/antonio/Desktop/Desing_Computadores/aula3/registradorGenerico.vhd
+/home/antonio/Desktop/Desing_Computadores/aula3/somaConstante.vhd
+/home/antonio/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 13 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

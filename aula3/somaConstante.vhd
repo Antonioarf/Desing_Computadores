@@ -6,7 +6,7 @@ entity somaConstante is
     generic
     (
         larguraDados : natural := 32;
-        constante : natural := 4
+        constante : natural := 1
     );
     port
     (
