@@ -14,7 +14,8 @@ entity contador is
     KEY: in std_logic_vector(3 downto 0);
     --SW: out std_logic_vector(12 downto 0);
     --PC_OUT: out std_logic_vector(larguraEnderecos-1 downto 0);
-    LEDR  : out std_logic_vector(9 downto 0)
+	 HEX0,HEX1,HEX2,HEX3,HEX4,HEX5: out std_logic_vector(6 downto 0);
+	 LEDR  : out std_logic_vector(9 downto 0)
   );
 end entity;
 
@@ -27,7 +28,7 @@ architecture arquitetura of contador is
   signal barramento_Ctrl : std_logic_vector (larguraPalavra-1 downto 0);
   signal Pc : std_logic_vector (larguraEnderecos-1 downto 0);
   signal Leds : std_logic_vector (9 downto 0);
-  
+  signal sete_segs : std_logic_vector(41 downto 0);
  signal saida_decoder_1 : std_logic_vector (larguraDados-1 downto 0);
  signal saida_decoder_2 : std_logic_vector (larguraDados-1 downto 0);
 
@@ -44,7 +45,7 @@ end generate;
 
 
   Processador : entity work.processador  generic map (larguraDados => larguraDados, larguraEnderecos => larguraEnderecos,larguraPalavra=>larguraPalavra)
-          port map (CLK => CLOCK_50, barramento_R => barramento_R, barramento_W => barramento_W, barramento_End  => barramento_End, barramento_Ctrl => barramento_Ctrl,PC_OUT=>Pc);
+          port map (CLK => CLK, barramento_R => barramento_R, barramento_W => barramento_W, barramento_End  => barramento_End, barramento_Ctrl => barramento_Ctrl,PC_OUT=>Pc);
   
   RAM : entity work.memoriaRAM   generic map (dataWidth => larguraDados, addrWidth => 6)
           port map (addr => barramento_End(5 downto 0), we => barramento_Ctrl(0), re => barramento_Ctrl(1), habilita  => saida_decoder_1(0), dado_in => barramento_W, dado_out => barramento_R, clk => CLK);
@@ -56,9 +57,17 @@ end generate;
   BLOCO_LEDs :  entity work.LEDs  generic map (larguraDados => larguraDados)
 				port map( dados_in => barramento_W, decoder_1 => saida_decoder_1, decoder_2 => saida_decoder_2, Wr=>barramento_Ctrl(0), clk =>CLOCK_50, A5=>barramento_End(5), ret =>Leds);			 
 
-	 
-			 
+ BLOCO_7seg :  entity work.Segs7 
+				port map( dados_in => barramento_W(3 downto 0), decoder_1 => saida_decoder_1, bloco => saida_decoder_2(4), Wr=>barramento_Ctrl(0), clk =>CLK, A5=>barramento_End(5), ret =>sete_segs);			 
+ 
+ 
 	--PC_OUT<=Pc;		 
    LEDR<= Leds;
-	
+	HEX0 <= sete_segs(6 downto 0);
+	HEX1 <= sete_segs(13 downto 7);
+	HEX2 <= sete_segs(20 downto 14);
+	HEX3 <= sete_segs(27 downto 21);
+	HEX4 <= sete_segs(34 downto 28);
+	HEX5 <= sete_segs(41 downto 35);
+
 end architecture;

@@ -30,25 +30,24 @@ architecture assincrona of memoriaROM is
   function initMemory
         return blocoMemoria is variable tmp : blocoMemoria := (others => (others => '0'));
   begin
-		  tmp(0)  := LDI & '0' & x"FF";
-		  tmp(1)  := STA & '1' & x"00";
-		  tmp(2)  := STA & '1' & x"01";
-		  tmp(3)  := STA & '1' & x"02";
-
-        tmp(4)  := LDI & '0' & x"01";   
-        tmp(5)  := STA & '0' & x"00";
+		  tmp(0)  := LDI & '0' & x"01";
+		  tmp(1)  := STA & '0' & x"00";
+		  tmp(2)  := SOMA & '0' & x"00";
+		  tmp(3)  := STA & '1' & x"20";
+        tmp(4)  := SOMA & '0' & x"00";   
+        tmp(5)  := STA & '1' & x"21";
 		  tmp(6)  := SOMA & '0' & x"00";
-		  tmp(7)  := STA & '0' & x"01";
-        tmp(8)  := LDA & '0' & x"00";
-		  tmp(9)  := STA & '1' & x"01";
-		  tmp(10)  := STA & '1' & x"02";
-		  tmp(11)  := LDI & '0' & x"55";
-		  tmp(12)  := STA & '1' & x"00";
-		  tmp(13)  := LDI & '0' & x"AA";
-		  tmp(14) := STA & '1' & x"00";
-		  tmp(15) := JMP & '0' & x"0B";
-		  tmp(16) := "0000000000000";
- 
+		  tmp(7)  := STA & '1' & x"22";
+        tmp(8)  := SOMA & '0' & x"00";
+		  tmp(9)  := STA & '1' & x"23";
+		  tmp(10)  := SOMA & '0' & x"00";
+		  tmp(11)  := STA & '1' & x"24";
+		  tmp(12)  := SOMA & '0' & x"00";
+		  tmp(13)  := STA & '1' & x"25";
+		  tmp(14) := JMP & '0' & x"02";
+		  tmp(15) := "0000000000000";
+		  
+
         return tmp;
     end initMemory;
 
