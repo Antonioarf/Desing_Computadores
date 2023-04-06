@@ -1,0 +1,107 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/antonio/Desktop/Desing_Computadores/contador/simulation/qsim
+Econtador
+Z1 w1680805667
+Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
+Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
+Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
+Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z6 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
+Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
+!i122 16
+R0
+Z11 8contador.vho
+Z12 Fcontador.vho
+l0
+L39 1
+Vh9]2PCHOL]oCChE`l09a50
+!s100 igDaGH1AGKzZdzZnJ:9_b1
+Z13 OV;C;2020.1;71
+32
+Z14 !s110 1680805667
+!i10b 1
+Z15 !s108 1680805667.000000
+Z16 !s90 -work|work|contador.vho|
+Z17 !s107 contador.vho|
+!i113 1
+Z18 o-work work
+Z19 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 8 contador 0 22 h9]2PCHOL]oCChE`l09a50
+!i122 16
+l332
+L49 3353
+V7G7KRRQeUT`cR3NC`E_661
+!s100 =fb0m<^?TA][znm?BVjbR3
+R13
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R18
+R19
+Econtador_vhd_vec_tst
+Z20 w1680805666
+R8
+R9
+!i122 17
+R0
+Z21 8Waveform6.vwf.vht
+Z22 FWaveform6.vwf.vht
+l0
+L32 1
+VdlY?7K2]@onfaD9j9@zo:2
+!s100 3E>Znb`[6LD<SCQMT6[8<3
+R13
+32
+R14
+!i10b 1
+R15
+Z23 !s90 -work|work|Waveform6.vwf.vht|
+!s107 Waveform6.vwf.vht|
+!i113 1
+R18
+R19
+Acontador_arch
+R8
+R9
+Z24 DEx4 work 20 contador_vhd_vec_tst 0 22 dlY?7K2]@onfaD9j9@zo:2
+!i122 17
+l51
+Z25 L34 40
+Z26 VPJ6IOPZdfA]<IBh3GkfLU3
+Z27 !s100 SWzH@X53n4IIC@<Sbz`^j1
+R13
+32
+R14
+!i10b 1
+R15
+R23
+Z28 !s107 Waveform6.vwf.vht|
+!i113 1
+R18
+R19
