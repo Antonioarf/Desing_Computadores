@@ -109,9 +109,9 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AA9       :        :                   :      
 HEX2[2]                      : AA10      : output : 3.3-V LVTTL       :         : 3B        : Y              
 GND                          : AA11      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA12      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA13      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA14      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA15      :        :                   :         : 4A        :                
+SW[7]                        : AA13      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+SW[6]                        : AA14      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+SW[4]                        : AA15      : input  : 3.3-V LVTTL       :         : 4A        : Y              
 VCCIO4A                      : AA16      : power  :                   : 3.3V    : 4A        :                
 HEX1[5]                      : AA17      : output : 3.3-V LVTTL       :         : 4A        : Y              
 HEX1[3]                      : AA18      : output : 3.3-V LVTTL       :         : 4A        : Y              
@@ -130,10 +130,10 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AB8       :        :                   :      
 GND                          : AB9       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB10      :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB11      :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB12      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB13      :        :                   :         : 4A        :                
+SW[9]                        : AB12      : input  : 3.3-V LVTTL       :         : 4A        : Y              
+SW[8]                        : AB13      : input  : 3.3-V LVTTL       :         : 4A        : Y              
 GND                          : AB14      : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AB15      :        :                   :         : 4A        :                
+SW[5]                        : AB15      : input  : 3.3-V LVTTL       :         : 4A        : Y              
 VREFB4AN0                    : AB16      : power  :                   :         : 4A        :                
 HEX2[1]                      : AB17      : output : 3.3-V LVTTL       :         : 4A        : Y              
 HEX1[4]                      : AB18      : output : 3.3-V LVTTL       :         : 4A        : Y              
@@ -460,8 +460,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : T8        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : T9        :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T10       :        :                   :         : 3B        :                
 VCCIO3B                      : T11       : power  :                   : 3.3V    : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T12       :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T13       :        :                   :         : 4A        :                
+SW[3]                        : T12       : input  : 3.3-V LVTTL       :         : 4A        : Y              
+SW[2]                        : T13       : input  : 3.3-V LVTTL       :         : 4A        : Y              
 HEX5[2]                      : T14       : output : 3.3-V LVTTL       :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : T15       :        :                   :         : 5A        :                
 GND                          : T16       : gnd    :                   :         :           :                
@@ -483,7 +483,7 @@ GND                          : U9        : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : U10       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U11       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U12       :        :                   :         : 3B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : U13       :        :                   :         : 4A        :                
+SW[0]                        : U13       : input  : 3.3-V LVTTL       :         : 4A        : Y              
 VCCIO4A                      : U14       : power  :                   : 3.3V    : 4A        :                
 HEX4[4]                      : U15       : output : 3.3-V LVTTL       :         : 4A        : Y              
 HEX4[3]                      : U16       : output : 3.3-V LVTTL       :         : 4A        : Y              
@@ -505,7 +505,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : V9        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : V10       :        :                   :         : 3B        :                
 NC                           : V11       :        :                   :         :           :                
 GND                          : V12       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : V13       :        :                   :         : 4A        :                
+SW[1]                        : V13       : input  : 3.3-V LVTTL       :         : 4A        : Y              
 HEX2[4]                      : V14       : output : 3.3-V LVTTL       :         : 4A        : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V15       :        :                   :         : 4A        :                
 HEX3[3]                      : V16       : output : 3.3-V LVTTL       :         : 4A        : Y              

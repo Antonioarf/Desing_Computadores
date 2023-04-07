@@ -1,5 +1,5 @@
 Fitter report for contador
-Thu Apr  6 20:41:43 2023
+Fri Apr  7 18:14:49 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -26,16 +26,16 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  18. Delay Chain Summary
  19. Pad To Core Delay Chain Fanout
  20. Control Signals
- 21. Routing Usage Summary
- 22. I/O Rules Summary
- 23. I/O Rules Details
- 24. I/O Rules Matrix
- 25. Fitter Device Options
- 26. Operating Settings and Conditions
- 27. Estimated Delay Added for Hold Timing Summary
- 28. Estimated Delay Added for Hold Timing Details
- 29. Fitter Messages
- 30. Fitter Suppressed Messages
+ 21. Global & Other Fast Signals
+ 22. Routing Usage Summary
+ 23. I/O Rules Summary
+ 24. I/O Rules Details
+ 25. I/O Rules Matrix
+ 26. Fitter Device Options
+ 27. Operating Settings and Conditions
+ 28. Estimated Delay Added for Hold Timing Summary
+ 29. Estimated Delay Added for Hold Timing Details
+ 30. Fitter Messages
 
 
 
@@ -62,16 +62,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Thu Apr  6 20:41:43 2023       ;
+; Fitter Status                   ; Successful - Fri Apr  7 18:14:49 2023       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; contador                                    ;
 ; Top-level Entity Name           ; contador                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 55 / 18,480 ( < 1 % )                       ;
-; Total registers                 ; 56                                          ;
-; Total pins                      ; 57 / 224 ( 25 % )                           ;
+; Logic utilization (in ALMs)     ; 49 / 18,480 ( < 1 % )                       ;
+; Total registers                 ; 40                                          ;
+; Total pins                      ; 67 / 224 ( 30 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
 ; Total RAM Blocks                ; 0 / 308 ( 0 % )                             ;
@@ -152,33 +152,28 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.03        ;
+; Average used               ; 1.02        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.9%      ;
-;     Processor 3            ;   0.9%      ;
+;     Processor 2            ;   0.8%      ;
+;     Processor 3            ;   0.8%      ;
 ;     Processor 4            ;   0.8%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Netlist Optimizations                                                                                                                                                                                                                                                                      ;
-+----------------------------------------------------------+------------+---------------------------------------------------+--------------------------+-----------+----------------+--------------------------------------------------------------------+------------------+-----------------------+
-; Node                                                     ; Action     ; Operation                                         ; Reason                   ; Node Port ; Node Port Name ; Destination Node                                                   ; Destination Port ; Destination Port Name ;
-+----------------------------------------------------------+------------+---------------------------------------------------+--------------------------+-----------+----------------+--------------------------------------------------------------------+------------------+-----------------------+
-; processador:Processador|registradorGenerico:PC|DOUT[0]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; processador:Processador|registradorGenerico:PC|DOUT[0]~DUPLICATE   ;                  ;                       ;
-; processador:Processador|registradorGenerico:PC|DOUT[1]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; processador:Processador|registradorGenerico:PC|DOUT[1]~DUPLICATE   ;                  ;                       ;
-; processador:Processador|registradorGenerico:PC|DOUT[2]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; processador:Processador|registradorGenerico:PC|DOUT[2]~DUPLICATE   ;                  ;                       ;
-; processador:Processador|registradorGenerico:PC|DOUT[3]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; processador:Processador|registradorGenerico:PC|DOUT[3]~DUPLICATE   ;                  ;                       ;
-; processador:Processador|registradorGenerico:PC|DOUT[4]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; processador:Processador|registradorGenerico:PC|DOUT[4]~DUPLICATE   ;                  ;                       ;
-; processador:Processador|registradorGenerico:PC|DOUT[5]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; processador:Processador|registradorGenerico:PC|DOUT[5]~DUPLICATE   ;                  ;                       ;
-; processador:Processador|registradorGenerico:PC|DOUT[6]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; processador:Processador|registradorGenerico:PC|DOUT[6]~DUPLICATE   ;                  ;                       ;
-; processador:Processador|registradorGenerico:PC|DOUT[7]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; processador:Processador|registradorGenerico:PC|DOUT[7]~DUPLICATE   ;                  ;                       ;
-; processador:Processador|registradorGenerico:PC|DOUT[8]   ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; processador:Processador|registradorGenerico:PC|DOUT[8]~DUPLICATE   ;                  ;                       ;
-; processador:Processador|registradorGenerico:REGA|DOUT[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; processador:Processador|registradorGenerico:REGA|DOUT[1]~DUPLICATE ;                  ;                       ;
-+----------------------------------------------------------+------------+---------------------------------------------------+--------------------------+-----------+----------------+--------------------------------------------------------------------+------------------+-----------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Netlist Optimizations                                                                                                                                                                                                                                                                    ;
++--------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+------------------------------------------------------------------+------------------+-----------------------+
+; Node                                                   ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                                                 ; Destination Port ; Destination Port Name ;
++--------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+------------------------------------------------------------------+------------------+-----------------------+
+; CLOCK_50~inputCLKENA0                                  ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                  ;                  ;                       ;
+; Segs7:BLOCO_7seg|registradorGenerico:REG_2|DOUT[3]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Segs7:BLOCO_7seg|registradorGenerico:REG_2|DOUT[3]~DUPLICATE     ;                  ;                       ;
+; processador:Processador|registradorGenerico:PC|DOUT[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; processador:Processador|registradorGenerico:PC|DOUT[1]~DUPLICATE ;                  ;                       ;
+; processador:Processador|registradorGenerico:PC|DOUT[2] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; processador:Processador|registradorGenerico:PC|DOUT[2]~DUPLICATE ;                  ;                       ;
+; processador:Processador|registradorGenerico:PC|DOUT[5] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; processador:Processador|registradorGenerico:PC|DOUT[5]~DUPLICATE ;                  ;                       ;
++--------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+------------------------------------------------------------------+------------------+-----------------------+
 
 
 +----------------------------------------------------------------------------------------------+
@@ -187,27 +182,7 @@ https://fpgasoftware.intel.com/eula.
 ; Name         ; Ignored Entity ; Ignored From ; Ignored To   ; Ignored Value ; Ignored Source ;
 +--------------+----------------+--------------+--------------+---------------+----------------+
 ; Location     ;                ;              ; FPGA_RESET_N ; PIN_P22       ; QSF Assignment ;
-; Location     ;                ;              ; SW[0]        ; PIN_U13       ; QSF Assignment ;
-; Location     ;                ;              ; SW[1]        ; PIN_V13       ; QSF Assignment ;
-; Location     ;                ;              ; SW[2]        ; PIN_T13       ; QSF Assignment ;
-; Location     ;                ;              ; SW[3]        ; PIN_T12       ; QSF Assignment ;
-; Location     ;                ;              ; SW[4]        ; PIN_AA15      ; QSF Assignment ;
-; Location     ;                ;              ; SW[5]        ; PIN_AB15      ; QSF Assignment ;
-; Location     ;                ;              ; SW[6]        ; PIN_AA14      ; QSF Assignment ;
-; Location     ;                ;              ; SW[7]        ; PIN_AA13      ; QSF Assignment ;
-; Location     ;                ;              ; SW[8]        ; PIN_AB13      ; QSF Assignment ;
-; Location     ;                ;              ; SW[9]        ; PIN_AB12      ; QSF Assignment ;
 ; I/O Standard ; contador       ;              ; FPGA_RESET_N ; 3.3-V LVTTL   ; QSF Assignment ;
-; I/O Standard ; contador       ;              ; SW[0]        ; 3.3-V LVTTL   ; QSF Assignment ;
-; I/O Standard ; contador       ;              ; SW[1]        ; 3.3-V LVTTL   ; QSF Assignment ;
-; I/O Standard ; contador       ;              ; SW[2]        ; 3.3-V LVTTL   ; QSF Assignment ;
-; I/O Standard ; contador       ;              ; SW[3]        ; 3.3-V LVTTL   ; QSF Assignment ;
-; I/O Standard ; contador       ;              ; SW[4]        ; 3.3-V LVTTL   ; QSF Assignment ;
-; I/O Standard ; contador       ;              ; SW[5]        ; 3.3-V LVTTL   ; QSF Assignment ;
-; I/O Standard ; contador       ;              ; SW[6]        ; 3.3-V LVTTL   ; QSF Assignment ;
-; I/O Standard ; contador       ;              ; SW[7]        ; 3.3-V LVTTL   ; QSF Assignment ;
-; I/O Standard ; contador       ;              ; SW[8]        ; 3.3-V LVTTL   ; QSF Assignment ;
-; I/O Standard ; contador       ;              ; SW[9]        ; 3.3-V LVTTL   ; QSF Assignment ;
 +--------------+----------------+--------------+--------------+---------------+----------------+
 
 
@@ -217,8 +192,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 255 ) ; 0.00 % ( 0 / 255 )         ; 0.00 % ( 0 / 255 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 255 ) ; 0.00 % ( 0 / 255 )         ; 0.00 % ( 0 / 255 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 260 ) ; 0.00 % ( 0 / 260 )         ; 0.00 % ( 0 / 260 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 260 ) ; 0.00 % ( 0 / 260 )         ; 0.00 % ( 0 / 260 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -241,7 +216,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 255 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 260 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -257,14 +232,14 @@ The pin-out file can be found in /home/antonio/Desktop/Desing_Computadores/conta
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 55 / 18,480        ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 55                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 62 / 18,480        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 10                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 39                 ;       ;
-;         [c] ALMs used for registers                         ; 13                 ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 49 / 18,480        ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 49                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 53 / 18,480        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 12                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 35                 ;       ;
+;         [c] ALMs used for registers                         ; 6                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 7 / 18,480         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 4 / 18,480         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18,480         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -273,28 +248,28 @@ The pin-out file can be found in /home/antonio/Desktop/Desing_Computadores/conta
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 9 / 1,848          ; < 1 % ;
-;     -- Logic LABs                                           ; 9                  ;       ;
+; Total LABs:  partially or completely used                   ; 8 / 1,848          ; < 1 % ;
+;     -- Logic LABs                                           ; 8                  ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 95                 ;       ;
-;     -- 7 input functions                                    ; 2                  ;       ;
-;     -- 6 input functions                                    ; 2                  ;       ;
-;     -- 5 input functions                                    ; 13                 ;       ;
-;     -- 4 input functions                                    ; 58                 ;       ;
-;     -- <=3 input functions                                  ; 20                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 14                 ;       ;
+; Combinational ALUT usage for logic                          ; 89                 ;       ;
+;     -- 7 input functions                                    ; 0                  ;       ;
+;     -- 6 input functions                                    ; 8                  ;       ;
+;     -- 5 input functions                                    ; 14                 ;       ;
+;     -- 4 input functions                                    ; 43                 ;       ;
+;     -- <=3 input functions                                  ; 24                 ;       ;
+; Combinational ALUT usage for route-throughs                 ; 3                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 56                 ;       ;
+; Dedicated logic registers                                   ; 40                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 46 / 36,960        ; < 1 % ;
-;         -- Secondary logic registers                        ; 10 / 36,960        ; < 1 % ;
+;         -- Primary logic registers                          ; 36 / 36,960        ; < 1 % ;
+;         -- Secondary logic registers                        ; 4 / 36,960         ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
-;         -- Design implementation registers                  ; 46                 ;       ;
-;         -- Routing optimization registers                   ; 10                 ;       ;
+;         -- Design implementation registers                  ; 36                 ;       ;
+;         -- Routing optimization registers                   ; 4                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
-; I/O pins                                                    ; 57 / 224           ; 25 %  ;
+; I/O pins                                                    ; 67 / 224           ; 30 %  ;
 ;     -- Clock pins                                           ; 4 / 9              ; 44 %  ;
 ;     -- Dedicated input pins                                 ; 0 / 11             ; 0 %   ;
 ;                                                             ;                    ;       ;
@@ -306,8 +281,8 @@ The pin-out file can be found in /home/antonio/Desktop/Desing_Computadores/conta
 ; Total DSP Blocks                                            ; 0 / 66             ; 0 %   ;
 ;                                                             ;                    ;       ;
 ; Fractional PLLs                                             ; 0 / 4              ; 0 %   ;
-; Global signals                                              ; 0                  ;       ;
-;     -- Global clocks                                        ; 0 / 16             ; 0 %   ;
+; Global signals                                              ; 1                  ;       ;
+;     -- Global clocks                                        ; 1 / 16             ; 6 %   ;
 ;     -- Quadrant clocks                                      ; 0 / 88             ; 0 %   ;
 ; SERDES Transmitters                                         ; 0 / 68             ; 0 %   ;
 ; SERDES Receivers                                            ; 0 / 68             ; 0 %   ;
@@ -318,11 +293,11 @@ The pin-out file can be found in /home/antonio/Desktop/Desing_Computadores/conta
 ; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 3              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 1.2% / 1.4% / 0.7% ;       ;
-; Maximum fan-out                                             ; 55                 ;       ;
-; Highest non-global fan-out                                  ; 55                 ;       ;
-; Total fan-out                                               ; 673                ;       ;
-; Average fan-out                                             ; 2.41               ;       ;
+; Peak interconnect usage (total/H/V)                         ; 1.7% / 1.9% / 1.0% ;       ;
+; Maximum fan-out                                             ; 37                 ;       ;
+; Highest non-global fan-out                                  ; 37                 ;       ;
+; Total fan-out                                               ; 552                ;       ;
+; Average fan-out                                             ; 2.07               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -331,14 +306,14 @@ The pin-out file can be found in /home/antonio/Desktop/Desing_Computadores/conta
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Statistic                                                   ; Top                  ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 55 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 55                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 62 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 10                   ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 39                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 13                   ; 0                              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 49 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 49                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 53 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 12                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 35                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 6                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 7 / 18480 ( < 1 % )  ; 0 / 18480 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 4 / 18480 ( < 1 % )  ; 0 / 18480 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18480 ( 0 % )    ; 0 / 18480 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
@@ -347,35 +322,36 @@ The pin-out file can be found in /home/antonio/Desktop/Desing_Computadores/conta
 ;                                                             ;                      ;                                ;
 ; Difficulty packing design                                   ; Low                  ; Low                            ;
 ;                                                             ;                      ;                                ;
-; Total LABs:  partially or completely used                   ; 9 / 1848 ( < 1 % )   ; 0 / 1848 ( 0 % )               ;
-;     -- Logic LABs                                           ; 9                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 8 / 1848 ( < 1 % )   ; 0 / 1848 ( 0 % )               ;
+;     -- Logic LABs                                           ; 8                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
-; Combinational ALUT usage for logic                          ; 95                   ; 0                              ;
-;     -- 7 input functions                                    ; 2                    ; 0                              ;
-;     -- 6 input functions                                    ; 2                    ; 0                              ;
-;     -- 5 input functions                                    ; 13                   ; 0                              ;
-;     -- 4 input functions                                    ; 58                   ; 0                              ;
-;     -- <=3 input functions                                  ; 20                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 14                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 89                   ; 0                              ;
+;     -- 7 input functions                                    ; 0                    ; 0                              ;
+;     -- 6 input functions                                    ; 8                    ; 0                              ;
+;     -- 5 input functions                                    ; 14                   ; 0                              ;
+;     -- 4 input functions                                    ; 43                   ; 0                              ;
+;     -- <=3 input functions                                  ; 24                   ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 3                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
 ;     -- 32-address deep                                      ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Dedicated logic registers                                   ; 0                    ; 0                              ;
 ;     -- By type:                                             ;                      ;                                ;
-;         -- Primary logic registers                          ; 46 / 36960 ( < 1 % ) ; 0 / 36960 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 10 / 36960 ( < 1 % ) ; 0 / 36960 ( 0 % )              ;
+;         -- Primary logic registers                          ; 36 / 36960 ( < 1 % ) ; 0 / 36960 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 4 / 36960 ( < 1 % )  ; 0 / 36960 ( 0 % )              ;
 ;     -- By function:                                         ;                      ;                                ;
-;         -- Design implementation registers                  ; 46                   ; 0                              ;
-;         -- Routing optimization registers                   ; 10                   ; 0                              ;
+;         -- Design implementation registers                  ; 36                   ; 0                              ;
+;         -- Routing optimization registers                   ; 4                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
 ; Virtual pins                                                ; 0                    ; 0                              ;
-; I/O pins                                                    ; 57                   ; 0                              ;
+; I/O pins                                                    ; 67                   ; 0                              ;
 ; I/O registers                                               ; 0                    ; 0                              ;
 ; Total block memory bits                                     ; 0                    ; 0                              ;
 ; Total block memory implementation bits                      ; 0                    ; 0                              ;
+; Clock enable block                                          ; 1 / 104 ( < 1 % )    ; 0 / 104 ( 0 % )                ;
 ;                                                             ;                      ;                                ;
 ; Connections                                                 ;                      ;                                ;
 ;     -- Input Connections                                    ; 0                    ; 0                              ;
@@ -384,15 +360,15 @@ The pin-out file can be found in /home/antonio/Desktop/Desing_Computadores/conta
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 673                  ; 0                              ;
-;     -- Registered Connections                               ; 265                  ; 0                              ;
+;     -- Total Connections                                    ; 552                  ; 0                              ;
+;     -- Registered Connections                               ; 182                  ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
 ;     -- Top                                                  ; 0                    ; 0                              ;
 ;     -- hard_block:auto_generated_inst                       ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Partition Interface                                         ;                      ;                                ;
-;     -- Input Ports                                          ; 5                    ; 0                              ;
+;     -- Input Ports                                          ; 15                   ; 0                              ;
 ;     -- Output Ports                                         ; 52                   ; 0                              ;
 ;     -- Bidir Ports                                          ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
@@ -417,11 +393,21 @@ The pin-out file can be found in /home/antonio/Desktop/Desing_Computadores/conta
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; CLOCK_50 ; M9    ; 3B       ; 22           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; CLOCK_50 ; M9    ; 3B       ; 22           ; 0            ; 0            ; 3                     ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; KEY[0]   ; U7    ; 3A       ; 10           ; 0            ; 91           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; KEY[1]   ; W9    ; 3A       ; 11           ; 0            ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; KEY[2]   ; M7    ; 3A       ; 14           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 ; KEY[3]   ; M6    ; 3A       ; 14           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; SW[0]    ; U13   ; 4A       ; 33           ; 0            ; 40           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; SW[1]    ; V13   ; 4A       ; 33           ; 0            ; 57           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; SW[2]    ; T13   ; 4A       ; 34           ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; SW[3]    ; T12   ; 4A       ; 34           ; 0            ; 17           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; SW[4]    ; AA15  ; 4A       ; 36           ; 0            ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; SW[5]    ; AB15  ; 4A       ; 36           ; 0            ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; SW[6]    ; AA14  ; 4A       ; 34           ; 0            ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; SW[7]    ; AA13  ; 4A       ; 34           ; 0            ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; SW[8]    ; AB13  ; 4A       ; 33           ; 0            ; 91           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
+; SW[9]    ; AB12  ; 4A       ; 33           ; 0            ; 74           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; --                        ; User                 ; no        ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -493,7 +479,7 @@ The pin-out file can be found in /home/antonio/Desktop/Desing_Computadores/conta
 ; 2A       ; 12 / 16 ( 75 % ) ; 3.3V          ; --           ; 3.3V          ;
 ; 3A       ; 4 / 16 ( 25 % )  ; 3.3V          ; --           ; 3.3V          ;
 ; 3B       ; 5 / 32 ( 16 % )  ; 3.3V          ; --           ; 3.3V          ;
-; 4A       ; 36 / 48 ( 75 % ) ; 3.3V          ; --           ; 3.3V          ;
+; 4A       ; 46 / 48 ( 96 % ) ; 3.3V          ; --           ; 3.3V          ;
 ; 5A       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 5B       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 7A       ; 0 / 48 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
@@ -540,9 +526,9 @@ The pin-out file can be found in /home/antonio/Desktop/Desing_Computadores/conta
 ; AA10     ; 87         ; 3B       ; HEX2[2]                         ; output ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AA11     ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AA12     ; 105        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AA13     ; 113        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AA14     ; 111        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AA15     ; 116        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AA13     ; 113        ; 4A       ; SW[7]                           ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; AA14     ; 111        ; 4A       ; SW[6]                           ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; AA15     ; 116        ; 4A       ; SW[4]                           ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AA16     ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 3.3V                ; --           ;                 ; --       ; --           ;
 ; AA17     ; 127        ; 4A       ; HEX1[5]                         ; output ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AA18     ; 129        ; 4A       ; HEX1[3]                         ; output ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
@@ -561,10 +547,10 @@ The pin-out file can be found in /home/antonio/Desktop/Desing_Computadores/conta
 ; AB9      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB10     ; 98         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB11     ; 100        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AB12     ; 108        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AB13     ; 106        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AB12     ; 108        ; 4A       ; SW[9]                           ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; AB13     ; 106        ; 4A       ; SW[8]                           ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AB14     ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AB15     ; 114        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AB15     ; 114        ; 4A       ; SW[5]                           ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AB16     ;            ; 4A       ; VREFB4AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB17     ; 119        ; 4A       ; HEX2[1]                         ; output ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AB18     ; 121        ; 4A       ; HEX1[4]                         ; output ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
@@ -891,8 +877,8 @@ The pin-out file can be found in /home/antonio/Desktop/Desing_Computadores/conta
 ; T9       ; 83         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; T10      ; 91         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; T11      ;            ; 3B       ; VCCIO3B                         ; power  ;              ; 3.3V                ; --           ;                 ; --       ; --           ;
-; T12      ; 110        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; T13      ; 112        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; T12      ; 110        ; 4A       ; SW[3]                           ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; T13      ; 112        ; 4A       ; SW[2]                           ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; T14      ; 126        ; 4A       ; HEX5[2]                         ; output ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; T15      ; 159        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; T16      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -914,7 +900,7 @@ The pin-out file can be found in /home/antonio/Desktop/Desing_Computadores/conta
 ; U10      ; 85         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; U11      ; 94         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; U12      ; 96         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; U13      ; 109        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; U13      ; 109        ; 4A       ; SW[0]                           ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; U14      ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 3.3V                ; --           ;                 ; --       ; --           ;
 ; U15      ; 128        ; 4A       ; HEX4[4]                         ; output ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; U16      ; 150        ; 4A       ; HEX4[3]                         ; output ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
@@ -936,7 +922,7 @@ The pin-out file can be found in /home/antonio/Desktop/Desing_Computadores/conta
 ; V10      ; 77         ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; V11      ;            ;          ; NC                              ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; V12      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; V13      ; 107        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; V13      ; 107        ; 4A       ; SW[1]                           ; input  ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; V14      ; 118        ; 4A       ; HEX2[4]                         ; output ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; V15      ; 120        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; V16      ; 134        ; 4A       ; HEX3[3]                         ; output ; 3.3-V LVTTL  ;                     ; Column I/O   ; Y               ; no       ; Off          ;
@@ -999,30 +985,30 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node             ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                          ; Entity Name         ; Library Name ;
 +----------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------------+---------------------+--------------+
-; |contador                              ; 55.0 (0.5)           ; 61.5 (0.5)                       ; 6.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 95 (1)              ; 56 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 57   ; 0            ; |contador                                                    ; contador            ; work         ;
-;    |Segs7:BLOCO_7seg|                  ; 24.0 (3.0)           ; 31.5 (3.0)                       ; 7.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 48 (6)              ; 24 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg                                   ; Segs7               ; work         ;
-;       |conversorHex7Seg:DEC_0|         ; 2.3 (2.3)            ; 3.5 (3.5)                        ; 1.2 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|conversorHex7Seg:DEC_0            ; conversorHex7Seg    ; work         ;
-;       |conversorHex7Seg:DEC_1|         ; 2.3 (2.3)            ; 3.5 (3.5)                        ; 1.2 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|conversorHex7Seg:DEC_1            ; conversorHex7Seg    ; work         ;
-;       |conversorHex7Seg:DEC_2|         ; 2.5 (2.5)            ; 3.3 (3.3)                        ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|conversorHex7Seg:DEC_2            ; conversorHex7Seg    ; work         ;
-;       |conversorHex7Seg:DEC_3|         ; 2.5 (2.5)            ; 3.3 (3.3)                        ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|conversorHex7Seg:DEC_3            ; conversorHex7Seg    ; work         ;
-;       |conversorHex7Seg:DEC_4|         ; 2.5 (2.5)            ; 3.5 (3.5)                        ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|conversorHex7Seg:DEC_4            ; conversorHex7Seg    ; work         ;
-;       |conversorHex7Seg:DEC_5|         ; 2.2 (2.2)            ; 3.5 (3.5)                        ; 1.3 (1.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|conversorHex7Seg:DEC_5            ; conversorHex7Seg    ; work         ;
-;       |registradorGenerico:REG_0|      ; 1.0 (1.0)            ; 1.2 (1.2)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|registradorGenerico:REG_0         ; registradorGenerico ; work         ;
-;       |registradorGenerico:REG_1|      ; 1.0 (1.0)            ; 1.5 (1.5)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|registradorGenerico:REG_1         ; registradorGenerico ; work         ;
-;       |registradorGenerico:REG_2|      ; 1.2 (1.2)            ; 1.5 (1.5)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|registradorGenerico:REG_2         ; registradorGenerico ; work         ;
-;       |registradorGenerico:REG_3|      ; 1.2 (1.2)            ; 1.2 (1.2)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|registradorGenerico:REG_3         ; registradorGenerico ; work         ;
-;       |registradorGenerico:REG_4|      ; 1.2 (1.2)            ; 1.3 (1.3)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|registradorGenerico:REG_4         ; registradorGenerico ; work         ;
-;       |registradorGenerico:REG_5|      ; 1.2 (1.2)            ; 1.2 (1.2)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|registradorGenerico:REG_5         ; registradorGenerico ; work         ;
+; |contador                              ; 49.0 (5.1)           ; 52.5 (5.1)                       ; 3.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 89 (10)             ; 40 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 67   ; 0            ; |contador                                                    ; contador            ; work         ;
+;    |Input:BLOCO_SW|                    ; 0.3 (0.3)            ; 0.7 (0.7)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Input:BLOCO_SW                                     ; Input               ; work         ;
+;    |LEDs:BLOCO_LEDs|                   ; 1.7 (0.0)            ; 2.0 (0.0)                        ; 0.3 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (0)               ; 2 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|LEDs:BLOCO_LEDs                                    ; LEDs                ; work         ;
+;       |flipflop:FF_8|                  ; 0.7 (0.7)            ; 1.0 (1.0)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|LEDs:BLOCO_LEDs|flipflop:FF_8                      ; flipflop            ; work         ;
+;       |flipflop:FF_9|                  ; 1.0 (1.0)            ; 1.0 (1.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|LEDs:BLOCO_LEDs|flipflop:FF_9                      ; flipflop            ; work         ;
+;    |Segs7:BLOCO_7seg|                  ; 13.8 (2.8)           ; 15.4 (2.8)                       ; 1.6 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (5)              ; 13 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg                                   ; Segs7               ; work         ;
+;       |conversorHex7Seg:DEC_0|         ; 2.3 (2.3)            ; 2.7 (2.7)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|conversorHex7Seg:DEC_0            ; conversorHex7Seg    ; work         ;
+;       |conversorHex7Seg:DEC_1|         ; 2.5 (2.5)            ; 2.9 (2.9)                        ; 0.4 (0.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|conversorHex7Seg:DEC_1            ; conversorHex7Seg    ; work         ;
+;       |conversorHex7Seg:DEC_2|         ; 2.5 (2.5)            ; 3.2 (3.2)                        ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|conversorHex7Seg:DEC_2            ; conversorHex7Seg    ; work         ;
+;       |registradorGenerico:REG_0|      ; 1.0 (1.0)            ; 1.0 (1.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|registradorGenerico:REG_0         ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_1|      ; 1.2 (1.2)            ; 1.3 (1.3)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|registradorGenerico:REG_1         ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_2|      ; 1.2 (1.2)            ; 1.5 (1.5)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 5 (5)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|registradorGenerico:REG_2         ; registradorGenerico ; work         ;
+;    |decoder3x8:Decoder012|             ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|decoder3x8:Decoder012                              ; decoder3x8          ; work         ;
 ;    |edgeDetector:\gravar:detectorSub0| ; 0.8 (0.8)            ; 0.8 (0.8)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|edgeDetector:\gravar:detectorSub0                  ; edgeDetector        ; work         ;
-;    |memoriaRAM:RAM|                    ; 5.0 (5.0)            ; 7.1 (7.1)                        ; 2.1 (2.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 8 (8)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|memoriaRAM:RAM                                     ; memoriaRAM          ; work         ;
-;    |processador:Processador|           ; 21.7 (0.0)           ; 21.7 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 37 (0)              ; 23 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|processador:Processador                            ; processador         ; work         ;
-;       |ULASomaSub:ULA1|                ; 2.5 (2.5)            ; 2.5 (2.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (5)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|processador:Processador|ULASomaSub:ULA1            ; ULASomaSub          ; work         ;
-;       |decoderInstru:decoder|          ; 1.8 (1.8)            ; 1.8 (1.8)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (6)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|processador:Processador|decoderInstru:decoder      ; decoderInstru       ; work         ;
-;       |memoriaROM:ROM1|                ; 5.0 (5.0)            ; 5.0 (5.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|processador:Processador|memoriaROM:ROM1            ; memoriaROM          ; work         ;
-;       |muxGenerico2x1:MUX1|            ; 1.3 (1.3)            ; 1.3 (1.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|processador:Processador|muxGenerico2x1:MUX1        ; muxGenerico2x1      ; work         ;
-;       |registradorGenerico:PC|         ; 4.5 (4.5)            ; 4.8 (4.8)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 18 (18)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|processador:Processador|registradorGenerico:PC     ; registradorGenerico ; work         ;
-;       |registradorGenerico:REGA|       ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 5 (5)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|processador:Processador|registradorGenerico:REGA   ; registradorGenerico ; work         ;
-;       |somaConstante:incrementaPC|     ; 4.2 (4.2)            ; 4.2 (4.2)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 9 (9)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|processador:Processador|somaConstante:incrementaPC ; somaConstante       ; work         ;
+;    |memoriaRAM:RAM|                    ; 4.5 (4.5)            ; 5.6 (5.6)                        ; 1.1 (1.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 8 (8)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|memoriaRAM:RAM                                     ; memoriaRAM          ; work         ;
+;    |processador:Processador|           ; 22.2 (0.0)           ; 23.0 (0.0)                       ; 0.8 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 39 (0)              ; 16 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|processador:Processador                            ; processador         ; work         ;
+;       |ULASomaSub:ULA1|                ; 2.3 (2.3)            ; 2.7 (2.7)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (5)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|processador:Processador|ULASomaSub:ULA1            ; ULASomaSub          ; work         ;
+;       |decoderInstru:decoder|          ; 2.3 (2.3)            ; 2.3 (2.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (5)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|processador:Processador|decoderInstru:decoder      ; decoderInstru       ; work         ;
+;       |memoriaROM:ROM1|                ; 5.0 (5.0)            ; 6.0 (6.0)                        ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|processador:Processador|memoriaROM:ROM1            ; memoriaROM          ; work         ;
+;       |muxGenerico2x1:MUX1|            ; 1.2 (1.2)            ; 1.2 (1.2)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|processador:Processador|muxGenerico2x1:MUX1        ; muxGenerico2x1      ; work         ;
+;       |muxGenerico4x2:MUX_JMP|         ; 1.4 (1.4)            ; 1.4 (1.4)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (5)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|processador:Processador|muxGenerico4x2:MUX_JMP     ; muxGenerico4x2      ; work         ;
+;       |registradorGenerico:PC|         ; 2.8 (2.8)            ; 3.1 (3.1)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|processador:Processador|registradorGenerico:PC     ; registradorGenerico ; work         ;
+;       |registradorGenerico:REGA|       ; 1.8 (1.8)            ; 1.8 (1.8)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|processador:Processador|registradorGenerico:REGA   ; registradorGenerico ; work         ;
+;       |somaConstante:incrementaPC|     ; 4.5 (4.5)            ; 4.5 (4.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 9 (9)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |contador|processador:Processador|somaConstante:incrementaPC ; somaConstante       ; work         ;
 +----------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1087,25 +1073,51 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDR[7]  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; LEDR[8]  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; LEDR[9]  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; KEY[0]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; CLOCK_50 ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; CLOCK_50 ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; SW[0]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; SW[8]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; SW[9]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; KEY[0]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; SW[3]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; SW[2]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; SW[1]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; SW[4]    ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; SW[5]    ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; SW[6]    ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; SW[7]    ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +----------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
-+---------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                  ;
-+---------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                               ; Pad To Core Index ; Setting ;
-+---------------------------------------------------+-------------------+---------+
-; KEY[1]                                            ;                   ;         ;
-; KEY[2]                                            ;                   ;         ;
-; KEY[3]                                            ;                   ;         ;
-; KEY[0]                                            ;                   ;         ;
-;      - edgeDetector:\gravar:detectorSub0|saida    ; 0                 ; 0       ;
-;      - edgeDetector:\gravar:detectorSub0|saidaQ~0 ; 0                 ; 0       ;
-; CLOCK_50                                          ;                   ;         ;
-;      - edgeDetector:\gravar:detectorSub0|saidaQ   ; 1                 ; 0       ;
-+---------------------------------------------------+-------------------+---------+
++-------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                  ;
++-------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                               ; Pad To Core Index ; Setting ;
++-------------------------------------------------------------------+-------------------+---------+
+; KEY[1]                                                            ;                   ;         ;
+; KEY[2]                                                            ;                   ;         ;
+; KEY[3]                                                            ;                   ;         ;
+; CLOCK_50                                                          ;                   ;         ;
+; SW[0]                                                             ;                   ;         ;
+;      - barramento_R[0]~1                                          ; 0                 ; 0       ;
+; SW[8]                                                             ;                   ;         ;
+;      - barramento_R[0]~14                                         ; 0                 ; 0       ;
+; SW[9]                                                             ;                   ;         ;
+;      - barramento_R[0]~14                                         ; 0                 ; 0       ;
+; KEY[0]                                                            ;                   ;         ;
+;      - edgeDetector:\gravar:detectorSub0|saida                    ; 1                 ; 0       ;
+;      - edgeDetector:\gravar:detectorSub0|saidaQ~0                 ; 1                 ; 0       ;
+; SW[3]                                                             ;                   ;         ;
+;      - barramento_R[3]~3                                          ; 1                 ; 0       ;
+; SW[2]                                                             ;                   ;         ;
+;      - processador:Processador|ULASomaSub:ULA1|Add0~9             ; 0                 ; 0       ;
+;      - barramento_R[2]~5                                          ; 0                 ; 0       ;
+; SW[1]                                                             ;                   ;         ;
+;      - processador:Processador|muxGenerico2x1:MUX1|saida_MUX[1]~1 ; 1                 ; 0       ;
+; SW[4]                                                             ;                   ;         ;
+; SW[5]                                                             ;                   ;         ;
+; SW[6]                                                             ;                   ;         ;
+; SW[7]                                                             ;                   ;         ;
++-------------------------------------------------------------------+-------------------+---------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1113,19 +1125,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                     ; Location            ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50                                                 ; PIN_M9              ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; Segs7:BLOCO_7seg|hab_0~0                                 ; MLABCELL_X42_Y2_N45 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Segs7:BLOCO_7seg|hab_1                                   ; LABCELL_X43_Y2_N0   ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Segs7:BLOCO_7seg|hab_2                                   ; LABCELL_X40_Y2_N30  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Segs7:BLOCO_7seg|hab_3                                   ; LABCELL_X41_Y2_N0   ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Segs7:BLOCO_7seg|hab_4                                   ; LABCELL_X44_Y2_N3   ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Segs7:BLOCO_7seg|hab_5                                   ; LABCELL_X41_Y2_N33  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; edgeDetector:\gravar:detectorSub0|saida                  ; LABCELL_X41_Y2_N6   ; 55      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; memoriaRAM:RAM|ram~529                                   ; LABCELL_X40_Y2_N42  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; processador:Processador|decoderInstru:decoder|Equal10~2  ; MLABCELL_X42_Y2_N18 ; 18      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; processador:Processador|decoderInstru:decoder|saida[4]~0 ; LABCELL_X43_Y2_N27  ; 5       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; processador:Processador|decoderInstru:decoder|saida~1    ; MLABCELL_X42_Y2_N21 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; CLOCK_50                                                 ; PIN_M9              ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; Segs7:BLOCO_7seg|hab_0                                   ; LABCELL_X32_Y4_N57  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Segs7:BLOCO_7seg|hab_1~0                                 ; LABCELL_X32_Y4_N30  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Segs7:BLOCO_7seg|hab_2~0                                 ; LABCELL_X36_Y4_N3   ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; edgeDetector:\gravar:detectorSub0|saida                  ; LABCELL_X32_Y4_N6   ; 37      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~535                                   ; MLABCELL_X34_Y4_N21 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; memoriaRAM:RAM|ram~536                                   ; MLABCELL_X34_Y4_N51 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; processador:Processador|decoderInstru:decoder|saida[4]~0 ; MLABCELL_X34_Y4_N24 ; 4       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; processador:Processador|decoderInstru:decoder|saida~1    ; MLABCELL_X34_Y4_N3  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +----------------------------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                         ;
++----------+----------+---------+----------------------+------------------+---------------------------+
+; Name     ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------+----------+---------+----------------------+------------------+---------------------------+
+; CLOCK_50 ; PIN_M9   ; 3       ; Global Clock         ; GCLK6            ; --                        ;
++----------+----------+---------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------------+
@@ -1133,22 +1151,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+-------------------------+
 ; Routing Resource Type        ; Usage                   ;
 +------------------------------+-------------------------+
-; Block interconnects          ; 222 / 140,056 ( < 1 % ) ;
-; C12 interconnects            ; 0 / 6,048 ( 0 % )       ;
-; C2 interconnects             ; 44 / 54,648 ( < 1 % )   ;
-; C4 interconnects             ; 31 / 25,920 ( < 1 % )   ;
+; Block interconnects          ; 200 / 140,056 ( < 1 % ) ;
+; C12 interconnects            ; 6 / 6,048 ( < 1 % )     ;
+; C2 interconnects             ; 34 / 54,648 ( < 1 % )   ;
+; C4 interconnects             ; 35 / 25,920 ( < 1 % )   ;
 ; DQS bus muxes                ; 0 / 17 ( 0 % )          ;
 ; DQS-18 I/O buses             ; 0 / 17 ( 0 % )          ;
 ; DQS-9 I/O buses              ; 0 / 17 ( 0 % )          ;
-; Direct links                 ; 48 / 140,056 ( < 1 % )  ;
-; Global clocks                ; 0 / 16 ( 0 % )          ;
-; Local interconnects          ; 34 / 36,960 ( < 1 % )   ;
+; Direct links                 ; 50 / 140,056 ( < 1 % )  ;
+; Global clocks                ; 1 / 16 ( 6 % )          ;
+; Local interconnects          ; 52 / 36,960 ( < 1 % )   ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )          ;
-; R14 interconnects            ; 18 / 5,984 ( < 1 % )    ;
-; R14/C12 interconnect drivers ; 18 / 9,504 ( < 1 % )    ;
-; R3 interconnects             ; 109 / 60,192 ( < 1 % )  ;
-; R6 interconnects             ; 86 / 127,072 ( < 1 % )  ;
-; Spine clocks                 ; 0 / 120 ( 0 % )         ;
+; R14 interconnects            ; 22 / 5,984 ( < 1 % )    ;
+; R14/C12 interconnect drivers ; 23 / 9,504 ( < 1 % )    ;
+; R3 interconnects             ; 91 / 60,192 ( < 1 % )   ;
+; R6 interconnects             ; 91 / 127,072 ( < 1 % )  ;
+; Spine clocks                 ; 2 / 120 ( 2 % )         ;
 ; Wire stub REs                ; 0 / 7,344 ( 0 % )       ;
 +------------------------------+-------------------------+
 
@@ -1207,9 +1225,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+--------------+
 ; Pin/Rules          ; IO_000002    ; IO_000001 ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000047    ; IO_000046    ; IO_000045    ; IO_000027    ; IO_000026    ; IO_000024    ; IO_000023    ; IO_000022    ; IO_000021    ; IO_000020    ; IO_000019    ; IO_000018    ; IO_000015    ; IO_000014    ; IO_000013    ; IO_000012    ; IO_000011    ; IO_000010 ; IO_000009 ; IO_000034    ;
 +--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+--------------+
-; Total Pass         ; 0            ; 57        ; 57        ; 0            ; 0            ; 57        ; 57        ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 52           ; 0            ; 0            ; 0            ; 0            ; 52           ; 57        ; 57        ; 0            ;
+; Total Pass         ; 0            ; 67        ; 67        ; 0            ; 0            ; 67        ; 67        ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 52           ; 0            ; 0            ; 0            ; 0            ; 52           ; 67        ; 67        ; 0            ;
 ; Total Unchecked    ; 0            ; 0         ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0            ;
-; Total Inapplicable ; 57           ; 0         ; 0         ; 57           ; 57           ; 0         ; 0         ; 57           ; 57           ; 57           ; 57           ; 57           ; 57           ; 57           ; 57           ; 57           ; 57           ; 57           ; 57           ; 5            ; 57           ; 57           ; 57           ; 57           ; 5            ; 0         ; 0         ; 57           ;
+; Total Inapplicable ; 67           ; 0         ; 0         ; 67           ; 67           ; 0         ; 0         ; 67           ; 67           ; 67           ; 67           ; 67           ; 67           ; 67           ; 67           ; 67           ; 67           ; 67           ; 67           ; 15           ; 67           ; 67           ; 67           ; 67           ; 15           ; 0         ; 0         ; 67           ;
 ; Total Fail         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0            ;
 ; KEY[1]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; KEY[2]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
@@ -1266,8 +1284,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDR[7]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Pass      ; Pass      ; Inapplicable ;
 ; LEDR[8]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Pass      ; Pass      ; Inapplicable ;
 ; LEDR[9]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Pass      ; Pass      ; Inapplicable ;
-; KEY[0]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 ; CLOCK_50           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; SW[0]              ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; SW[8]              ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; SW[9]              ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; KEY[0]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; SW[3]              ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; SW[2]              ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; SW[1]              ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; SW[4]              ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; SW[5]              ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; SW[6]              ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
+; SW[7]              ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ;
 +--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+--------------+
 
 
@@ -1319,8 +1347,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; KEY[0]          ; KEY[0]               ; 22.2              ;
-; I/O             ; CLOCK_50             ; 3.1               ;
+; KEY[0]          ; KEY[0]               ; 17.1              ;
+; I/O             ; CLOCK_50             ; 2.2               ;
+; KEY[0]          ; KEY[0],CLOCK_50      ; 1.9               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1331,30 +1360,37 @@ This will disable optimization of problematic paths and expose them for further 
 +----------------------------------------------------------+----------------------------------------------------------+-------------------+
 ; Source Register                                          ; Destination Register                                     ; Delay Added in ns ;
 +----------------------------------------------------------+----------------------------------------------------------+-------------------+
-; KEY[0]                                                   ; edgeDetector:\gravar:detectorSub0|saidaQ                 ; 3.065             ;
-; processador:Processador|registradorGenerico:REGA|DOUT[3] ; Segs7:BLOCO_7seg|registradorGenerico:REG_1|DOUT[3]       ; 0.624             ;
-; processador:Processador|registradorGenerico:REGA|DOUT[0] ; Segs7:BLOCO_7seg|registradorGenerico:REG_1|DOUT[0]       ; 0.618             ;
-; processador:Processador|registradorGenerico:REGA|DOUT[2] ; Segs7:BLOCO_7seg|registradorGenerico:REG_1|DOUT[2]       ; 0.615             ;
-; processador:Processador|registradorGenerico:REGA|DOUT[1] ; Segs7:BLOCO_7seg|registradorGenerico:REG_1|DOUT[1]       ; 0.612             ;
-; processador:Processador|registradorGenerico:PC|DOUT[3]   ; processador:Processador|registradorGenerico:REGA|DOUT[0] ; 0.601             ;
-; processador:Processador|registradorGenerico:PC|DOUT[2]   ; processador:Processador|registradorGenerico:REGA|DOUT[0] ; 0.599             ;
-; memoriaRAM:RAM|ram~274                                   ; processador:Processador|registradorGenerico:REGA|DOUT[3] ; 0.582             ;
-; processador:Processador|registradorGenerico:PC|DOUT[0]   ; processador:Processador|registradorGenerico:REGA|DOUT[0] ; 0.581             ;
-; processador:Processador|registradorGenerico:PC|DOUT[1]   ; processador:Processador|registradorGenerico:REGA|DOUT[0] ; 0.552             ;
-; processador:Processador|registradorGenerico:PC|DOUT[4]   ; processador:Processador|registradorGenerico:REGA|DOUT[3] ; 0.544             ;
-; processador:Processador|registradorGenerico:PC|DOUT[7]   ; processador:Processador|registradorGenerico:REGA|DOUT[3] ; 0.530             ;
-; processador:Processador|registradorGenerico:PC|DOUT[6]   ; processador:Processador|registradorGenerico:REGA|DOUT[3] ; 0.527             ;
-; memoriaRAM:RAM|ram~272                                   ; processador:Processador|registradorGenerico:REGA|DOUT[1] ; 0.526             ;
-; processador:Processador|registradorGenerico:PC|DOUT[5]   ; processador:Processador|registradorGenerico:REGA|DOUT[3] ; 0.525             ;
-; processador:Processador|registradorGenerico:PC|DOUT[8]   ; processador:Processador|registradorGenerico:REGA|DOUT[3] ; 0.513             ;
-; memoriaRAM:RAM|ram~16                                    ; processador:Processador|registradorGenerico:REGA|DOUT[1] ; 0.422             ;
-; memoriaRAM:RAM|ram~18                                    ; processador:Processador|registradorGenerico:REGA|DOUT[3] ; 0.416             ;
-; memoriaRAM:RAM|ram~271                                   ; processador:Processador|registradorGenerico:REGA|DOUT[0] ; 0.197             ;
-; memoriaRAM:RAM|ram~15                                    ; processador:Processador|registradorGenerico:REGA|DOUT[0] ; 0.197             ;
-; memoriaRAM:RAM|ram~273                                   ; processador:Processador|registradorGenerico:REGA|DOUT[2] ; 0.090             ;
-; memoriaRAM:RAM|ram~17                                    ; processador:Processador|registradorGenerico:REGA|DOUT[2] ; 0.078             ;
+; KEY[0]                                                   ; edgeDetector:\gravar:detectorSub0|saidaQ                 ; 2.218             ;
+; processador:Processador|registradorGenerico:PC|DOUT[0]   ; processador:Processador|registradorGenerico:PC|DOUT[6]   ; 0.802             ;
+; processador:Processador|registradorGenerico:PC|DOUT[1]   ; processador:Processador|registradorGenerico:PC|DOUT[6]   ; 0.753             ;
+; processador:Processador|registradorGenerico:PC|DOUT[3]   ; processador:Processador|registradorGenerico:PC|DOUT[6]   ; 0.749             ;
+; processador:Processador|registradorGenerico:PC|DOUT[2]   ; processador:Processador|registradorGenerico:PC|DOUT[6]   ; 0.716             ;
+; processador:Processador|registradorGenerico:REGA|DOUT[0] ; processador:Processador|registradorGenerico:REGA|DOUT[0] ; 0.687             ;
+; processador:Processador|registradorGenerico:PC|DOUT[8]   ; processador:Processador|registradorGenerico:PC|DOUT[6]   ; 0.646             ;
+; processador:Processador|registradorGenerico:PC|DOUT[6]   ; processador:Processador|registradorGenerico:PC|DOUT[6]   ; 0.619             ;
+; processador:Processador|registradorGenerico:PC|DOUT[7]   ; processador:Processador|registradorGenerico:PC|DOUT[6]   ; 0.617             ;
+; processador:Processador|registradorGenerico:PC|DOUT[5]   ; processador:Processador|registradorGenerico:PC|DOUT[6]   ; 0.607             ;
+; processador:Processador|registradorGenerico:PC|DOUT[4]   ; processador:Processador|registradorGenerico:PC|DOUT[6]   ; 0.578             ;
+; processador:Processador|registradorGenerico:REGA|DOUT[1] ; processador:Processador|registradorGenerico:REGA|DOUT[2] ; 0.493             ;
+; processador:Processador|registradorGenerico:REGA|DOUT[3] ; memoriaRAM:RAM|ram~274                                   ; 0.455             ;
+; memoriaRAM:RAM|ram~18                                    ; processador:Processador|registradorGenerico:REGA|DOUT[3] ; 0.442             ;
+; processador:Processador|registradorGenerico:REGA|DOUT[2] ; memoriaRAM:RAM|ram~17                                    ; 0.436             ;
+; memoriaRAM:RAM|ram~17                                    ; processador:Processador|registradorGenerico:REGA|DOUT[2] ; 0.398             ;
+; memoriaRAM:RAM|ram~274                                   ; processador:Processador|registradorGenerico:REGA|DOUT[3] ; 0.336             ;
+; edgeDetector:\gravar:detectorSub0|saidaQ                 ; Segs7:BLOCO_7seg|registradorGenerico:REG_2|DOUT[0]       ; 0.319             ;
+; memoriaRAM:RAM|ram~273                                   ; processador:Processador|registradorGenerico:REGA|DOUT[2] ; 0.303             ;
+; memoriaRAM:RAM|ram~271                                   ; processador:Processador|registradorGenerico:REGA|DOUT[0] ; 0.224             ;
+; memoriaRAM:RAM|ram~15                                    ; processador:Processador|registradorGenerico:REGA|DOUT[0] ; 0.187             ;
+; memoriaRAM:RAM|ram~16                                    ; processador:Processador|registradorGenerico:REGA|DOUT[2] ; 0.070             ;
+; SW[0]                                                    ; processador:Processador|registradorGenerico:REGA|DOUT[0] ; 0.068             ;
+; SW[8]                                                    ; processador:Processador|registradorGenerico:REGA|DOUT[0] ; 0.068             ;
+; SW[9]                                                    ; processador:Processador|registradorGenerico:REGA|DOUT[0] ; 0.068             ;
+; SW[3]                                                    ; processador:Processador|registradorGenerico:REGA|DOUT[3] ; 0.060             ;
+; SW[2]                                                    ; processador:Processador|registradorGenerico:REGA|DOUT[2] ; 0.057             ;
+; memoriaRAM:RAM|ram~272                                   ; processador:Processador|registradorGenerico:REGA|DOUT[2] ; 0.040             ;
+; SW[1]                                                    ; processador:Processador|registradorGenerico:REGA|DOUT[2] ; 0.013             ;
 +----------------------------------------------------------+----------------------------------------------------------+-------------------+
-Note: This table only shows the top 22 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 29 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1368,6 +1404,8 @@ Info (21077): High junction temperature is 85 degrees C
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (184020): Starting Fitter periphery placement operations
+Info (11191): Automatically promoted 1 clock (1 global)
+    Info (11162): CLOCK_50~inputCLKENA0 with 3 fanout uses global clock CLKCTRL_G6
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'contador.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -1379,16 +1417,6 @@ Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "FPGA_RESET_N" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[0]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[1]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[2]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[3]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[4]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[5]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[6]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[7]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[8]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[9]" is assigned to location or region, but does not exist in design
 Info (11798): Fitter preparation operations ending: elapsed time is 00:00:04
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
@@ -1398,28 +1426,21 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X33_Y0 to location X43_Y10
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X33_Y0 to location X43_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.29 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+Info (11888): Total time spent on timing analysis during the Fitter is 0.31 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file /home/antonio/Desktop/Desing_Computadores/contador/contador.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 1543 megabytes
-    Info: Processing ended: Thu Apr  6 20:41:43 2023
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:28
-
-
-+----------------------------+
-; Fitter Suppressed Messages ;
-+----------------------------+
-The suppressed messages can be found in /home/antonio/Desktop/Desing_Computadores/contador/contador.fit.smsg.
+Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 1557 megabytes
+    Info: Processing ended: Fri Apr  7 18:14:50 2023
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:29
 
 

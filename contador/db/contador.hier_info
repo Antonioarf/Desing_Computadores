@@ -5,6 +5,16 @@ KEY[0] => edgedetector:gravar:detectorSub0.entrada
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~
+SW[0] => input:BLOCO_SW.estado_chaves[0]
+SW[1] => input:BLOCO_SW.estado_chaves[1]
+SW[2] => input:BLOCO_SW.estado_chaves[2]
+SW[3] => input:BLOCO_SW.estado_chaves[3]
+SW[4] => input:BLOCO_SW.estado_chaves[4]
+SW[5] => input:BLOCO_SW.estado_chaves[5]
+SW[6] => input:BLOCO_SW.estado_chaves[6]
+SW[7] => input:BLOCO_SW.estado_chaves[7]
+SW[8] => input:BLOCO_SW.estado_chaves[8]
+SW[9] => input:BLOCO_SW.estado_chaves[9]
 HEX0[0] <= segs7:BLOCO_7seg.ret[0]
 HEX0[1] <= segs7:BLOCO_7seg.ret[1]
 HEX0[2] <= segs7:BLOCO_7seg.ret[2]
@@ -1519,5 +1529,125 @@ saida7seg[3] <= saida7seg.DB_MAX_OUTPUT_PORT_TYPE
 saida7seg[4] <= saida7seg.DB_MAX_OUTPUT_PORT_TYPE
 saida7seg[5] <= saida7seg.DB_MAX_OUTPUT_PORT_TYPE
 saida7seg[6] <= saida7seg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador|Input:BLOCO_SW
+dados_out[0] <= saida_sw_9[0].DB_MAX_OUTPUT_PORT_TYPE
+dados_out[1] <= saida_sw_9[1].DB_MAX_OUTPUT_PORT_TYPE
+dados_out[2] <= saida_sw_9[2].DB_MAX_OUTPUT_PORT_TYPE
+dados_out[3] <= saida_sw_9[3].DB_MAX_OUTPUT_PORT_TYPE
+dados_out[4] <= saida_sw_9[4].DB_MAX_OUTPUT_PORT_TYPE
+dados_out[5] <= saida_sw_9[5].DB_MAX_OUTPUT_PORT_TYPE
+dados_out[6] <= saida_sw_9[6].DB_MAX_OUTPUT_PORT_TYPE
+dados_out[7] <= saida_sw_9[7].DB_MAX_OUTPUT_PORT_TYPE
+estado_chaves[0] => buffer_3_state_8portas:Buffer_bloco.entrada[0]
+estado_chaves[1] => buffer_3_state_8portas:Buffer_bloco.entrada[1]
+estado_chaves[2] => buffer_3_state_8portas:Buffer_bloco.entrada[2]
+estado_chaves[3] => buffer_3_state_8portas:Buffer_bloco.entrada[3]
+estado_chaves[4] => buffer_3_state_8portas:Buffer_bloco.entrada[4]
+estado_chaves[5] => buffer_3_state_8portas:Buffer_bloco.entrada[5]
+estado_chaves[6] => buffer_3_state_8portas:Buffer_bloco.entrada[6]
+estado_chaves[7] => buffer_3_state_8portas:Buffer_bloco.entrada[7]
+estado_chaves[8] => buffer_3_state_8portas:Buffer_sw8.entrada[0]
+estado_chaves[9] => buffer_3_state_8portas:Buffer_sw9.entrada[0]
+decoder_1[0] => hab_bloco.IN1
+decoder_1[1] => hab_sw_8.IN1
+decoder_1[2] => hab_sw_9.IN1
+decoder_1[3] => ~NO_FANOUT~
+decoder_1[4] => ~NO_FANOUT~
+decoder_1[5] => ~NO_FANOUT~
+decoder_1[6] => ~NO_FANOUT~
+decoder_1[7] => ~NO_FANOUT~
+Rd => hab_bloco.IN0
+Rd => hab_sw_8.IN0
+Rd => hab_sw_9.IN0
+A5 => hab_bloco.IN1
+A5 => hab_sw_8.IN1
+A5 => hab_sw_9.IN1
+clk => ~NO_FANOUT~
+bloco => hab_bloco.IN1
+bloco => hab_sw_8.IN1
+bloco => hab_sw_9.IN1
+
+
+|contador|Input:BLOCO_SW|buffer_3_state_8portas:Buffer_bloco
+entrada[0] => saida[0].DATAIN
+entrada[1] => saida[1].DATAIN
+entrada[2] => saida[2].DATAIN
+entrada[3] => saida[3].DATAIN
+entrada[4] => saida[4].DATAIN
+entrada[5] => saida[5].DATAIN
+entrada[6] => saida[6].DATAIN
+entrada[7] => saida[7].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador|Input:BLOCO_SW|buffer_3_state_8portas:Buffer_sw8
+entrada[0] => saida[0].DATAIN
+entrada[1] => saida[1].DATAIN
+entrada[2] => saida[2].DATAIN
+entrada[3] => saida[3].DATAIN
+entrada[4] => saida[4].DATAIN
+entrada[5] => saida[5].DATAIN
+entrada[6] => saida[6].DATAIN
+entrada[7] => saida[7].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador|Input:BLOCO_SW|buffer_3_state_8portas:Buffer_sw9
+entrada[0] => saida[0].DATAIN
+entrada[1] => saida[1].DATAIN
+entrada[2] => saida[2].DATAIN
+entrada[3] => saida[3].DATAIN
+entrada[4] => saida[4].DATAIN
+entrada[5] => saida[5].DATAIN
+entrada[6] => saida[6].DATAIN
+entrada[7] => saida[7].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
