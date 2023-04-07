@@ -55,7 +55,7 @@ end generate;
   Decoder678 :  entity work.decoder3x8 port map( entrada => barramento_End(8 downto 6), saida => saida_decoder_2);			 
   Decoder012 :  entity work.decoder3x8 port map( entrada => barramento_End(2 downto 0), saida => saida_decoder_1);			 
 		
-  BLOCO_LEDs :  entity work.LEDs  generic map (larguraDados => larguraDados)
+ BLOCO_LEDs :  entity work.LEDs  generic map (larguraDados => larguraDados)
 				port map( dados_in => barramento_W, decoder_1 => saida_decoder_1, decoder_2 => saida_decoder_2, Wr=>barramento_Ctrl(0), clk =>CLOCK_50, A5=>barramento_End(5), ret =>Leds);			 
 
  BLOCO_7seg :  entity work.Segs7 

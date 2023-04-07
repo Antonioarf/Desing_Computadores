@@ -25,20 +25,25 @@ architecture assincrona of memoriaROM is
   constant CEQ  : std_logic_vector(3 downto 0) := "1000";
   constant JSR  : std_logic_vector(3 downto 0) := "1001";
   constant RET  : std_logic_vector(3 downto 0) := "1010";
+  constant SOMI  : std_logic_vector(3 downto 0) := "1011";
+  constant SUBI  : std_logic_vector(3 downto 0) := "1100";
+	 
+  constant Reg_0  : std_logic_vector(1 downto 0) := "00";
+  constant Reg_1  : std_logic_vector(1 downto 0) := "01";
+  constant Reg_2  : std_logic_vector(1 downto 0) := "10";
+  constant Reg_3  : std_logic_vector(1 downto 0) := "11";
+  
   type blocoMemoria is array(0 TO 2**addrWidth - 1) of std_logic_vector(dataWidth-1 DOWNTO 0);
 
   function initMemory
         return blocoMemoria is variable tmp : blocoMemoria := (others => (others => '0'));
   begin
-		  tmp(0)  := LDA & '1' & x"40";
-		  tmp(1)  := LDA & '1' & x"40";
-		  tmp(2)  := STA & '1' & x"20";
-		  tmp(3)  := LDA & '1' & x"41";
-		  tmp(4)  := STA & '1' & x"21";
-		  tmp(5)  := LDA & '1' & x"42";
-		  tmp(6)  := STA & '1' & x"22";
-		  tmp(7)  := JMP & '0' & x"00";
-		  tmp(9) := "0000000000000";
+		  tmp(0)  := LDI & Reg_0 & '0' & x"0A";
+		  tmp(1)  := LDI & Reg_1 & '0' & x"0A";
+		  tmp(2)  := SOMI & Reg_0 & '0' & x"0A";
+		  tmp(3)  := SUBI & Reg_1 & '0' & x"05";
+		  tmp(4)  := JMP & Reg_0 & '0' & x"00";
+		  tmp(5) := "000000000000000";
 		  
 
         return tmp;

@@ -28,7 +28,7 @@ architecture arquiteturaa of processador is
   signal Saida_ULA : std_logic_vector (larguraDados-1 downto 0);
   signal Saida_RAM : std_logic_vector (larguraDados-1 downto 0);
   signal Sinais_Controle : std_logic_vector (larguraPalavra-1 downto 0); --depende dos pontos de controle
-  signal Sinais_ROM : std_logic_vector (12 downto 0);
+  signal Sinais_ROM : std_logic_vector (14 downto 0);
   signal Endereco : std_logic_vector (larguraEnderecos-1 downto 0);
   signal proxPC : std_logic_vector (larguraEnderecos-1 downto 0);
   signal Chave_Operacao_ULA : std_logic;
@@ -65,9 +65,11 @@ MUX1 :  entity work.muxGenerico2x1  generic map (larguraDados => larguraDados)
 					  
 				  
 -- O port map completo do Acumulador.
-REGA : entity work.registradorGenerico   generic map (larguraDados => larguraDados)
-          port map (DIN => Saida_ULA, DOUT => REG1_ULA_A, ENABLE => Habilita_A, CLK => CLK, RST => '0');
-
+			 
+Banco_Reg : entity work.bancoRegistradoresArqRegMem   generic map (larguraDados => larguraDados, larguraEndBancoRegs => 2)
+          port map ( clk => CLK, endereco => Sinais_ROM(10 downto 9),dadoEscrita => Saida_ULA, habilitaEscrita => Habilita_A,saida  => REG1_ULA_A);
+			 
+			 
 -- O port map completo do Program Counter.
 PC : entity work.registradorGenerico   generic map (larguraDados => larguraEnderecos)
           port map (DIN => Saida_Mux_Pc, DOUT => Endereco, ENABLE => '1', CLK => CLK, RST => '0');
@@ -82,11 +84,11 @@ ULA1 : entity work.ULASomaSub  generic map(larguraDados => larguraDados)
 			 
 
 
-ROM1 : entity work.memoriaROM   generic map (dataWidth => 13, addrWidth => larguraEnderecos)
+ROM1 : entity work.memoriaROM   generic map (dataWidth => 15, addrWidth => larguraEnderecos)
     	 port map (Endereco => Endereco, Dado => Sinais_ROM);
 		 
 
-decoder :  entity work.decoderInstru port map( opcode => Sinais_ROM(12 downto 9), saida => Sinais_Controle);
+decoder :  entity work.decoderInstru port map( opcode => Sinais_ROM(14 downto 11), saida => Sinais_Controle);
 
 
 
