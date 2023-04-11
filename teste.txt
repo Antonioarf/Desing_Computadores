@@ -1,0 +1,19 @@
+JSR  @14			
+JMP  @5			
+JEQ  @9	
+SALVA		
+NOP			
+NOP			
+LDA R1 @1
+LDI R1 $5		
+STA R1 @1			
+CEQ R1 @1		
+JMP @2			
+NOP			
+LDI R0 $4			
+CEQ R1 @1 #detalhe aqui			
+JEQ @3			
+JMP @13
+SOMA R1 @1			
+NOP			
+RET	

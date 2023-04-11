@@ -8,7 +8,7 @@ entity decoderInstru is
 end entity;
 
 architecture comportamento of decoderInstru is
-
+-- FAZER CEQI -> comparacao com imediato
 constant NOP  : std_logic_vector(3 downto 0) := "0000";
 constant LDA  : std_logic_vector(3 downto 0) := "0001";
 constant SOMA : std_logic_vector(3 downto 0) := "0010";
