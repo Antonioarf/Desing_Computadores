@@ -19,11 +19,33 @@ STA R0 @2
 STA R0 @3
 STA R0 @4
 STA R0 @5
+STA R0 @63 ; zerar memoria para o contador geral
+STA R0 @62 ; zerar memoria para o LIM
 
 LOOP
 LDA R1 @352
+STA R0 @511		;	Limpa a leitura do botão
 CEQ R1 @10
 JEQ INCREMENTA_0
+JSR MAX
+JSR RESET
+JMP LOOP
+
+MAX
+LDA R2 @320
+SOMI R2 $1  
+CEQ R2 @63
+JEQ INICIO
+LDA R2 @63
+SOMI R2 $1
+STA R2 @63
+RET 
+
+RESET
+LDA R1 @356
+LDI R0 $0
+STA R0 @510
+STA R0 @511	
 
 INCREMENTA_0
 LDA R3 @0

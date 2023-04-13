@@ -14,24 +14,7 @@ entity memoriaROM is
 end entity;
 
 architecture assincrona of memoriaROM is
-  constant NOP  : std_logic_vector(3 downto 0) := "0000";
-  constant LDA  : std_logic_vector(3 downto 0) := "0001";
-  constant SOMA : std_logic_vector(3 downto 0) := "0010";
-  constant SUB  : std_logic_vector(3 downto 0) := "0011";
-  constant LDI  : std_logic_vector(3 downto 0) := "0100";
-  constant STA  : std_logic_vector(3 downto 0) := "0101";
-  constant JMP  : std_logic_vector(3 downto 0) := "0110";
-  constant JEQ  : std_logic_vector(3 downto 0) := "0111";
-  constant CEQ  : std_logic_vector(3 downto 0) := "1000";
-  constant JSR  : std_logic_vector(3 downto 0) := "1001";
-  constant RET  : std_logic_vector(3 downto 0) := "1010";
-  constant SOMI  : std_logic_vector(3 downto 0) := "1011";
-  constant SUBI  : std_logic_vector(3 downto 0) := "1100";
-	 
-  constant Reg_0  : std_logic_vector(1 downto 0) := "00";
-  constant Reg_1  : std_logic_vector(1 downto 0) := "01";
-  constant Reg_2  : std_logic_vector(1 downto 0) := "10";
-  constant Reg_3  : std_logic_vector(1 downto 0) := "11";
+
   
   type blocoMemoria is array(0 TO 2**addrWidth - 1) of std_logic_vector(dataWidth-1 DOWNTO 0);
 
@@ -39,96 +22,35 @@ architecture assincrona of memoriaROM is
         return blocoMemoria is variable tmp : blocoMemoria := (others => (others => '0'));
   begin
 tmp(0)  := "000000000000000";  -- 
-tmp(1)  := "010001000001010";  -- 
-tmp(2)  := "010101000001001";  -- const 10 no end 9 
-tmp(3)  := "010001000000001";  -- 
-tmp(4)  := "010101000001010";  -- const 1 no end 10
-tmp(5)  := "010000000000000";  -- 
-tmp(6)  := "010100100100000";  --  zerar os displays
-tmp(7)  := "010100100100001";  -- 
-tmp(8)  := "010100100100010";  -- 
-tmp(9)  := "010100100100011";  -- 
-tmp(10)  := "010100100100100";  -- 
-tmp(11)  := "010100100100101";  -- 
-tmp(12)  := "010100100000000";  --  zerar os leds
-tmp(13)  := "010100100000001";  -- 
-tmp(14)  := "010100100000010";  -- 
-tmp(15)  := "010100000000000";  --  zerar memoria para os contadores
-tmp(16)  := "010100000000001";  -- 
-tmp(17)  := "010100000000010";  -- 
-tmp(18)  := "010100000000011";  -- 
-tmp(19)  := "010100000000100";  -- 
-tmp(20)  := "010100000000101";  -- 
+tmp(1)  := "010000000000000";  -- 	Carrega o acumulador com o valor 0
+tmp(2)  := "000101101100000";  -- 
+tmp(3)  := "010101000111010";  -- 
+tmp(4)  := "010100111111111";  -- 
+tmp(5)  := "011000000000000";  -- 
+tmp(6)  := "010001000000000";  -- 
+tmp(7)  := "010010000000000";  -- 
+tmp(8)  := "010011000000000";  -- 
+tmp(9)  := "010100000000000";  -- Armazena o valor do acumulador em MEM[0] (constante 0)
+tmp(10)  := "010100000000010";  -- 	Armazena o valor do acumulador em MEM[2] (contador)
+tmp(11)  := "010000000000001";  -- 	Carrega o acumulador com o valor 1
+tmp(12)  := "010100000000001";  -- 	Armazena o valor do acumulador em MEM[1] (constante 1)
+tmp(13)  := "000000000000000";  -- 
+tmp(14)  := "000110101100000";  -- 		Carrega o acumulador com a leitura do botão KEY0
+tmp(15)  := "010110100100000";  -- 		Armazena o valor lido em HEX0 (para verificar erros de leitura)
+tmp(16)  := "100010000000000";  -- 	Compara com o valor de MEM[0] (constante 0)
+tmp(17)  := "011100000001011";  -- 	Desvia se igual a 0 (botão não foi pressionado)
+tmp(18)  := "100100000010101";  -- 	O botão foi pressionado, chama a sub-rotina de incremento
+tmp(19)  := "000000000000000";  -- Retorno da sub-rotina de incremento
+tmp(20)  := "011000000001001";  -- 	Fecha o laço principal, faz uma nova leitura de KEY0
 tmp(21)  := "000000000000000";  -- 
-tmp(22)  := "000101101100000";  -- 
-tmp(23)  := "100001000001010";  -- 
-tmp(24)  := "011100000011001";  -- 
-tmp(25)  := "000000000000000";  -- 
-tmp(26)  := "000111000000000";  -- 
-tmp(27)  := "101111000000001";  -- 
-tmp(28)  := "100011000001001";  -- 
-tmp(29)  := "010111000000000";  -- 
-tmp(30)  := "011100000100000";  -- 
-tmp(31)  := "011000001001000";  -- 
-tmp(32)  := "000000000000000";  -- 
-tmp(33)  := "010100000000000";  -- 
-tmp(34)  := "000111000000001";  -- 
-tmp(35)  := "101111000000001";  -- 
-tmp(36)  := "100011000001001";  -- 
-tmp(37)  := "010111000000001";  -- 
-tmp(38)  := "011100000101000";  -- 
-tmp(39)  := "011000001001000";  -- 
-tmp(40)  := "000000000000000";  -- 
-tmp(41)  := "010100000000001";  -- 
-tmp(42)  := "000111000000010";  -- 
-tmp(43)  := "101111000000001";  -- 
-tmp(44)  := "100011000001001";  -- 
-tmp(45)  := "010111000000010";  -- 
-tmp(46)  := "011100000110000";  -- 
-tmp(47)  := "011000001001000";  -- 
-tmp(48)  := "000000000000000";  -- 
-tmp(49)  := "010100000000010";  -- 
-tmp(50)  := "000111000000011";  -- 
-tmp(51)  := "101111000000001";  -- 
-tmp(52)  := "100011000001001";  -- 
-tmp(53)  := "010111000000011";  -- 
-tmp(54)  := "011100000111000";  -- 
-tmp(55)  := "011000001001000";  -- 
-tmp(56)  := "000000000000000";  -- 
-tmp(57)  := "010100000000011";  -- 
-tmp(58)  := "000111000000100";  -- 
-tmp(59)  := "101111000000001";  -- 
-tmp(60)  := "100011000001001";  -- 
-tmp(61)  := "010111000000100";  -- 
-tmp(62)  := "011100001000000";  -- 
-tmp(63)  := "011000001001000";  -- 
-tmp(64)  := "000000000000000";  -- 
-tmp(65)  := "010100000000100";  -- 
-tmp(66)  := "000111000000101";  -- 
-tmp(67)  := "101111000000001";  -- 
-tmp(68)  := "100011000001001";  -- 
-tmp(69)  := "010111000000101";  -- 
-tmp(70)  := "011100000011001";  -- 
-tmp(71)  := "011000001001000";  -- 
-tmp(72)  := "000000000000000";  -- 
-tmp(73)  := "000110000000000";  -- 
-tmp(74)  := "010110100100000";  -- 
-tmp(75)  := "000110000000001";  -- 
-tmp(76)  := "010110100100001";  -- 
-tmp(77)  := "000110000000010";  -- 
-tmp(78)  := "010110100100010";  -- 
-tmp(79)  := "000110000000011";  -- 
-tmp(80)  := "010110100100011";  -- 
-tmp(81)  := "000110000000100";  -- 
-tmp(82)  := "010110100100100";  -- 
-tmp(83)  := "000110000000101";  -- 
-tmp(84)  := "010110100100101";  -- 
-tmp(85)  := "011000000010101";  -- 
-tmp(86)  := "000000000000000";  -- 
-
-
-		  
-
+tmp(22)  := "010111111111111";  -- Limpa a leitura do botão
+tmp(23)  := "000101000000010";  -- Carrega o valor de MEM[2] (contador)
+tmp(24)  := "001001000000001";  -- Soma com a constante em MEM[1]
+tmp(25)  := "010101000000010";  -- Salva o incremento em MEM[2] (contador)
+tmp(26)  := "010101100000010";  -- Armazena o valor do bit0 do acumulador no LDR9
+tmp(27)  := "010101100100101";  -- Armazena o valor do acumulador no HEX5
+tmp(28)  := "101000000000000";  -- 	Retorna da sub-rotina
+tmp(29)  := "011000000000000";  -- 	Desvia para o endereço 0 (início do programa)
         return tmp;
     end initMemory;
 

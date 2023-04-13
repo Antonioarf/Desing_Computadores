@@ -1,10 +1,14 @@
 |contador
-CLOCK_50 => edgedetector:gravar:detectorSub0.clk
 CLOCK_50 => leds:BLOCO_LEDs.clk
-KEY[0] => edgedetector:gravar:detectorSub0.entrada
-KEY[1] => ~NO_FANOUT~
-KEY[2] => ~NO_FANOUT~
-KEY[3] => ~NO_FANOUT~
+KEY[0] => input:BLOCO_SW.estado_botoes[0]
+KEY[1] => input:BLOCO_SW.estado_botoes[1]
+KEY[2] => input:BLOCO_SW.estado_botoes[2]
+KEY[3] => processador:Processador.CLK
+KEY[3] => memoriaram:RAM.clk
+KEY[3] => segs7:BLOCO_7seg.clk
+KEY[3] => input:BLOCO_SW.clk
+KEY[3] => input:BLOCO_SW.estado_botoes[3]
+FPGA_RESET_N => input:BLOCO_SW.estado_botoes[4]
 SW[0] => input:BLOCO_SW.estado_chaves[0]
 SW[1] => input:BLOCO_SW.estado_chaves[1]
 SW[2] => input:BLOCO_SW.estado_chaves[2]
@@ -67,13 +71,6 @@ LEDR[6] <= leds:BLOCO_LEDs.ret[6]
 LEDR[7] <= leds:BLOCO_LEDs.ret[7]
 LEDR[8] <= leds:BLOCO_LEDs.ret[8]
 LEDR[9] <= leds:BLOCO_LEDs.ret[9]
-
-
-|contador|edgeDetector:\gravar:detectorSub0
-clk => saidaQ.CLK
-entrada => saida.IN1
-entrada => saidaQ.DATAIN
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |contador|processador:Processador
@@ -1546,14 +1543,14 @@ saida7seg[6] <= saida7seg.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |contador|Input:BLOCO_SW
-dados_out[0] <= saida_sw_9[0].DB_MAX_OUTPUT_PORT_TYPE
-dados_out[1] <= saida_sw_9[1].DB_MAX_OUTPUT_PORT_TYPE
-dados_out[2] <= saida_sw_9[2].DB_MAX_OUTPUT_PORT_TYPE
-dados_out[3] <= saida_sw_9[3].DB_MAX_OUTPUT_PORT_TYPE
-dados_out[4] <= saida_sw_9[4].DB_MAX_OUTPUT_PORT_TYPE
-dados_out[5] <= saida_sw_9[5].DB_MAX_OUTPUT_PORT_TYPE
-dados_out[6] <= saida_sw_9[6].DB_MAX_OUTPUT_PORT_TYPE
-dados_out[7] <= saida_sw_9[7].DB_MAX_OUTPUT_PORT_TYPE
+dados_out[0] <= saida_k4[0].DB_MAX_OUTPUT_PORT_TYPE
+dados_out[1] <= saida_k4[1].DB_MAX_OUTPUT_PORT_TYPE
+dados_out[2] <= saida_k4[2].DB_MAX_OUTPUT_PORT_TYPE
+dados_out[3] <= saida_k4[3].DB_MAX_OUTPUT_PORT_TYPE
+dados_out[4] <= saida_k4[4].DB_MAX_OUTPUT_PORT_TYPE
+dados_out[5] <= saida_k4[5].DB_MAX_OUTPUT_PORT_TYPE
+dados_out[6] <= saida_k4[6].DB_MAX_OUTPUT_PORT_TYPE
+dados_out[7] <= saida_k4[7].DB_MAX_OUTPUT_PORT_TYPE
 estado_chaves[0] => buffer_3_state_8portas:Buffer_bloco.entrada[0]
 estado_chaves[1] => buffer_3_state_8portas:Buffer_bloco.entrada[1]
 estado_chaves[2] => buffer_3_state_8portas:Buffer_bloco.entrada[2]
@@ -1564,24 +1561,39 @@ estado_chaves[6] => buffer_3_state_8portas:Buffer_bloco.entrada[6]
 estado_chaves[7] => buffer_3_state_8portas:Buffer_bloco.entrada[7]
 estado_chaves[8] => buffer_3_state_8portas:Buffer_sw8.entrada[0]
 estado_chaves[9] => buffer_3_state_8portas:Buffer_sw9.entrada[0]
+estado_botoes[0] => edgedetector:detectorKey0.entrada
+estado_botoes[1] => ~NO_FANOUT~
+estado_botoes[2] => ~NO_FANOUT~
+estado_botoes[3] => ~NO_FANOUT~
+estado_botoes[4] => edgedetector:detectorKey4.entrada
 decoder_1[0] => hab_bloco.IN1
+decoder_1[0] => hab_k0.IN1
 decoder_1[1] => hab_sw_8.IN1
 decoder_1[2] => hab_sw_9.IN1
 decoder_1[3] => ~NO_FANOUT~
-decoder_1[4] => ~NO_FANOUT~
+decoder_1[4] => hab_k4.IN1
 decoder_1[5] => ~NO_FANOUT~
 decoder_1[6] => ~NO_FANOUT~
 decoder_1[7] => ~NO_FANOUT~
 Rd => hab_bloco.IN0
 Rd => hab_sw_8.IN0
 Rd => hab_sw_9.IN0
+Rd => hab_k0.IN0
+Rd => hab_k4.IN0
+A5 => hab_k0.IN1
+A5 => hab_k4.IN1
 A5 => hab_bloco.IN1
 A5 => hab_sw_8.IN1
 A5 => hab_sw_9.IN1
-clk => ~NO_FANOUT~
+clk => edgedetector:detectorKey0.clk
+clk => edgedetector:detectorKey4.clk
 bloco => hab_bloco.IN1
 bloco => hab_sw_8.IN1
 bloco => hab_sw_9.IN1
+bloco => hab_k0.IN1
+bloco => hab_k4.IN1
+limpa0 => flipflop:FF_k0.RST
+limpa1 => flipflop:FF_k4.RST
 
 
 |contador|Input:BLOCO_SW|buffer_3_state_8portas:Buffer_bloco
@@ -1639,6 +1651,90 @@ saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |contador|Input:BLOCO_SW|buffer_3_state_8portas:Buffer_sw9
+entrada[0] => saida[0].DATAIN
+entrada[1] => saida[1].DATAIN
+entrada[2] => saida[2].DATAIN
+entrada[3] => saida[3].DATAIN
+entrada[4] => saida[4].DATAIN
+entrada[5] => saida[5].DATAIN
+entrada[6] => saida[6].DATAIN
+entrada[7] => saida[7].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador|Input:BLOCO_SW|edgeDetector:detectorKey0
+clk => saidaQ.CLK
+entrada => saida.IN1
+entrada => saidaQ.DATAIN
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador|Input:BLOCO_SW|flipflop:FF_k0
+DIN => DOUT~reg0.DATAIN
+DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ENABLE => DOUT~reg0.ENA
+CLK => DOUT~reg0.CLK
+RST => DOUT~reg0.ACLR
+
+
+|contador|Input:BLOCO_SW|buffer_3_state_8portas:Buffer_K0
+entrada[0] => saida[0].DATAIN
+entrada[1] => saida[1].DATAIN
+entrada[2] => saida[2].DATAIN
+entrada[3] => saida[3].DATAIN
+entrada[4] => saida[4].DATAIN
+entrada[5] => saida[5].DATAIN
+entrada[6] => saida[6].DATAIN
+entrada[7] => saida[7].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador|Input:BLOCO_SW|edgeDetector:detectorKey4
+clk => saidaQ.CLK
+entrada => saida.IN1
+entrada => saidaQ.DATAIN
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador|Input:BLOCO_SW|flipflop:FF_k4
+DIN => DOUT~reg0.DATAIN
+DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ENABLE => DOUT~reg0.ENA
+CLK => DOUT~reg0.CLK
+RST => DOUT~reg0.ACLR
+
+
+|contador|Input:BLOCO_SW|buffer_3_state_8portas:Buffer_K4
 entrada[0] => saida[0].DATAIN
 entrada[1] => saida[1].DATAIN
 entrada[2] => saida[2].DATAIN

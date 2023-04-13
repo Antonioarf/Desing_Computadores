@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/antonio/Desktop/Desing_Computadores/contador/simulation/qsim
 Econtador
-Z1 w1680805667
+Z1 w1681351359
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
@@ -20,19 +20,19 @@ Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 16
+!i122 20
 R0
 Z11 8contador.vho
 Z12 Fcontador.vho
 l0
 L39 1
-Vh9]2PCHOL]oCChE`l09a50
-!s100 igDaGH1AGKzZdzZnJ:9_b1
+VP[4`kAh1hY=j5BGVHi9[f3
+!s100 P]>3XJdj=1QG1=PkM_2UV2
 Z13 OV;C;2020.1;71
 32
-Z14 !s110 1680805667
+Z14 !s110 1681351360
 !i10b 1
-Z15 !s108 1680805667.000000
+Z15 !s108 1681351360.000000
 Z16 !s90 -work|work|contador.vho|
 Z17 !s107 contador.vho|
 !i113 1
@@ -48,12 +48,12 @@ R7
 R8
 R9
 R10
-DEx4 work 8 contador 0 22 h9]2PCHOL]oCChE`l09a50
-!i122 16
-l332
-L49 3353
-V7G7KRRQeUT`cR3NC`E_661
-!s100 =fb0m<^?TA][znm?BVjbR3
+DEx4 work 8 contador 0 22 P[4`kAh1hY=j5BGVHi9[f3
+!i122 20
+l560
+L55 5652
+VDL<bN;dknf2_]=3zBKTbC0
+!s100 N4JM15bf2`jJ:SUiNfhm^2
 R13
 32
 R14
@@ -65,13 +65,13 @@ R17
 R18
 R19
 Econtador_vhd_vec_tst
-Z20 w1680805666
+R1
 R8
 R9
-!i122 17
+!i122 21
 R0
-Z21 8Waveform6.vwf.vht
-Z22 FWaveform6.vwf.vht
+Z20 8Waveform1.vwf.vht
+Z21 FWaveform1.vwf.vht
 l0
 L32 1
 VdlY?7K2]@onfaD9j9@zo:2
@@ -81,27 +81,27 @@ R13
 R14
 !i10b 1
 R15
-Z23 !s90 -work|work|Waveform6.vwf.vht|
-!s107 Waveform6.vwf.vht|
+Z22 !s90 -work|work|Waveform1.vwf.vht|
+!s107 Waveform1.vwf.vht|
 !i113 1
 R18
 R19
 Acontador_arch
 R8
 R9
-Z24 DEx4 work 20 contador_vhd_vec_tst 0 22 dlY?7K2]@onfaD9j9@zo:2
-!i122 17
-l51
-Z25 L34 40
-Z26 VPJ6IOPZdfA]<IBh3GkfLU3
-Z27 !s100 SWzH@X53n4IIC@<Sbz`^j1
+Z23 DEx4 work 20 contador_vhd_vec_tst 0 22 dlY?7K2]@onfaD9j9@zo:2
+!i122 21
+l63
+L34 106
+V8WB^^Kll]<X9a2felgDAf2
+!s100 =a?7DPQMH>kn1Xgi0YiSN3
 R13
 32
 R14
 !i10b 1
 R15
-R23
-Z28 !s107 Waveform6.vwf.vht|
+R22
+Z24 !s107 Waveform1.vwf.vht|
 !i113 1
 R18
 R19
