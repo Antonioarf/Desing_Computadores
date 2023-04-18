@@ -6,8 +6,6 @@ Joras Custodio
 
 # Projeto 1
 
-## 
-
 ### Arquitetura
 
 O projeto segue o diagrama abaixo, a partir de um processador, que possui uma memoria ROM interna com instruções, e se comunica com memoria RAM e os endereços de IO por quatro barramento, sendo eles de Leitura e Escrita de dados, de Endereçamento e Controle.
@@ -22,9 +20,9 @@ Inputs e Outputs:
 | Chaves | 10 | 320-322 |
 | Botões | 5 | 352-356 |
 
-Conecções com os barramentos:
+O diagrama abaixo mostra as conecções com os quatro barramentos principais realizadas no arquivo Top-Level e o decodificador de intruções, componente responsavel por habilitar o componente adequado para que não haja conflito nos barramentos de leitura e escrita.
 
-![ComputerAddressingPCFS-2021s2.svg](Imgs/ComputerAddressingPCFS-2021s2.svg)
+![Untitled](Imgs/Untitled.png)
 
 ### Processador
 
@@ -37,7 +35,7 @@ Para o controle das instruções é utilizado um registrador tambem de 8 bits (P
 | 1 | Imediato |
 | 2 | End. Retorno |
 
-![Untitled](Imgs/Untitled.png)
+![Untitled](Imgs/Untitled%201.png)
 
 ### Intruções:
 
