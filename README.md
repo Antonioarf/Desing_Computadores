@@ -8,7 +8,7 @@ Joras Custodio
 
 ### Arquitetura
 
-O projeto segue o diagrama abaixo, a partir de um processador, que possui uma memoria ROM interna com instruções, e se comunica com memoria RAM e os endereços de IO por quatro barramento, sendo eles de Leitura e Escrita de dados, de Endereçamento e Controle.
+O projeto segue a arquitetura Harvard, com barramentos e memoria de 8 bits, em um modelo Registrador-Memoria, como mostra o diagrama abaixo, possuindo uma memoria ROM interna com instruções, e se comunica com memoria RAM e os endereços de IO por quatro barramento, sendo eles de Leitura e Escrita de dados, de Endereçamento e Controle.
 
 Inputs e Outputs:
 
@@ -28,16 +28,24 @@ O diagrama abaixo mostra as conecções com os quatro barramentos principais rea
 
 O processador utiliza uma ULA com 4 operações, soma, subtração, passa e comparação, e opera entre um registrador e a saida de um MUX, que direciona ou a saida da memoria RAM ou o valor do Imediato da intrução, salvando a saida sempre no mesmo registrador da entrada A.
 
-Para o controle das instruções é utilizado um registrador tambem de 8 bits (PC) para guardar a posição atual da memoria ROM, e pode ter seu valor manipulado por um MUX descrito na tabela a baixo
+Para o controle das instruções é utilizado um registrador tambem de 8 bits (PC) para guardar a posição atual da memoria ROM, e pode ter seu valor manipulado por um MUX descrito na tabela a seguir.
 
 | 0 | PC +1 |
 | --- | --- |
 | 1 | Imediato |
 | 2 | End. Retorno |
 
+A memoria ROM foi contruida com 4 bits para codificar instruções e mais 9 bits para endereçãmento na RAM ou para valor Imediato, sendo os quatro bits de instruções direcionados para o decodificador de instruções, responsavel pela ativação dos pontos de controles que espalhados por todo o processador, representados pelas linhas em vermelho na imagem abaixo.
+
 ![Untitled](Imgs/Untitled%201.png)
 
 ### Intruções:
+
+Seguindo a arquitetura Registrador-Memoria, é necessario endereçar além da instrução e do imediato, um dos 4 registradores para ser utilizado na instução, mesmo que a instrução não de fato utilize registradores, pelo barramento é necessario endereçar, fazendo com que a instrução tenha o formato abaixo, com a diferença que no processor do projeto, o endereço da RAM possui o mesmo tamanho da ROM, não sendo necessario os bits 10 e 11 da imagem
+
+![Untitled](Imgs/Untitled%202.png)
+
+A tabela abaixo mostra as instruções inplementadas para o projeto, e os respectivos Mnemonios, que nada mais são do que abreviações utiliadas para a programação em assembly.
 
 | Função | Mnemonio | Binario |
 | --- | --- | --- |
@@ -58,6 +66,10 @@ Para o controle das instruções é utilizado um registrador tambem de 8 bits (P
 
 ## Contador
 
-Desenvolvimento de um processador em arquitetura Harvard de 8 bits em modelo Registrador-Memória. O projeto inicial do contador é capaz de ler um botão precionado na FPGA e mostrar  a contagem de clicks em displays de 7 segmentos
+A partir do hardware descrito acima, foi definido como projeto inicial a implementação de um contador, primeiramente capaz de ler um botão precionado na FPGA e mostrar  a contagem de clicks em displays de 7 segmentos, e em um segundo momento, capaz de ler as posições das chaves como um numero binairo, e definir esse valor como o limite maximo da contagem.
+
+### Software
+
+O software desenvolvido funciona em uma estrutura de 3 blocos principais, um setup inicial, que zera endereços de memoria relevantes e carrega os valores iniciais necessario nos registradores, seguido de um loop principal, que realiza a leitura dos botões e chaves, e chama as funções necessarias do terceiro bloco, que são as sub-rotinas ou funções.
 
 ## Relogio

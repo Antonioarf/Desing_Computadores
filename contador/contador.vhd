@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity contador is
   generic ( larguraDados : natural := 8;
         larguraEnderecos : natural := 9;
-		  larguraPalavra : natural := 12;
+		  larguraPalavra : natural := 13;
         simulacao : boolean := TRUE -- para gravar na placa, altere de TRUE para FALSE
   );
 

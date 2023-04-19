@@ -5,7 +5,7 @@ entity processador is
   -- Total de bits das entradas e saidas
   generic ( larguraDados : natural := 8;
         larguraEnderecos : natural := 9;
-		  larguraPalavra : natural := 12
+		  larguraPalavra : natural := 13
   );
   port   (
     CLK : in std_logic;
@@ -33,7 +33,7 @@ architecture arquiteturaa of processador is
   signal proxPC : std_logic_vector (larguraEnderecos-1 downto 0);
   signal Chave_Operacao_ULA : std_logic;
 
-
+  signal jsq : std_logic;
   signal Jmp : std_logic;
   signal Jeq : std_logic;
   signal Jsr : std_logic;
@@ -95,7 +95,7 @@ decoder :  entity work.decoderInstru port map( opcode => Sinais_ROM(14 downto 11
 -- O port map completo do MUX. 1-B e 0-A
 
 
-Log_Desvio: entity work.logDesvio  port map (jeq => Jeq, jmp  => Jmp, flag => saida_flag, jsr =>Jsr, ret=>Ret,
+Log_Desvio: entity work.logDesvio  port map (jeq => Jeq, jmp  => Jmp, flag => saida_flag, jsr =>Jsr, ret=>Ret, jsq => jsq,
 			saida=> sel_mux_jmp);	
 
 			
@@ -114,6 +114,7 @@ MUX_JMP :  entity work.muxGenerico4x2  generic map (larguraDados => larguraEnder
 					  
 					  
 --JMP	JEQ	Sel MUX	Hab_A	Operação	habFlag	RD	WR
+jsq <= Sinais_Controle(12);
 hab_reg_ret <= Sinais_Controle(11);
 Jmp <= Sinais_Controle(10);
 Ret <= Sinais_Controle(9);
