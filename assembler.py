@@ -6,7 +6,7 @@ from sys import argv
 	 
 registradores = {"R0":"00","R1":"01","R2":"10","R3":"11"}
 pulos={}
-mnemonics = {'NOP': '0000', 'LDA': '0001', 'SOMA': '0010', 'SUB': '0011', 'LDI': '0100', 'STA': '0101', 'JMP': '0110', 'JEQ': '0111', 'CEQ': '1000', 'JSR': '1001', 'RET': "1010", 'SOMI': "1011", 'SUBI': "1100"}
+mnemonics = {'NOP': '0000', 'LDA': '0001', 'SOMA': '0010', 'SUB': '0011', 'LDI': '0100', 'STA': '0101', 'JMP': '0110', 'JEQ': '0111', 'CEQ': '1000', 'JSR': '1001', 'RET': "1010", 'SOMI': "1011", 'SUBI': "1100", "JSQ":"1101" }
 def filtra(linha:str):
     if ";" in linha:
         linha, coment = linha.split(";")

@@ -7,7 +7,7 @@ entity Input is
   port (
 		dados_out : out std_logic_vector((larguraDados-1) downto 0);
 		estado_chaves : in std_logic_vector(9 downto 0);
-		estado_botoes : in std_logic_vector(4 downto 0);
+		estado_botoes : in std_logic_vector(3 downto 0);
 		decoder_1 : in std_logic_vector(7 downto 0);
 		Rd, A5,clk,bloco, limpa0, limpa1: in std_logic
   );
@@ -32,21 +32,16 @@ hab_sw_9 <= bloco and Rd and decoder_1(2) and (not A5);
 
 
 detectorKey0: work.edgeDetector(bordaSubida) port map (clk => clk, entrada => (not estado_botoes(0)), saida => miolo_k0);
-FF_k0 : entity work.FlipFlop port map (DIN =>  '1',DOUT => miolo2_k0,ENABLE => '1',CLK => miolo_k0,RST => limpa0); 
-hab_k0 <= bloco and Rd and decoder_1(0) and A5;
-Buffer_K0 :  entity work.buffer_3_state_8portas port map(entrada => ("0000000" & miolo2_k0) , habilita =>  hab_k0, saida => saida_k0);
+FF_k0 : entity work.FlipFlop port map (DIN =>  '1',DOUT => miolo2_k0, ENABLE => '1', CLK => miolo_k0, RST => limpa0); 
 
-detectorKey4: work.edgeDetector(bordaSubida) port map (clk => clk, entrada => (not estado_botoes(4)), saida => miolo_k4);
-FF_k4 : entity work.FlipFlop port map (DIN =>  '1',DOUT => miolo2_k4,ENABLE => '1',CLK => miolo_k4,RST => limpa1);		 
-hab_k4 <= bloco and Rd and decoder_1(4) and A5;
-Buffer_K4 :  entity work.buffer_3_state_8portas port map(entrada => ("0000000" & miolo2_k4) , habilita =>  hab_k4, saida => saida_k4);			 
-			 
+Buffer_K8 :  entity work.buffer_3_state_8portas port map(entrada => ("0000000" & miolo2_k0) , habilita =>  hab_k0, saida => saida_k0);
+hab_k0 <= bloco and Rd and decoder_1(0) and A5;
+
 
 dados_out<=saida_bloco;		 
 dados_out<=saida_sw_8;		 
 dados_out<=saida_sw_9;		 
 dados_out<=saida_k0;
-dados_out <= saida_k4;
 
 
 end architecture;

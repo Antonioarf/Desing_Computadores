@@ -6,7 +6,7 @@ entity contador is
   generic ( larguraDados : natural := 8;
         larguraEnderecos : natural := 9;
 		  larguraPalavra : natural := 13;
-        simulacao : boolean := TRUE -- para gravar na placa, altere de TRUE para FALSE
+        simulacao : boolean := FALSE -- Define entre clock_50 e Key3 como CLK
   );
 
   port   (
@@ -30,16 +30,18 @@ signal barramento_Ctrl : std_logic_vector (larguraPalavra-1 downto 0);
 signal Pc : std_logic_vector (larguraEnderecos-1 downto 0);
 signal Leds : std_logic_vector (9 downto 0);
 signal Chaves : std_logic_vector (9 downto 0);
-signal Botoes: std_logic_vector(4 downto 0);
+signal Botoes: std_logic_vector(3 downto 0);
 signal sete_segs : std_logic_vector(41 downto 0);
 signal saida_decoder_1 : std_logic_vector (larguraDados-1 downto 0);
 signal saida_decoder_2 : std_logic_vector (larguraDados-1 downto 0);
+signal teste : std_logic_vector(1 downto 0);
 
   
 begin
 -- Para simular, fica mais simples tirar o edgeDetector
 gravar:  if simulacao generate
-CLK <= KEY(3);
+detectorSub0: work.edgeDetector(bordaSubida)
+        port map (clk => CLOCK_50, entrada => (not KEY(3)), saida => CLK);
 else generate
 CLK <= CLOCK_50;
 end generate;
@@ -55,13 +57,17 @@ end generate;
   Decoder678 :  entity work.decoder3x8 port map( entrada => barramento_End(8 downto 6), saida => saida_decoder_2);			 
   Decoder012 :  entity work.decoder3x8 port map( entrada => barramento_End(2 downto 0), saida => saida_decoder_1);			 
 		
+ 
+ BLOCO_7seg :  entity work.Segs7 
+ port map( dados_in => barramento_W(3 downto 0), decoder_1 => saida_decoder_1, bloco => saida_decoder_2(4), Wr=>barramento_Ctrl(0), clk =>CLK, A5=>barramento_End(5), ret =>sete_segs);			 
+
  BLOCO_LEDs :  entity work.LEDs  generic map (larguraDados => larguraDados)
 				port map( dados_in => barramento_W, decoder_1 => saida_decoder_1, decoder_2 => saida_decoder_2, Wr=>barramento_Ctrl(0), clk =>CLOCK_50, A5=>barramento_End(5), ret =>Leds);			 
-
- BLOCO_7seg :  entity work.Segs7 
-				port map( dados_in => barramento_W(3 downto 0), decoder_1 => saida_decoder_1, bloco => saida_decoder_2(4), Wr=>barramento_Ctrl(0), clk =>CLK, A5=>barramento_End(5), ret =>sete_segs);			 
  BLOCO_SW :  entity work.Input 
-				port map( dados_out => barramento_R, decoder_1 => saida_decoder_1, bloco => saida_decoder_2(5), Rd=>barramento_Ctrl(1), clk =>CLK, A5=>barramento_End(5), estado_chaves =>Chaves, estado_botoes=>Botoes, limpa0 =>limpa0, limpa1 =>limpa4 );			 
+				port map(dados_out => barramento_R, decoder_1 => saida_decoder_1, bloco => saida_decoder_2(5), Rd => barramento_Ctrl(1), clk => CLK, A5 => barramento_End(5), estado_chaves => Chaves, estado_botoes => KEY, limpa0 => limpa0, limpa1 => limpa4);
+
+
+				
  limpa0 <= barramento_Ctrl(0) and barramento_End(8) and barramento_End(7) and barramento_End(6) and barramento_End(5) and barramento_End(4) and barramento_End(3) and barramento_End(2) and barramento_End(1) and barramento_End(0);
  limpa4 <= barramento_Ctrl(0) and barramento_End(8) and barramento_End(7) and barramento_End(6) and barramento_End(5) and barramento_End(4) and barramento_End(3) and barramento_End(2) and barramento_End(1) and (not barramento_End(0));
  
@@ -74,6 +80,6 @@ end generate;
 	HEX4 <= sete_segs(34 downto 28);
 	HEX5 <= sete_segs(41 downto 35);
 	Chaves <= SW;
-	Botoes <= FPGA_RESET_N & KEY;
+	Botoes <= KEY;
 
 end architecture;
