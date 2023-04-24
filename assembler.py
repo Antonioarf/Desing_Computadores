@@ -28,19 +28,23 @@ with open(arq) as f:
             else:
                 pulos[line[0]] = contador
                 linha_nova = 15*"0"
+
         elif len(line) == 2:
-            if line[1][0] in ['@', '#']:
+            if line[1][0] in ['@', '$', '#']:
                 end = bin(int(line[1][1:]))[2:].zfill(9)
             else:
                 end = line[1]
+
             linha_nova = mnemonics[line[0]] +"00" + end 
+
         elif len(line) == 3:
             if line[2] in pulos:
                 end = bin(pulos[line[2]])[2:].zfill(9)
             else:
-                
                 end = bin(int(line[2][1:]))[2:].zfill(9)
+
             linha_nova = mnemonics[line[0]] + registradores[line[1]] + end
+
         else:
             pular = True
 
