@@ -84,7 +84,7 @@ O assembler é um programa em python que recebe um arquivo de texto com um códi
 
 O loop principal do programa varre um for entre as linhas no input, e discriminando o tratamento da linha pelo numero de argumento nela presente
 
-```
+```python
 for line in f:
         line, coment = filtra(line)
         if len(line) == 1:
