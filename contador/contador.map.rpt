@@ -1,5 +1,5 @@
 Analysis & Synthesis report for contador
-Mon Apr 24 20:57:58 2023
+Tue Apr 25 02:23:24 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -90,7 +90,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Apr 24 20:57:58 2023       ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr 25 02:23:24 2023       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; contador                                    ;
 ; Top-level Entity Name           ; contador                                    ;
@@ -255,14 +255,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 471            ;
+; Estimate of Logic utilization (ALMs needed) ; 466            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 479            ;
-;     -- 7 input functions                    ; 2              ;
-;     -- 6 input functions                    ; 285            ;
-;     -- 5 input functions                    ; 34             ;
-;     -- 4 input functions                    ; 59             ;
-;     -- <=3 input functions                  ; 99             ;
+; Combinational ALUT usage for logic          ; 472            ;
+;     -- 7 input functions                    ; 1              ;
+;     -- 6 input functions                    ; 281            ;
+;     -- 5 input functions                    ; 27             ;
+;     -- 4 input functions                    ; 63             ;
+;     -- <=3 input functions                  ; 100            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 595            ;
 ;                                             ;                ;
@@ -272,8 +272,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 595            ;
-; Total fan-out                               ; 4308           ;
-; Average fan-out                             ; 3.56           ;
+; Total fan-out                               ; 4261           ;
+; Average fan-out                             ; 3.54           ;
 +---------------------------------------------+----------------+
 
 
@@ -282,10 +282,10 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Entity Name                 ; Library Name ;
 +-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------+-----------------------------+--------------+
-; |contador                                     ; 479 (0)             ; 595 (0)                   ; 0                 ; 0          ; 68   ; 0            ; |contador                                                               ; contador                    ; work         ;
-;    |LEDs:BLOCO_LEDs|                          ; 2 (2)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|LEDs:BLOCO_LEDs                                               ; LEDs                        ; work         ;
+; |contador                                     ; 472 (0)             ; 595 (0)                   ; 0                 ; 0          ; 68   ; 0            ; |contador                                                               ; contador                    ; work         ;
+;    |LEDs:BLOCO_LEDs|                          ; 1 (1)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|LEDs:BLOCO_LEDs                                               ; LEDs                        ; work         ;
 ;       |registradorGenerico:REG_07|            ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|LEDs:BLOCO_LEDs|registradorGenerico:REG_07                    ; registradorGenerico         ; work         ;
-;    |Segs7:BLOCO_7seg|                         ; 49 (7)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg                                              ; Segs7                       ; work         ;
+;    |Segs7:BLOCO_7seg|                         ; 48 (6)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg                                              ; Segs7                       ; work         ;
 ;       |conversorHex7Seg:DEC_0|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|conversorHex7Seg:DEC_0                       ; conversorHex7Seg            ; work         ;
 ;       |conversorHex7Seg:DEC_1|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|conversorHex7Seg:DEC_1                       ; conversorHex7Seg            ; work         ;
 ;       |conversorHex7Seg:DEC_2|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|conversorHex7Seg:DEC_2                       ; conversorHex7Seg            ; work         ;
@@ -298,16 +298,17 @@ https://fpgasoftware.intel.com/eula.
 ;       |registradorGenerico:REG_3|             ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|registradorGenerico:REG_3                    ; registradorGenerico         ; work         ;
 ;       |registradorGenerico:REG_4|             ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|registradorGenerico:REG_4                    ; registradorGenerico         ; work         ;
 ;       |registradorGenerico:REG_5|             ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|registradorGenerico:REG_5                    ; registradorGenerico         ; work         ;
+;    |decoder3x8:Decoder012|                    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|decoder3x8:Decoder012                                         ; decoder3x8                  ; work         ;
 ;    |decoder3x8:Decoder678|                    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|decoder3x8:Decoder678                                         ; decoder3x8                  ; work         ;
 ;    |memoriaRAM:RAM|                           ; 297 (297)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |contador|memoriaRAM:RAM                                                ; memoriaRAM                  ; work         ;
-;    |processador:Processador|                  ; 130 (0)             ; 51 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |contador|processador:Processador                                       ; processador                 ; work         ;
+;    |processador:Processador|                  ; 124 (0)             ; 51 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |contador|processador:Processador                                       ; processador                 ; work         ;
 ;       |ULASomaSub:ULA1|                       ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|processador:Processador|ULASomaSub:ULA1                       ; ULASomaSub                  ; work         ;
 ;       |bancoRegistradoresArqRegMem:Banco_Reg| ; 12 (12)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |contador|processador:Processador|bancoRegistradoresArqRegMem:Banco_Reg ; bancoRegistradoresArqRegMem ; work         ;
 ;       |decoderInstru:decoder|                 ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|processador:Processador|decoderInstru:decoder                 ; decoderInstru               ; work         ;
 ;       |flipflop:flag_ula|                     ; 3 (3)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|processador:Processador|flipflop:flag_ula                     ; flipflop                    ; work         ;
-;       |memoriaROM:ROM1|                       ; 60 (60)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|processador:Processador|memoriaROM:ROM1                       ; memoriaROM                  ; work         ;
-;       |muxGenerico2x1:MUX1|                   ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|processador:Processador|muxGenerico2x1:MUX1                   ; muxGenerico2x1              ; work         ;
-;       |muxGenerico4x2:MUX_JMP|                ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|processador:Processador|muxGenerico4x2:MUX_JMP                ; muxGenerico4x2              ; work         ;
+;       |memoriaROM:ROM1|                       ; 54 (54)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|processador:Processador|memoriaROM:ROM1                       ; memoriaROM                  ; work         ;
+;       |muxGenerico2x1:MUX1|                   ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|processador:Processador|muxGenerico2x1:MUX1                   ; muxGenerico2x1              ; work         ;
+;       |muxGenerico4x2:MUX_JMP|                ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|processador:Processador|muxGenerico4x2:MUX_JMP                ; muxGenerico4x2              ; work         ;
 ;       |registradorGenerico:PC|                ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|processador:Processador|registradorGenerico:PC                ; registradorGenerico         ; work         ;
 ;       |registradorGenerico:Salva_Ret|         ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|processador:Processador|registradorGenerico:Salva_Ret         ; registradorGenerico         ; work         ;
 ;       |somaConstante:incrementaPC|            ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|processador:Processador|somaConstante:incrementaPC            ; somaConstante               ; work         ;
@@ -809,24 +810,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 553                         ;
 ;     ENA SLD           ; 32                          ;
 ;     plain             ; 10                          ;
-; arriav_lcell_comb     ; 480                         ;
+; arriav_lcell_comb     ; 473                         ;
 ;     arith             ; 18                          ;
 ;         1 data inputs ; 9                           ;
 ;         3 data inputs ; 1                           ;
 ;         5 data inputs ; 8                           ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 460                         ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 454                         ;
 ;         0 data inputs ; 1                           ;
 ;         2 data inputs ; 75                          ;
-;         3 data inputs ; 14                          ;
-;         4 data inputs ; 59                          ;
-;         5 data inputs ; 26                          ;
-;         6 data inputs ; 285                         ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 63                          ;
+;         5 data inputs ; 19                          ;
+;         6 data inputs ; 281                         ;
 ; boundary_port         ; 68                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.30                       ;
-; Average LUT depth     ; 6.51                        ;
+; Average LUT depth     ; 6.45                        ;
 +-----------------------+-----------------------------+
 
 
@@ -845,7 +846,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Apr 24 20:57:51 2023
+    Info: Processing started: Tue Apr 25 02:23:15 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off contador -c contador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -978,14 +979,14 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 14
     Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 14
     Warning (15610): No output dependent on input pin "FPGA_RESET_N" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 15
-Info (21057): Implemented 1132 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1125 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 1064 logic cells
+    Info (21061): Implemented 1057 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 4911 megabytes
-    Info: Processing ended: Mon Apr 24 20:57:58 2023
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 4921 megabytes
+    Info: Processing ended: Tue Apr 25 02:23:24 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:08
 
 
