@@ -45,7 +45,7 @@ detectorSub0: work.edgeDetector(bordaSubida)
         port map (clk => CLOCK_50, entrada => (not KEY(3)), saida => CLK);
 else generate
 CLK <= CLOCK_50;			
-DetectorSub0: work.edgeDetector(bordaSubida) port map(clk => CLOCK_50, entrada => (not KEY(0)), saida 	=> KEY_0_tratado );
+--DetectorSub0: work.edgeDetector(bordaSubida) port map(clk => CLOCK_50, entrada => (not SW(9)), saida 	=> KEY_0_tratado );
 
 end generate;
 
@@ -73,10 +73,11 @@ end generate;
 --KEY_0: entity work.buffer_3_state_8portas port map(entrada => ("0000000" & DEBOUNCER_OUT_0), habilita => (saida_decoder_2(5) and barramento_Ctrl(1) and barramento_End(5) and saida_decoder_1(0)), saida => saida_key);
  limpa0 <= barramento_Ctrl(0) and barramento_End(8) and barramento_End(7) and barramento_End(6) and barramento_End(5) and barramento_End(4) and barramento_End(3) and barramento_End(2) and barramento_End(1) and barramento_End(0);
  limpa4 <= barramento_Ctrl(0) and barramento_End(8) and barramento_End(7) and barramento_End(6) and barramento_End(5) and barramento_End(4) and barramento_End(3) and barramento_End(2) and barramento_End(1) and (not barramento_End(0));
+ DetectorSub0: work.edgeDetector(bordaSubida) port map(clk => CLOCK_50, entrada => (not KEY(0)), saida 	=> KEY_0_tratado );
+
  
- 
-   
-Buffer_k0 :  entity work.buffer_3_state_8portas port map(entrada => ("0000000" & KEY(0)),habilita=> (saida_decoder_2(5) and barramento_Ctrl(1) and barramento_End(5) and saida_decoder_1(0)), saida => saida_key);
+FF_DEBOUNCER_0: entity work.flipflop port map(DIN => '1', DOUT=> DEBOUNCER_OUT_0, ENABLE	=> '1', CLK => KEY_0_tratado, RST	=> limpa0);                		   
+Buffer_k0 :  entity work.buffer_3_state_8portas port map(entrada => ("0000000" & (not KEY(0) )) ,habilita=> (saida_decoder_2(5) and barramento_Ctrl(1) and barramento_End(5) and saida_decoder_1(0)), saida => saida_key);
 
 	--PC_OUT<=Pc;		 
    LEDR(7 downto 0)<= Leds(7 downto 0);
