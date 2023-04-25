@@ -22,7 +22,7 @@ end entity;
 
 
 architecture arquitetura of contador is
-signal CLK, limpa0, limpa4: std_logic;
+signal CLK, limpa0, limpa4, KEY_0_tratado, DEBOUNCER_OUT_0 : std_logic;
 signal barramento_R : std_logic_vector (larguraDados-1 downto 0);
 signal barramento_W : std_logic_vector (larguraDados-1 downto 0);
 signal barramento_End : std_logic_vector (larguraEnderecos-1 downto 0);
@@ -34,6 +34,7 @@ signal Botoes: std_logic_vector(3 downto 0);
 signal sete_segs : std_logic_vector(41 downto 0);
 signal saida_decoder_1 : std_logic_vector (larguraDados-1 downto 0);
 signal saida_decoder_2 : std_logic_vector (larguraDados-1 downto 0);
+signal saida_key : std_logic_vector (larguraDados-1 downto 0);
 signal teste : std_logic_vector(1 downto 0);
 
   
@@ -43,7 +44,9 @@ gravar:  if simulacao generate
 detectorSub0: work.edgeDetector(bordaSubida)
         port map (clk => CLOCK_50, entrada => (not KEY(3)), saida => CLK);
 else generate
-CLK <= CLOCK_50;
+CLK <= CLOCK_50;			
+--DetectorSub0: work.edgeDetector(bordaSubida) port map(clk => CLOCK_50, entrada => (not SW(9)), saida 	=> KEY_0_tratado );
+
 end generate;
 
 
@@ -66,13 +69,18 @@ end generate;
  BLOCO_SW :  entity work.Input 
 				port map(dados_out => barramento_R, decoder_1 => saida_decoder_1, bloco => saida_decoder_2(5), Rd => barramento_Ctrl(1), clk => CLK, A5 => barramento_End(5), estado_chaves => Chaves, estado_botoes => KEY, limpa0 => limpa0, limpa1 => limpa4);
 
-
-				
+--FF_DEBOUNCER_0: entity work.flipflop port map(DIN => '1', DOUT=> DEBOUNCER_OUT_0, ENABLE	=> '1', CLK => KEY_0_tratado, RST	=> limpa0);                		
+--KEY_0: entity work.buffer_3_state_8portas port map(entrada => ("0000000" & DEBOUNCER_OUT_0), habilita => (saida_decoder_2(5) and barramento_Ctrl(1) and barramento_End(5) and saida_decoder_1(0)), saida => saida_key);
  limpa0 <= barramento_Ctrl(0) and barramento_End(8) and barramento_End(7) and barramento_End(6) and barramento_End(5) and barramento_End(4) and barramento_End(3) and barramento_End(2) and barramento_End(1) and barramento_End(0);
  limpa4 <= barramento_Ctrl(0) and barramento_End(8) and barramento_End(7) and barramento_End(6) and barramento_End(5) and barramento_End(4) and barramento_End(3) and barramento_End(2) and barramento_End(1) and (not barramento_End(0));
+ DetectorSub0: work.edgeDetector(bordaSubida) port map(clk => CLOCK_50, entrada => (not KEY(0)), saida 	=> KEY_0_tratado );
+
  
+FF_DEBOUNCER_0: entity work.flipflop port map(DIN => '1', DOUT=> DEBOUNCER_OUT_0, ENABLE	=> '1', CLK => KEY_0_tratado, RST	=> limpa0);                		   
+Buffer_k0 :  entity work.buffer_3_state_8portas port map(entrada => ("0000000" & (not KEY(0) )) ,habilita=> (saida_decoder_2(5) and barramento_Ctrl(1) and barramento_End(5) and saida_decoder_1(0)), saida => saida_key);
+
 	--PC_OUT<=Pc;		 
-   LEDR<= Leds;
+   LEDR(7 downto 0)<= Leds(7 downto 0);
 	HEX0 <= sete_segs(6 downto 0);
 	HEX1 <= sete_segs(13 downto 7);
 	HEX2 <= sete_segs(20 downto 14);
@@ -81,5 +89,7 @@ end generate;
 	HEX5 <= sete_segs(41 downto 35);
 	Chaves <= SW;
 	Botoes <= KEY;
+	LEDR(9)<= KEY(0);
+        barramento_R <= saida_key;
 
 end architecture;

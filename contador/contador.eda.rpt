@@ -1,5 +1,5 @@
 EDA Netlist Writer report for contador
-Wed Apr 12 23:02:39 2023
+Mon Apr 24 15:27:08 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Apr 12 23:02:39 2023 ;
+; EDA Netlist Writer Status ; Successful - Mon Apr 24 15:27:08 2023 ;
 ; Revision Name             ; contador                              ;
 ; Top-level Entity Name     ; contador                              ;
 ; Family                    ; Cyclone V                             ;
@@ -66,13 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+----------------------------------------------------------------------------------+
-; Simulation Generated Files                                                       ;
-+----------------------------------------------------------------------------------+
-; Generated Files                                                                  ;
-+----------------------------------------------------------------------------------+
-; /home/antonio/Desktop/Desing_Computadores/contador/simulation/qsim//contador.vho ;
-+----------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                          ;
++---------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                     ;
++---------------------------------------------------------------------------------------------------------------------+
+; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/simulation/qsim//contador.vho ;
++---------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -95,15 +95,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Apr 12 23:02:39 2023
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/antonio/Desktop/Desing_Computadores/contador/simulation/qsim/ contador -c contador
+    Info: Processing started: Mon Apr 24 15:27:08 2023
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/simulation/qsim/ contador -c contador
 Info (119006): Selected device 5CEBA4F23C7 for design "contador"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file contador.vho in folder "/home/antonio/Desktop/Desing_Computadores/contador/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file contador.vho in folder "C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 667 megabytes
-    Info: Processing ended: Wed Apr 12 23:02:39 2023
+    Info: Peak virtual memory: 4721 megabytes
+    Info: Processing ended: Mon Apr 24 15:27:08 2023
     Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 

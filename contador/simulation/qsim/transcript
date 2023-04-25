@@ -1,7 +1,7 @@
 # do contador.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:02:40 on Apr 12,2023
+# Start time: 15:27:09 on Apr 24,2023
 # vcom -work work contador.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -15,20 +15,20 @@
 # -- Loading package cyclonev_components
 # -- Compiling entity contador
 # -- Compiling architecture structure of contador
-# End time: 23:02:40 on Apr 12,2023, Elapsed time: 0:00:00
+# End time: 15:27:09 on Apr 24,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:02:40 on Apr 12,2023
-# vcom -work work Waveform1.vwf.vht 
+# Start time: 15:27:09 on Apr 24,2023
+# vcom -work work Waveform2.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity contador_vhd_vec_tst
 # -- Compiling architecture contador_arch of contador_vhd_vec_tst
-# End time: 23:02:40 on Apr 12,2023, Elapsed time: 0:00:00
+# End time: 15:27:09 on Apr 24,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.contador_vhd_vec_tst 
-# Start time: 23:02:40 on Apr 12,2023
+# Start time: 15:27:10 on Apr 24,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -46,8 +46,8 @@
 # Loading cyclonev.cyclonev_io_ibuf(arch)
 # Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 51223 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 200176 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#34
-# End time: 23:02:40 on Apr 12,2023, Elapsed time: 0:00:00
+# End time: 15:27:10 on Apr 24,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
