@@ -1,5 +1,5 @@
 Analysis & Synthesis report for contador
-Tue Apr 25 02:23:24 2023
+Tue May 02 15:15:04 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -36,34 +36,35 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  28. Parameter Settings for User Entity Instance: LEDs:BLOCO_LEDs
  29. Parameter Settings for User Entity Instance: LEDs:BLOCO_LEDs|registradorGenerico:REG_07
  30. Parameter Settings for User Entity Instance: Input:BLOCO_SW
- 31. Port Connectivity Checks: "buffer_3_state_8portas:Buffer_k0"
- 32. Port Connectivity Checks: "flipflop:FF_DEBOUNCER_0"
- 33. Port Connectivity Checks: "Input:BLOCO_SW|buffer_3_state_8portas:Buffer_sw9"
- 34. Port Connectivity Checks: "Input:BLOCO_SW|buffer_3_state_8portas:Buffer_sw8"
- 35. Port Connectivity Checks: "LEDs:BLOCO_LEDs|flipflop:FF_9"
- 36. Port Connectivity Checks: "LEDs:BLOCO_LEDs|flipflop:FF_8"
- 37. Port Connectivity Checks: "LEDs:BLOCO_LEDs|registradorGenerico:REG_07"
- 38. Port Connectivity Checks: "LEDs:BLOCO_LEDs"
- 39. Port Connectivity Checks: "Segs7:BLOCO_7seg|conversorHex7Seg:DEC_5"
- 40. Port Connectivity Checks: "Segs7:BLOCO_7seg|registradorGenerico:REG_5"
- 41. Port Connectivity Checks: "Segs7:BLOCO_7seg|conversorHex7Seg:DEC_4"
- 42. Port Connectivity Checks: "Segs7:BLOCO_7seg|registradorGenerico:REG_4"
- 43. Port Connectivity Checks: "Segs7:BLOCO_7seg|conversorHex7Seg:DEC_3"
- 44. Port Connectivity Checks: "Segs7:BLOCO_7seg|registradorGenerico:REG_3"
- 45. Port Connectivity Checks: "Segs7:BLOCO_7seg|conversorHex7Seg:DEC_2"
- 46. Port Connectivity Checks: "Segs7:BLOCO_7seg|registradorGenerico:REG_2"
- 47. Port Connectivity Checks: "Segs7:BLOCO_7seg|conversorHex7Seg:DEC_1"
- 48. Port Connectivity Checks: "Segs7:BLOCO_7seg|registradorGenerico:REG_1"
- 49. Port Connectivity Checks: "Segs7:BLOCO_7seg|conversorHex7Seg:DEC_0"
- 50. Port Connectivity Checks: "Segs7:BLOCO_7seg|registradorGenerico:REG_0"
- 51. Port Connectivity Checks: "processador:Processador|muxGenerico4x2:MUX_JMP"
- 52. Port Connectivity Checks: "processador:Processador|registradorGenerico:Salva_Ret"
- 53. Port Connectivity Checks: "processador:Processador|flipflop:flag_ula"
- 54. Port Connectivity Checks: "processador:Processador|registradorGenerico:PC"
- 55. Port Connectivity Checks: "processador:Processador"
- 56. Post-Synthesis Netlist Statistics for Top Partition
- 57. Elapsed Time Per Partition
- 58. Analysis & Synthesis Messages
+ 31. Parameter Settings for User Entity Instance: divisorGenerico:baseTempo
+ 32. Port Connectivity Checks: "buffer_3_state_8portas:Buffer_k0"
+ 33. Port Connectivity Checks: "flipflop:FF_DEBOUNCER_0"
+ 34. Port Connectivity Checks: "Input:BLOCO_SW|buffer_3_state_8portas:Buffer_sw9"
+ 35. Port Connectivity Checks: "Input:BLOCO_SW|buffer_3_state_8portas:Buffer_sw8"
+ 36. Port Connectivity Checks: "LEDs:BLOCO_LEDs|flipflop:FF_9"
+ 37. Port Connectivity Checks: "LEDs:BLOCO_LEDs|flipflop:FF_8"
+ 38. Port Connectivity Checks: "LEDs:BLOCO_LEDs|registradorGenerico:REG_07"
+ 39. Port Connectivity Checks: "LEDs:BLOCO_LEDs"
+ 40. Port Connectivity Checks: "Segs7:BLOCO_7seg|conversorHex7Seg:DEC_5"
+ 41. Port Connectivity Checks: "Segs7:BLOCO_7seg|registradorGenerico:REG_5"
+ 42. Port Connectivity Checks: "Segs7:BLOCO_7seg|conversorHex7Seg:DEC_4"
+ 43. Port Connectivity Checks: "Segs7:BLOCO_7seg|registradorGenerico:REG_4"
+ 44. Port Connectivity Checks: "Segs7:BLOCO_7seg|conversorHex7Seg:DEC_3"
+ 45. Port Connectivity Checks: "Segs7:BLOCO_7seg|registradorGenerico:REG_3"
+ 46. Port Connectivity Checks: "Segs7:BLOCO_7seg|conversorHex7Seg:DEC_2"
+ 47. Port Connectivity Checks: "Segs7:BLOCO_7seg|registradorGenerico:REG_2"
+ 48. Port Connectivity Checks: "Segs7:BLOCO_7seg|conversorHex7Seg:DEC_1"
+ 49. Port Connectivity Checks: "Segs7:BLOCO_7seg|registradorGenerico:REG_1"
+ 50. Port Connectivity Checks: "Segs7:BLOCO_7seg|conversorHex7Seg:DEC_0"
+ 51. Port Connectivity Checks: "Segs7:BLOCO_7seg|registradorGenerico:REG_0"
+ 52. Port Connectivity Checks: "processador:Processador|muxGenerico4x2:MUX_JMP"
+ 53. Port Connectivity Checks: "processador:Processador|registradorGenerico:Salva_Ret"
+ 54. Port Connectivity Checks: "processador:Processador|flipflop:flag_ula"
+ 55. Port Connectivity Checks: "processador:Processador|registradorGenerico:PC"
+ 56. Port Connectivity Checks: "processador:Processador"
+ 57. Post-Synthesis Netlist Statistics for Top Partition
+ 58. Elapsed Time Per Partition
+ 59. Analysis & Synthesis Messages
 
 
 
@@ -90,13 +91,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 25 02:23:24 2023       ;
+; Analysis & Synthesis Status     ; Successful - Tue May 02 15:15:04 2023       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; contador                                    ;
 ; Top-level Entity Name           ; contador                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 595                                         ;
+; Total registers                 ; 600                                         ;
 ; Total pins                      ; 68                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -213,41 +214,37 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processors 9-16        ;   0.0%      ;
+;     Processors 4-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                 ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                          ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+---------+
-; ULASomaSub.vhd                   ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/ULASomaSub.vhd                  ;         ;
-; memoriaROM.vhd                   ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/memoriaROM.vhd                  ;         ;
-; memoriaRAM.vhd                   ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/memoriaRAM.vhd                  ;         ;
-; logDesvio.vhd                    ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/logDesvio.vhd                   ;         ;
-; LEDs.vhd                         ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/LEDs.vhd                        ;         ;
-; flipflop.vhd                     ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/flipflop.vhd                    ;         ;
-; somaConstante.vhd                ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/somaConstante.vhd               ;         ;
-; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/registradorGenerico.vhd         ;         ;
-; processador.vhd                  ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/processador.vhd                 ;         ;
-; muxGenerico4x2.vhd               ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd              ;         ;
-; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico2x1.vhd              ;         ;
-; edgeDetector.vhd                 ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/edgeDetector.vhd                ;         ;
-; decoderInstru.vhd                ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/decoderInstru.vhd               ;         ;
-; decoder3x8.vhd                   ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/decoder3x8.vhd                  ;         ;
-; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/conversorHex7Seg.vhd            ;         ;
-; contador.vhd                     ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd                    ;         ;
-; Segs7.vhd                        ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/Segs7.vhd                       ;         ;
-; Input.vhd                        ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/Input.vhd                       ;         ;
-; buffer_3_state_8portas.vhd       ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/buffer_3_state_8portas.vhd      ;         ;
-; bancoRegistradoresArqRegMem.vhd  ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/bancoRegistradoresArqRegMem.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                         ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+---------+
+; ULASomaSub.vhd                   ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/ULASomaSub.vhd                  ;         ;
+; memoriaROM.vhd                   ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/memoriaROM.vhd                  ;         ;
+; memoriaRAM.vhd                   ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/memoriaRAM.vhd                  ;         ;
+; logDesvio.vhd                    ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/logDesvio.vhd                   ;         ;
+; LEDs.vhd                         ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/LEDs.vhd                        ;         ;
+; flipflop.vhd                     ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/flipflop.vhd                    ;         ;
+; somaConstante.vhd                ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/somaConstante.vhd               ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/registradorGenerico.vhd         ;         ;
+; processador.vhd                  ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/processador.vhd                 ;         ;
+; muxGenerico4x2.vhd               ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd              ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico2x1.vhd              ;         ;
+; edgeDetector.vhd                 ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/edgeDetector.vhd                ;         ;
+; decoderInstru.vhd                ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/decoderInstru.vhd               ;         ;
+; decoder3x8.vhd                   ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/decoder3x8.vhd                  ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/conversorHex7Seg.vhd            ;         ;
+; contador.vhd                     ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd                    ;         ;
+; Segs7.vhd                        ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/Segs7.vhd                       ;         ;
+; Input.vhd                        ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/Input.vhd                       ;         ;
+; buffer_3_state_8portas.vhd       ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/buffer_3_state_8portas.vhd      ;         ;
+; bancoRegistradoresArqRegMem.vhd  ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/bancoRegistradoresArqRegMem.vhd ;         ;
+; divisorGenerico.vhd              ; yes             ; User VHDL File  ; C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/divisorGenerico.vhd             ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -255,24 +252,24 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 466            ;
+; Estimate of Logic utilization (ALMs needed) ; 468            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 472            ;
+; Combinational ALUT usage for logic          ; 477            ;
 ;     -- 7 input functions                    ; 1              ;
 ;     -- 6 input functions                    ; 281            ;
-;     -- 5 input functions                    ; 27             ;
-;     -- 4 input functions                    ; 63             ;
-;     -- <=3 input functions                  ; 100            ;
+;     -- 5 input functions                    ; 28             ;
+;     -- 4 input functions                    ; 65             ;
+;     -- <=3 input functions                  ; 102            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 595            ;
+; Dedicated logic registers                   ; 600            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 68             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 595            ;
-; Total fan-out                               ; 4261           ;
+; Maximum fan-out                             ; 600            ;
+; Total fan-out                               ; 4289           ;
 ; Average fan-out                             ; 3.54           ;
 +---------------------------------------------+----------------+
 
@@ -282,7 +279,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Entity Name                 ; Library Name ;
 +-----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------+-----------------------------+--------------+
-; |contador                                     ; 472 (0)             ; 595 (0)                   ; 0                 ; 0          ; 68   ; 0            ; |contador                                                               ; contador                    ; work         ;
+; |contador                                     ; 477 (0)             ; 600 (0)                   ; 0                 ; 0          ; 68   ; 0            ; |contador                                                               ; contador                    ; work         ;
 ;    |LEDs:BLOCO_LEDs|                          ; 1 (1)               ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|LEDs:BLOCO_LEDs                                               ; LEDs                        ; work         ;
 ;       |registradorGenerico:REG_07|            ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|LEDs:BLOCO_LEDs|registradorGenerico:REG_07                    ; registradorGenerico         ; work         ;
 ;    |Segs7:BLOCO_7seg|                         ; 48 (6)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg                                              ; Segs7                       ; work         ;
@@ -300,6 +297,7 @@ https://fpgasoftware.intel.com/eula.
 ;       |registradorGenerico:REG_5|             ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|Segs7:BLOCO_7seg|registradorGenerico:REG_5                    ; registradorGenerico         ; work         ;
 ;    |decoder3x8:Decoder012|                    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|decoder3x8:Decoder012                                         ; decoder3x8                  ; work         ;
 ;    |decoder3x8:Decoder678|                    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|decoder3x8:Decoder678                                         ; decoder3x8                  ; work         ;
+;    |divisorGenerico:baseTempo|                ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|divisorGenerico:baseTempo                                     ; divisorGenerico             ; work         ;
 ;    |memoriaRAM:RAM|                           ; 297 (297)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |contador|memoriaRAM:RAM                                                ; memoriaRAM                  ; work         ;
 ;    |processador:Processador|                  ; 124 (0)             ; 51 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |contador|processador:Processador                                       ; processador                 ; work         ;
 ;       |ULASomaSub:ULA1|                       ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |contador|processador:Processador|ULASomaSub:ULA1                       ; ULASomaSub                  ; work         ;
@@ -321,7 +319,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 595   ;
+; Total registers                              ; 600   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 32    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -336,8 +334,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
-; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |contador|processador:Processador|registradorGenerico:PC|DOUT[5] ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |contador|processador:Processador|decoderInstru:decoder|saida[1] ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |contador|processador:Processador|registradorGenerico:PC|DOUT[8] ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |contador|processador:Processador|decoderInstru:decoder|saida[6] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 
 
@@ -557,6 +555,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------+
 ; larguradados   ; 8     ; Signed Integer                     ;
 +----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisorGenerico:baseTempo ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; divisor        ; 8     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -806,28 +814,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 595                         ;
+; arriav_ff             ; 600                         ;
 ;     ENA               ; 553                         ;
 ;     ENA SLD           ; 32                          ;
-;     plain             ; 10                          ;
-; arriav_lcell_comb     ; 473                         ;
+;     plain             ; 15                          ;
+; arriav_lcell_comb     ; 478                         ;
 ;     arith             ; 18                          ;
 ;         1 data inputs ; 9                           ;
 ;         3 data inputs ; 1                           ;
 ;         5 data inputs ; 8                           ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 454                         ;
+;     normal            ; 459                         ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 75                          ;
-;         3 data inputs ; 15                          ;
-;         4 data inputs ; 63                          ;
-;         5 data inputs ; 19                          ;
+;         2 data inputs ; 76                          ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 65                          ;
+;         5 data inputs ; 20                          ;
 ;         6 data inputs ; 281                         ;
 ; boundary_port         ; 68                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.30                       ;
-; Average LUT depth     ; 6.45                        ;
+; Average LUT depth     ; 6.40                        ;
 +-----------------------+-----------------------------+
 
 
@@ -846,147 +854,151 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Apr 25 02:23:15 2023
+    Info: Processing started: Tue May 02 15:14:56 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off contador -c contador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ulasomasub.vhd
-    Info (12022): Found design unit 1: ULASomaSub-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/ULASomaSub.vhd Line: 15
-    Info (12023): Found entity 1: ULASomaSub File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/ULASomaSub.vhd Line: 5
+    Info (12022): Found design unit 1: ULASomaSub-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/ULASomaSub.vhd Line: 15
+    Info (12023): Found entity 1: ULASomaSub File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/ULASomaSub.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file memoriarom.vhd
-    Info (12022): Found design unit 1: memoriaROM-assincrona File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/memoriaROM.vhd Line: 16
-    Info (12023): Found entity 1: memoriaROM File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/memoriaROM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaROM-assincrona File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/memoriaROM.vhd Line: 16
+    Info (12023): Found entity 1: memoriaROM File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/memoriaROM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file memoriaram.vhd
-    Info (12022): Found design unit 1: memoriaRAM-rtl File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/memoriaRAM.vhd Line: 21
-    Info (12023): Found entity 1: memoriaRAM File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/memoriaRAM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaRAM-rtl File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/memoriaRAM.vhd Line: 21
+    Info (12023): Found entity 1: memoriaRAM File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/memoriaRAM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file logdesvio.vhd
-    Info (12022): Found design unit 1: logDesvio-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/logDesvio.vhd Line: 15
-    Info (12023): Found entity 1: logDesvio File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/logDesvio.vhd Line: 4
+    Info (12022): Found design unit 1: logDesvio-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/logDesvio.vhd Line: 15
+    Info (12023): Found entity 1: logDesvio File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/logDesvio.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file leds.vhd
-    Info (12022): Found design unit 1: LEDs-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/LEDs.vhd Line: 16
-    Info (12023): Found entity 1: LEDs File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/LEDs.vhd Line: 4
+    Info (12022): Found design unit 1: LEDs-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/LEDs.vhd Line: 16
+    Info (12023): Found entity 1: LEDs File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/LEDs.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file flipflop.vhd
-    Info (12022): Found design unit 1: flipflop-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/flipflop.vhd Line: 14
-    Info (12023): Found entity 1: flipflop File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/flipflop.vhd Line: 5
+    Info (12022): Found design unit 1: flipflop-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/flipflop.vhd Line: 14
+    Info (12023): Found entity 1: flipflop File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/flipflop.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file somaconstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/somaConstante.vhd Line: 18
-    Info (12023): Found entity 1: somaConstante File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/somaConstante.vhd Line: 5
+    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/somaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/somaConstante.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/registradorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: registradorGenerico File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/registradorGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/registradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/registradorGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file processador.vhd
-    Info (12022): Found design unit 1: processador-arquiteturaa File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/processador.vhd Line: 21
-    Info (12023): Found entity 1: processador File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/processador.vhd Line: 4
+    Info (12022): Found design unit 1: processador-arquiteturaa File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/processador.vhd Line: 21
+    Info (12023): Found entity 1: processador File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/processador.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico4x2.vhd
-    Info (12022): Found design unit 1: muxGenerico4x2-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico4x2 File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico4x2-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico4x2 File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico2x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico2x1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico2x1.vhd Line: 4
 Info (12021): Found 3 design units, including 1 entities, in source file edgedetector.vhd
-    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/edgeDetector.vhd Line: 10
-    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/edgeDetector.vhd Line: 23
-    Info (12023): Found entity 1: edgeDetector File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/edgeDetector.vhd Line: 4
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/edgeDetector.vhd Line: 10
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/edgeDetector.vhd Line: 23
+    Info (12023): Found entity 1: edgeDetector File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/edgeDetector.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file decoderinstru.vhd
-    Info (12022): Found design unit 1: decoderInstru-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/decoderInstru.vhd Line: 10
-    Info (12023): Found entity 1: decoderInstru File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/decoderInstru.vhd Line: 4
+    Info (12022): Found design unit 1: decoderInstru-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/decoderInstru.vhd Line: 10
+    Info (12023): Found entity 1: decoderInstru File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/decoderInstru.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file decoder3x8.vhd
-    Info (12022): Found design unit 1: decoder3x8-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/decoder3x8.vhd Line: 10
-    Info (12023): Found entity 1: decoder3x8 File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/decoder3x8.vhd Line: 4
+    Info (12022): Found design unit 1: decoder3x8-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/decoder3x8.vhd Line: 10
+    Info (12023): Found entity 1: decoder3x8 File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/decoder3x8.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
-    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/conversorHex7Seg.vhd Line: 17
-    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/conversorHex7Seg.vhd Line: 4
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/conversorHex7Seg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file contador.vhd
-    Info (12022): Found design unit 1: contador-arquitetura File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 24
-    Info (12023): Found entity 1: contador File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 5
+    Info (12022): Found design unit 1: contador-arquitetura File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd Line: 24
+    Info (12023): Found entity 1: contador File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file segs7.vhd
-    Info (12022): Found design unit 1: Segs7-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/Segs7.vhd Line: 15
-    Info (12023): Found entity 1: Segs7 File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/Segs7.vhd Line: 4
+    Info (12022): Found design unit 1: Segs7-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/Segs7.vhd Line: 15
+    Info (12023): Found entity 1: Segs7 File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/Segs7.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file input.vhd
-    Info (12022): Found design unit 1: Input-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/Input.vhd Line: 16
-    Info (12023): Found entity 1: Input File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/Input.vhd Line: 4
+    Info (12022): Found design unit 1: Input-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/Input.vhd Line: 16
+    Info (12023): Found entity 1: Input File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/Input.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file buffer_3_state_8portas.vhd
-    Info (12022): Found design unit 1: buffer_3_state_8portas-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/buffer_3_state_8portas.vhd Line: 11
-    Info (12023): Found entity 1: buffer_3_state_8portas File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/buffer_3_state_8portas.vhd Line: 4
+    Info (12022): Found design unit 1: buffer_3_state_8portas-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/buffer_3_state_8portas.vhd Line: 11
+    Info (12023): Found entity 1: buffer_3_state_8portas File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/buffer_3_state_8portas.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradoresarqregmem.vhd
-    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/bancoRegistradoresArqRegMem.vhd Line: 23
-    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/bancoRegistradoresArqRegMem.vhd Line: 5
+    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/bancoRegistradoresArqRegMem.vhd Line: 23
+    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/bancoRegistradoresArqRegMem.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file divisorgenerico.vhd
+    Info (12022): Found design unit 1: divisorGenerico-divInteiro File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/divisorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: divisorGenerico File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/divisorGenerico.vhd Line: 5
 Info (12127): Elaborating entity "contador" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at contador.vhd(25): object "DEBOUNCER_OUT_0" assigned a value but never read File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 25
-Warning (10036): Verilog HDL or VHDL warning at contador.vhd(30): object "Pc" assigned a value but never read File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 30
-Warning (10036): Verilog HDL or VHDL warning at contador.vhd(33): object "Botoes" assigned a value but never read File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 33
-Warning (10873): Using initial value X (don't care) for net "LEDR[8]" at contador.vhd(19) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 19
-Info (12128): Elaborating entity "processador" for hierarchy "processador:Processador" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 53
-Warning (10036): Verilog HDL or VHDL warning at processador.vhd(45): object "hab_read" assigned a value but never read File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/processador.vhd Line: 45
-Warning (10036): Verilog HDL or VHDL warning at processador.vhd(46): object "hab_wrt" assigned a value but never read File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/processador.vhd Line: 46
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:Processador|muxGenerico2x1:MUX1" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/processador.vhd Line: 60
-Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "processador:Processador|bancoRegistradoresArqRegMem:Banco_Reg" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/processador.vhd Line: 69
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "processador:Processador|registradorGenerico:PC" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/processador.vhd Line: 74
-Info (12128): Elaborating entity "somaConstante" for hierarchy "processador:Processador|somaConstante:incrementaPC" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/processador.vhd Line: 77
-Info (12128): Elaborating entity "ULASomaSub" for hierarchy "processador:Processador|ULASomaSub:ULA1" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/processador.vhd Line: 82
-Info (12128): Elaborating entity "memoriaROM" for hierarchy "processador:Processador|memoriaROM:ROM1" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/processador.vhd Line: 87
-Info (12128): Elaborating entity "decoderInstru" for hierarchy "processador:Processador|decoderInstru:decoder" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/processador.vhd Line: 91
-Info (12128): Elaborating entity "logDesvio" for hierarchy "processador:Processador|logDesvio:Log_Desvio" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/processador.vhd Line: 98
-Info (12128): Elaborating entity "flipflop" for hierarchy "processador:Processador|flipflop:flag_ula" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/processador.vhd Line: 102
-Info (12128): Elaborating entity "muxGenerico4x2" for hierarchy "processador:Processador|muxGenerico4x2:MUX_JMP" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/processador.vhd Line: 107
-Info (10041): Inferred latch for "saida_MUX[0]" at muxGenerico4x2.vhd(16) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 16
-Info (10041): Inferred latch for "saida_MUX[1]" at muxGenerico4x2.vhd(16) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 16
-Info (10041): Inferred latch for "saida_MUX[2]" at muxGenerico4x2.vhd(16) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 16
-Info (10041): Inferred latch for "saida_MUX[3]" at muxGenerico4x2.vhd(16) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 16
-Info (10041): Inferred latch for "saida_MUX[4]" at muxGenerico4x2.vhd(16) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 16
-Info (10041): Inferred latch for "saida_MUX[5]" at muxGenerico4x2.vhd(16) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 16
-Info (10041): Inferred latch for "saida_MUX[6]" at muxGenerico4x2.vhd(16) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 16
-Info (10041): Inferred latch for "saida_MUX[7]" at muxGenerico4x2.vhd(16) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 16
-Info (10041): Inferred latch for "saida_MUX[8]" at muxGenerico4x2.vhd(16) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 16
-Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 56
-Info (12128): Elaborating entity "decoder3x8" for hierarchy "decoder3x8:Decoder678" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 60
-Info (12128): Elaborating entity "Segs7" for hierarchy "Segs7:BLOCO_7seg" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 64
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Segs7:BLOCO_7seg|registradorGenerico:REG_0" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/Segs7.vhd Line: 23
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "Segs7:BLOCO_7seg|conversorHex7Seg:DEC_0" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/Segs7.vhd Line: 25
-Info (12128): Elaborating entity "LEDs" for hierarchy "LEDs:BLOCO_LEDs" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 67
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "LEDs:BLOCO_LEDs|registradorGenerico:REG_07" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/LEDs.vhd Line: 25
-Info (12128): Elaborating entity "Input" for hierarchy "Input:BLOCO_SW" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 69
-Info (12128): Elaborating entity "buffer_3_state_8portas" for hierarchy "Input:BLOCO_SW|buffer_3_state_8portas:Buffer_bloco" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/Input.vhd Line: 24
-Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:DetectorSub0" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 76
+Warning (10036): Verilog HDL or VHDL warning at contador.vhd(25): object "DEBOUNCER_OUT_0" assigned a value but never read File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd Line: 25
+Warning (10036): Verilog HDL or VHDL warning at contador.vhd(30): object "Pc" assigned a value but never read File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd Line: 30
+Warning (10036): Verilog HDL or VHDL warning at contador.vhd(33): object "Botoes" assigned a value but never read File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd Line: 33
+Warning (10873): Using initial value X (don't care) for net "LEDR[8]" at contador.vhd(19) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd Line: 19
+Info (12128): Elaborating entity "processador" for hierarchy "processador:Processador" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd Line: 54
+Warning (10036): Verilog HDL or VHDL warning at processador.vhd(45): object "hab_read" assigned a value but never read File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/processador.vhd Line: 45
+Warning (10036): Verilog HDL or VHDL warning at processador.vhd(46): object "hab_wrt" assigned a value but never read File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/processador.vhd Line: 46
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:Processador|muxGenerico2x1:MUX1" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/processador.vhd Line: 60
+Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "processador:Processador|bancoRegistradoresArqRegMem:Banco_Reg" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/processador.vhd Line: 69
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "processador:Processador|registradorGenerico:PC" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/processador.vhd Line: 74
+Info (12128): Elaborating entity "somaConstante" for hierarchy "processador:Processador|somaConstante:incrementaPC" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/processador.vhd Line: 77
+Info (12128): Elaborating entity "ULASomaSub" for hierarchy "processador:Processador|ULASomaSub:ULA1" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/processador.vhd Line: 82
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "processador:Processador|memoriaROM:ROM1" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/processador.vhd Line: 87
+Info (12128): Elaborating entity "decoderInstru" for hierarchy "processador:Processador|decoderInstru:decoder" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/processador.vhd Line: 91
+Info (12128): Elaborating entity "logDesvio" for hierarchy "processador:Processador|logDesvio:Log_Desvio" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/processador.vhd Line: 98
+Info (12128): Elaborating entity "flipflop" for hierarchy "processador:Processador|flipflop:flag_ula" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/processador.vhd Line: 102
+Info (12128): Elaborating entity "muxGenerico4x2" for hierarchy "processador:Processador|muxGenerico4x2:MUX_JMP" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/processador.vhd Line: 107
+Info (10041): Inferred latch for "saida_MUX[0]" at muxGenerico4x2.vhd(16) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 16
+Info (10041): Inferred latch for "saida_MUX[1]" at muxGenerico4x2.vhd(16) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 16
+Info (10041): Inferred latch for "saida_MUX[2]" at muxGenerico4x2.vhd(16) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 16
+Info (10041): Inferred latch for "saida_MUX[3]" at muxGenerico4x2.vhd(16) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 16
+Info (10041): Inferred latch for "saida_MUX[4]" at muxGenerico4x2.vhd(16) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 16
+Info (10041): Inferred latch for "saida_MUX[5]" at muxGenerico4x2.vhd(16) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 16
+Info (10041): Inferred latch for "saida_MUX[6]" at muxGenerico4x2.vhd(16) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 16
+Info (10041): Inferred latch for "saida_MUX[7]" at muxGenerico4x2.vhd(16) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 16
+Info (10041): Inferred latch for "saida_MUX[8]" at muxGenerico4x2.vhd(16) File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 16
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd Line: 62
+Info (12128): Elaborating entity "decoder3x8" for hierarchy "decoder3x8:Decoder678" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd Line: 72
+Info (12128): Elaborating entity "Segs7" for hierarchy "Segs7:BLOCO_7seg" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd Line: 76
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Segs7:BLOCO_7seg|registradorGenerico:REG_0" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/Segs7.vhd Line: 23
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "Segs7:BLOCO_7seg|conversorHex7Seg:DEC_0" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/Segs7.vhd Line: 25
+Info (12128): Elaborating entity "LEDs" for hierarchy "LEDs:BLOCO_LEDs" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd Line: 85
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "LEDs:BLOCO_LEDs|registradorGenerico:REG_07" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/LEDs.vhd Line: 25
+Info (12128): Elaborating entity "Input" for hierarchy "Input:BLOCO_SW" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd Line: 94
+Info (12128): Elaborating entity "buffer_3_state_8portas" for hierarchy "Input:BLOCO_SW|buffer_3_state_8portas:Buffer_bloco" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/Input.vhd Line: 24
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico:baseTempo" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd Line: 107
+Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:DetectorSub0" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd Line: 115
 Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276007): RAM logic "memoriaRAM:RAM|ram" is uninferred due to asynchronous read logic File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/memoriaRAM.vhd Line: 27
-    Info (276004): RAM logic "processador:Processador|bancoRegistradoresArqRegMem:Banco_Reg|registrador" is uninferred due to inappropriate RAM size File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/bancoRegistradoresArqRegMem.vhd Line: 29
+    Info (276007): RAM logic "memoriaRAM:RAM|ram" is uninferred due to asynchronous read logic File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/memoriaRAM.vhd Line: 27
+    Info (276004): RAM logic "processador:Processador|bancoRegistradoresArqRegMem:Banco_Reg|registrador" is uninferred due to inappropriate RAM size File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/bancoRegistradoresArqRegMem.vhd Line: 29
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13048): Converted tri-state node "barramento_R[7]" into a selector File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "barramento_R[6]" into a selector File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "barramento_R[5]" into a selector File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "barramento_R[4]" into a selector File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "barramento_R[3]" into a selector File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "barramento_R[2]" into a selector File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "barramento_R[1]" into a selector File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "barramento_R[0]" into a selector File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico2x1.vhd Line: 10
-Warning (14026): LATCH primitive "processador:Processador|muxGenerico4x2:MUX_JMP|saida_MUX[0]" is permanently enabled File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 16
-Warning (14026): LATCH primitive "processador:Processador|muxGenerico4x2:MUX_JMP|saida_MUX[1]" is permanently enabled File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 16
-Warning (14026): LATCH primitive "processador:Processador|muxGenerico4x2:MUX_JMP|saida_MUX[2]" is permanently enabled File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 16
-Warning (14026): LATCH primitive "processador:Processador|muxGenerico4x2:MUX_JMP|saida_MUX[3]" is permanently enabled File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 16
-Warning (14026): LATCH primitive "processador:Processador|muxGenerico4x2:MUX_JMP|saida_MUX[4]" is permanently enabled File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 16
-Warning (14026): LATCH primitive "processador:Processador|muxGenerico4x2:MUX_JMP|saida_MUX[5]" is permanently enabled File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 16
-Warning (14026): LATCH primitive "processador:Processador|muxGenerico4x2:MUX_JMP|saida_MUX[6]" is permanently enabled File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 16
-Warning (14026): LATCH primitive "processador:Processador|muxGenerico4x2:MUX_JMP|saida_MUX[7]" is permanently enabled File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 16
-Warning (14026): LATCH primitive "processador:Processador|muxGenerico4x2:MUX_JMP|saida_MUX[8]" is permanently enabled File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/muxGenerico4x2.vhd Line: 16
+    Warning (13048): Converted tri-state node "barramento_R[7]" into a selector File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramento_R[6]" into a selector File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramento_R[5]" into a selector File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramento_R[4]" into a selector File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramento_R[3]" into a selector File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramento_R[2]" into a selector File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramento_R[1]" into a selector File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "barramento_R[0]" into a selector File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico2x1.vhd Line: 10
+Warning (14026): LATCH primitive "processador:Processador|muxGenerico4x2:MUX_JMP|saida_MUX[0]" is permanently enabled File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 16
+Warning (14026): LATCH primitive "processador:Processador|muxGenerico4x2:MUX_JMP|saida_MUX[1]" is permanently enabled File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 16
+Warning (14026): LATCH primitive "processador:Processador|muxGenerico4x2:MUX_JMP|saida_MUX[2]" is permanently enabled File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 16
+Warning (14026): LATCH primitive "processador:Processador|muxGenerico4x2:MUX_JMP|saida_MUX[3]" is permanently enabled File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 16
+Warning (14026): LATCH primitive "processador:Processador|muxGenerico4x2:MUX_JMP|saida_MUX[4]" is permanently enabled File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 16
+Warning (14026): LATCH primitive "processador:Processador|muxGenerico4x2:MUX_JMP|saida_MUX[5]" is permanently enabled File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 16
+Warning (14026): LATCH primitive "processador:Processador|muxGenerico4x2:MUX_JMP|saida_MUX[6]" is permanently enabled File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 16
+Warning (14026): LATCH primitive "processador:Processador|muxGenerico4x2:MUX_JMP|saida_MUX[7]" is permanently enabled File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 16
+Warning (14026): LATCH primitive "processador:Processador|muxGenerico4x2:MUX_JMP|saida_MUX[8]" is permanently enabled File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/muxGenerico4x2.vhd Line: 16
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 19
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd Line: 19
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 14
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 14
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 14
-    Warning (15610): No output dependent on input pin "FPGA_RESET_N" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/contador/contador.vhd Line: 15
-Info (21057): Implemented 1125 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd Line: 14
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd Line: 14
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd Line: 14
+    Warning (15610): No output dependent on input pin "FPGA_RESET_N" File: C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/Desing_Computadores/relogio/contador.vhd Line: 15
+Info (21057): Implemented 1130 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 1057 logic cells
+    Info (21061): Implemented 1062 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 4921 megabytes
-    Info: Processing ended: Tue Apr 25 02:23:24 2023
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 4927 megabytes
+    Info: Processing ended: Tue May 02 15:15:04 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:06
 
 
