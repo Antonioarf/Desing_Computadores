@@ -7,6 +7,7 @@ from sys import argv
 registradores = {"R0":"00","R1":"01","R2":"10","R3":"11"}
 pulos={}
 mnemonics = {'NOP': '0000', 'LDA': '0001', 'SOMA': '0010', 'SUB': '0011', 'LDI': '0100', 'STA': '0101', 'JMP': '0110', 'JEQ': '0111', 'CEQ': '1000', 'JSR': '1001', 'RET': "1010", 'SOMI': "1011", 'SUBI': "1100", "JSQ":"1101" }
+jmps=['JMP', 'JEQ', 'JSR', 'JSQ']
 def filtra(linha:str):
     if ";" in linha:
         linha, coment = linha.split(";")
@@ -15,7 +16,6 @@ def filtra(linha:str):
         return [x for x in linha.split()], '\n'
 
 arq = argv[1]
-saida = argv[2]
 content = ''
 contador = 0
 pular = False 
@@ -31,7 +31,10 @@ with open(arq) as f:
 
         elif len(line) == 2:
             if line[1][0] in ['@', '$', '#']:
-                end = bin(int(line[1][1:]))[2:].zfill(9)
+                if line[0] in jmps:
+                    end = bin(int(line[1][1:])-1)[2:].zfill(9)
+                else:    
+                    end = bin(int(line[1][1:]))[2:].zfill(9)
             else:
                 end = line[1]
 
@@ -39,9 +42,12 @@ with open(arq) as f:
 
         elif len(line) == 3:
             if line[2] in pulos:
-                end = bin(pulos[line[2]])[2:].zfill(9)
+                end = bin(pulos[line[2]]-1)[2:].zfill(9)
             else:
-                end = bin(int(line[2][1:]))[2:].zfill(9)
+                if line[0] in jmps:
+                    end = bin(int(line[2][1:])-1)[2:].zfill(9)
+                else:
+                    end = bin(int(line[2][1:]))[2:].zfill(9)
 
             linha_nova = mnemonics[line[0]] + registradores[line[1]] + end
 
@@ -54,8 +60,8 @@ with open(arq) as f:
         pular = False    
 
 for e in pulos:
-    content = content.replace(e, bin(int(pulos[e]))[2:].zfill(9))
-with open(saida, 'w') as f:
+    content = content.replace(e, bin(int(pulos[e])-1)[2:].zfill(9))
+with open('output.txt', 'w') as f:
     f.write(content)
 
 

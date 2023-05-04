@@ -63,7 +63,7 @@ end generate;
           port map (addr => barramento_End(5 downto 0), 
 							we => barramento_Ctrl(0), 
 							re => barramento_Ctrl(1), 
-							habilita  => saida_decoder_1(0), 
+							habilita  => saida_decoder_2(0), 
 							dado_in => barramento_W, 
 							dado_out => barramento_R, 
 							clk => CLK);
@@ -120,23 +120,11 @@ end generate;
               leituraUmSegundo => saida_segundo);
 				  
 				  
-	--comente para fora se for usar a base de tempo separada da interface 			  
-	saida_key <= saida_segundo;
+	Buffer_k0 :  entity work.buffer_3_state_8portas port map(entrada => ("0000000" & saida_segundo), 
+																	habilita=> (saida_decoder_2(5) and barramento_Ctrl(1) and barramento_End(5) and saida_decoder_1(0)), 
+																	saida => saida_key);		  
 			
-			
---	DetectorSub0: work.edgeDetector(bordaSubida) port map(clk => CLOCK_50, 
---																		entrada => saida_segundo, 
---																		saida => KEY_0_tratado);
---
---	FF_DEBOUNCER_0: entity work.flipflop port map(DIN => '1', 
---															DOUT=> DEBOUNCER_OUT_0, 
---															ENABLE => '1', 
---															CLK => KEY_0_tratado, 
---															RST => limpa0); 
- 
---	Buffer_k0 :  entity work.buffer_3_state_8portas port map(entrada => ("0000000" & saida_segundo), 
---																			habilita=> (saida_decoder_2(5) and barramento_Ctrl(1) and barramento_End(5) and saida_decoder_1(0)), 
---																			saida => saida_key);
+
 
 	--PC_OUT<=Pc;		 
    LEDR(7 downto 0)<= Leds(7 downto 0);

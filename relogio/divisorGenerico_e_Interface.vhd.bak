@@ -19,7 +19,7 @@ baseTempo: entity work.divisorGenerico
            generic map (divisor => 5)   -- divide por 10.
            port map (clk => clk, saida_clk => saidaclk_reg1seg);
 
-registraUmSegundo: entity work.flipflop
+registraUmSegundo: entity work.flipflopGenerico
    port map (DIN => '1', DOUT => sinalUmSegundo,
          ENABLE => '1', CLK => saidaclk_reg1seg,
          RST => limpaLeitura);

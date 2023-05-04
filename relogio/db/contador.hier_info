@@ -4,10 +4,8 @@ CLOCK_50 => processador:Processador.CLK
 CLOCK_50 => memoriaram:RAM.clk
 CLOCK_50 => segs7:BLOCO_7seg.clk
 CLOCK_50 => input:BLOCO_SW.clk
-CLOCK_50 => divisorgenerico:baseTempo.clk
-CLOCK_50 => edgedetector:DetectorSub0.clk
+CLOCK_50 => divisorgenerico_e_interface:interfaceBaseTempo.clk
 KEY[0] => input:BLOCO_SW.estado_botoes[0]
-KEY[0] => buffer_3_state_8portas:Buffer_k0.entrada[0]
 KEY[1] => input:BLOCO_SW.estado_botoes[1]
 KEY[2] => input:BLOCO_SW.estado_botoes[2]
 KEY[3] => input:BLOCO_SW.estado_botoes[3]
@@ -73,7 +71,7 @@ LEDR[5] <= leds:BLOCO_LEDs.ret[5]
 LEDR[6] <= leds:BLOCO_LEDs.ret[6]
 LEDR[7] <= leds:BLOCO_LEDs.ret[7]
 LEDR[8] <= <GND>
-LEDR[9] <= divisorgenerico:baseTempo.saida_clk
+LEDR[9] <= divisorgenerico_e_interface:interfaceBaseTempo.leituraUmSegundo
 
 
 |contador|processador:Processador
@@ -1679,23 +1677,22 @@ saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|contador|divisorGenerico:baseTempo
+|contador|divisorGenerico_e_Interface:interfaceBaseTempo
+clk => divisorgenerico:baseTempo.clk
+habilitaLeitura => leituraUmSegundo.OE
+limpaLeitura => flipflop:registraUmSegundo.RST
+leituraUmSegundo <= leituraUmSegundo.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador|divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo
 clk => tick.CLK
 clk => contador[0].CLK
 clk => contador[1].CLK
 clk => contador[2].CLK
-clk => contador[3].CLK
 saida_clk <= tick.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|contador|edgeDetector:DetectorSub0
-clk => saidaQ.CLK
-entrada => saida.IN1
-entrada => saidaQ.DATAIN
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|contador|flipflop:FF_DEBOUNCER_0
+|contador|divisorGenerico_e_Interface:interfaceBaseTempo|flipflop:registraUmSegundo
 DIN => DOUT~reg0.DATAIN
 DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ENABLE => DOUT~reg0.ENA
