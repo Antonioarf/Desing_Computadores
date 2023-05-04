@@ -32,8 +32,8 @@ signal Leds : std_logic_vector (9 downto 0);
 signal Chaves : std_logic_vector (9 downto 0);
 signal Botoes: std_logic_vector(3 downto 0);
 signal sete_segs : std_logic_vector(41 downto 0);
-signal saida_decoder_1 : std_logic_vector (larguraDados-1 downto 0);
-signal saida_decoder_2 : std_logic_vector (larguraDados-1 downto 0);
+signal saida_decoder012 : std_logic_vector (larguraDados-1 downto 0);
+signal saida_decoder678 : std_logic_vector (larguraDados-1 downto 0);
 signal saida_key : std_logic_vector (larguraDados-1 downto 0);
 signal teste : std_logic_vector(1 downto 0);
 signal saida_segundo : std_logic;
@@ -63,20 +63,20 @@ end generate;
           port map (addr => barramento_End(5 downto 0), 
 							we => barramento_Ctrl(0), 
 							re => barramento_Ctrl(1), 
-							habilita  => saida_decoder_2(0), 
+							habilita  => saida_decoder678(0), 
 							dado_in => barramento_W, 
 							dado_out => barramento_R, 
 							clk => CLK);
 			 
 			 
-	Decoder678 :  entity work.decoder3x8 port map( entrada => barramento_End(8 downto 6), saida => saida_decoder_2);			 
-	Decoder012 :  entity work.decoder3x8 port map( entrada => barramento_End(2 downto 0), saida => saida_decoder_1);			 
+	Decoder678 :  entity work.decoder3x8 port map( entrada => barramento_End(8 downto 6), saida => saida_decoder678);			 
+	Decoder012 :  entity work.decoder3x8 port map( entrada => barramento_End(2 downto 0), saida => saida_decoder012);			 
 		
  
 	BLOCO_7seg :  entity work.Segs7 
 					port map( dados_in => barramento_W(3 downto 0), 
-								decoder_1 => saida_decoder_1, 
-								bloco => saida_decoder_2(4), 
+								decoder_1 => saida_decoder012, 
+								bloco => saida_decoder678(4), 
 								Wr => barramento_Ctrl(0), 
 								clk => CLK, 
 								A5 => barramento_End(5), 
@@ -84,8 +84,8 @@ end generate;
 
 	BLOCO_LEDs :  entity work.LEDs  generic map (larguraDados => larguraDados)
 					port map(dados_in => barramento_W, 
-								decoder_1 => saida_decoder_1, 
-								decoder_2 => saida_decoder_2, 
+								decoder_1 => saida_decoder012, 
+								decoder_2 => saida_decoder678, 
 								Wr=>barramento_Ctrl(0), 
 								clk =>CLOCK_50, 
 								A5=>barramento_End(5), 
@@ -93,8 +93,8 @@ end generate;
  
 	BLOCO_SW :  entity work.Input 
 				 port map(dados_out => barramento_R, 
-				 decoder_1 => saida_decoder_1, 
-				 bloco => saida_decoder_2(5), 
+				 decoder_1 => saida_decoder012, 
+				 bloco => saida_decoder678(5), 
 				 Rd => barramento_Ctrl(1), 
 				 clk => CLK, 
 				 A5 => barramento_End(5), 
@@ -121,13 +121,13 @@ end generate;
 				  
 				  
 	Buffer_k0 :  entity work.buffer_3_state_8portas port map(entrada => ("0000000" & saida_segundo), 
-																	habilita=> (saida_decoder_2(5) and barramento_Ctrl(1) and barramento_End(5) and saida_decoder_1(0)), 
+																	habilita=> (saida_decoder678(5) and barramento_Ctrl(1) and barramento_End(5) and saida_decoder012(0)), 
 																	saida => saida_key);		  
 			
 
 
 	--PC_OUT<=Pc;		 
-   LEDR(7 downto 0)<= Leds(7 downto 0);
+   LEDR(8 downto 0) <= Pc;
 	HEX0 <= sete_segs(6 downto 0);
 	HEX1 <= sete_segs(13 downto 7);
 	HEX2 <= sete_segs(20 downto 14);
