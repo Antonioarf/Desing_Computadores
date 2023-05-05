@@ -16,14 +16,15 @@ entity contador is
     SW: in std_logic_vector(9 downto 0);
     --PC_OUT: out std_logic_vector(larguraEnderecos-1 downto 0);
 	 HEX0,HEX1,HEX2,HEX3,HEX4,HEX5: out std_logic_vector(6 downto 0);
-	 LEDR  : out std_logic_vector(9 downto 0)
+	 LEDR  : out std_logic_vector(9 downto 0);
+	 PC_out : out std_logic_vector(8 downto 0)
   );
 end entity;
 
 
 architecture arquitetura of contador is
 signal CLK, limpa0, limpa4, KEY_0_tratado, DEBOUNCER_OUT_0 : std_logic;
-signal barramento_R : std_logic_vector (larguraDados-1 downto 0);
+signal BarramentoR : std_logic_vector (larguraDados-1 downto 0);
 signal barramento_W : std_logic_vector (larguraDados-1 downto 0);
 signal barramento_End : std_logic_vector (larguraEnderecos-1 downto 0);
 signal barramento_Ctrl : std_logic_vector (larguraPalavra-1 downto 0);
@@ -37,6 +38,9 @@ signal saida_decoder678 : std_logic_vector (larguraDados-1 downto 0);
 signal saida_key : std_logic_vector (larguraDados-1 downto 0);
 signal teste : std_logic_vector(1 downto 0);
 signal saida_segundo : std_logic;
+
+signal saida_logica_desvio : std_logic_vector(1 downto 0);
+signal flag_jmp : std_logic;
 
   
 begin
@@ -53,11 +57,14 @@ end generate;
 
   Processador : entity work.processador  generic map (larguraDados => larguraDados, larguraEnderecos => larguraEnderecos,larguraPalavra=>larguraPalavra)
           port map (CLK => CLK, 
-						barramento_R => barramento_R, 
+						barramento_R => BarramentoR, 
 						barramento_W => barramento_W, 
 						barramento_End  => barramento_End, 
 						barramento_Ctrl => barramento_Ctrl,
-						PC_OUT => Pc);
+						PC_OUT => Pc,
+						saida_logica_desvio => saida_logica_desvio,
+						flag_jmp => flag_jmp)
+						;
   
   RAM : entity work.memoriaRAM   generic map (dataWidth => larguraDados, addrWidth => 6)
           port map (addr => barramento_End(5 downto 0), 
@@ -65,7 +72,7 @@ end generate;
 							re => barramento_Ctrl(1), 
 							habilita  => saida_decoder678(0), 
 							dado_in => barramento_W, 
-							dado_out => barramento_R, 
+							dado_out => BarramentoR, 
 							clk => CLK);
 			 
 			 
@@ -92,7 +99,7 @@ end generate;
 								ret =>Leds);			 
  
 	BLOCO_SW :  entity work.Input 
-				 port map(dados_out => barramento_R, 
+				 port map(dados_out => BarramentoR, 
 				 decoder_1 => saida_decoder012, 
 				 bloco => saida_decoder678(5), 
 				 Rd => barramento_Ctrl(1), 
@@ -127,7 +134,9 @@ end generate;
 
 
 	--PC_OUT<=Pc;		 
-   LEDR(8 downto 0) <= Pc;
+   LEDR(5 downto 0) <= Pc(5 downto 0);
+	LEDR(6) <= flag_jmp;
+	LEDR(9 downto 8)<= saida_logica_desvio;
 	HEX0 <= sete_segs(6 downto 0);
 	HEX1 <= sete_segs(13 downto 7);
 	HEX2 <= sete_segs(20 downto 14);
@@ -136,7 +145,8 @@ end generate;
 	HEX5 <= sete_segs(41 downto 35);
 	Chaves <= SW;
 	Botoes <= KEY;
-	LEDR(9)<= saida_segundo;
-   barramento_R <= saida_key;
+   BarramentoR <= saida_key;
+	PC_out <= Pc;
+	
 
 end architecture;

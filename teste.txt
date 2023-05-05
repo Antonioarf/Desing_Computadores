@@ -1,27 +1,15 @@
-LDI R0 $0 ;rotina de inicializacao, zera todos os displays e leds
-STA R0 @0
-STA R0 @2
-LDI R0 $1
-STA R0 @1
-
+LDI R0 $0 ;rotina de inicializacao
+STA R0 @0 ; salva 0 no endereco 0
+LDI R2 $4;
+STA R2 @4;
 LOOP
 NOP
-LDA R0 @352 ; carrega o valor lido do botao 0
-STA R0 @290 ; salva no 7seg 0 
-CEQ R0 @0 ; se o botao nao ta apertado volta pro comeco da rotina
-JEQ PULO
-JSR FUNC ; se o botao ta apertado, pula para o func
-PULO
-NOP
+LDA R0 @0 ; carrega o valor do endereco em R0
+SOMI R0 $1 ; soma 1 ao contador (R1)
+STA R0 @293 ; carrega o valor do R1 no ultimo display de 7 segmentos 
+STA R0 @0;  
+CEQ R0 @4;
+JEQ R0 @20;
 JMP LOOP
 
-FUNC
-NOP
-STA R0 @511 ; salva r0
-LDA R0 $2  ; carrega 2 no r0
-SOMA R0 @1 ; soma 1 ao valor 
-STA R0 @2 ; salva o valor de r0 na posicao 2 da RAM
-STA R0 @258 ; coloca r0 no ultimo led
-STA R0 @293 ; salva o valor de r0 no ultimo display de 7 seg
-STA R0 @511 ; limpa a leitura 
-JMP LOOP
+

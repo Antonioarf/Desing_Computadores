@@ -2,28 +2,34 @@ LDI R0 $0 ;rotina de inicializacao
 STA R0 @0 ; salva 0 no endereco 0
 STA R0 @2 ; salva 0 no endereco 2
 LDI R0 $1 ; carrega 1 no r0
-STA R0 @1 ; salva 1 no endereco 0
+; STA R0 @1  salva 1 no endereco 1
 LDI R0 $0 ; carrega zero no R0
 LDI R1 $0 ; contador para o display
-
 LOOP
 NOP
 LDA R0 @352 ; carrega o valor lido do botao 0 no R0
-STA R0 @288 ; salva no 7seg 0
+STA R0 @288 ; salva R0 no 7seg 0
 NOP
 CEQ R0 @0 ; se o botao nao ta apertado, volta para o comeco do loop
+NOP
 JEQ PULO
+NOP
 JMP FUNC ; se o botao  nao ta apertado, pula para a func
-
+NOP
 PULO
 NOP
-STA R0 @289 ; R0 no salva no 7seg 1
+STA R0 @290 ; salva R0 no 7seg 2
 JMP LOOP
-
+NOP
 FUNC
 NOP
-STA R0 @290 ; R0 no salva no 7seg 2
+STA R0 @291 ;  salva R0 no 7seg 3
 STA R0 @511 ;  limpa a leitura 
-SOMA R1 @1 ; soma 1 ao contador (R1)
-STA R1 @293 ; carrega o valor do R1 no ultimo display de 7 segmentos 
+SOMI R1 $1 ; soma 1 ao contador (R1)
+STA R1 @293 ; carrega o valor do R1 no ultimo display de 7 segmentos
 JMP LOOP
+NOP
+
+
+
+

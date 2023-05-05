@@ -13,8 +13,10 @@ entity processador is
     barramento_W : out std_logic_vector (larguraDados-1 downto 0);
     barramento_End : out std_logic_vector (larguraEnderecos-1 downto 0);
     barramento_Ctrl : out std_logic_vector (larguraPalavra-1 downto 0);
-	 PC_OUT : out std_logic_vector (larguraEnderecos-1 downto 0)
-  );
+	 PC_OUT : out std_logic_vector (larguraEnderecos-1 downto 0);
+	 saida_logica_desvio : out std_logic_vector(1 downto 0);
+	 flag_jmp : out std_logic
+	 );
 end entity;
 
 
@@ -42,8 +44,6 @@ architecture arquiteturaa of processador is
   signal Habilita_flag : std_logic;
   signal Habilita_A : std_logic;
   signal Operacao_ULA : std_logic_vector (1 downto 0);
-  signal hab_read: std_logic;
-  signal hab_wrt: std_logic;
   signal ULA_flag : std_logic;
   signal saida_flag : std_logic;
  signal Saida_Mux_Pc : std_logic_vector (larguraEnderecos-1 downto 0);
@@ -124,8 +124,6 @@ SelMUX <= Sinais_Controle(6);
 Habilita_A <= Sinais_Controle(5);
 Operacao_ULA <= Sinais_Controle(4 downto 3);
 Habilita_flag <= Sinais_Controle(2);
-hab_read <= Sinais_Controle(1);
-hab_wrt <= Sinais_Controle(0);
 
 
 
@@ -133,7 +131,9 @@ Saida_RAM <= barramento_R;
 barramento_W <= REG1_ULA_A;
 barramento_End <= Sinais_ROM(8 downto 0);
 barramento_Ctrl <= Sinais_Controle;
-PC_OUT <=proxPC;
+PC_OUT <=Saida_Mux_Pc;
 
+saida_logica_desvio <= sel_mux_jmp ; 
+flag_jmp <= saida_flag;
 		 
 end architecture;

@@ -45,7 +45,7 @@ with open(arq) as f:
                 end = bin(pulos[line[2]]-1)[2:].zfill(9)
             else:
                 if line[0] in jmps:
-                    end = bin(int(line[2][1:])-1)[2:].zfill(9)
+                    end = bin(int(line[2][1:]))[2:].zfill(9)
                 else:
                     end = bin(int(line[2][1:]))[2:].zfill(9)
 
@@ -60,7 +60,7 @@ with open(arq) as f:
         pular = False    
 
 for e in pulos:
-    content = content.replace(e, bin(int(pulos[e])-1)[2:].zfill(9))
+    content = content.replace(e, bin(int(pulos[e]))[2:].zfill(9))
 with open('output.txt', 'w') as f:
     f.write(content)
 
