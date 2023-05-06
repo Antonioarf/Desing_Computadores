@@ -23,7 +23,7 @@ end entity;
 
 
 architecture arquitetura of contador is
-signal CLK, limpa0, limpa4, KEY_0_tratado, DEBOUNCER_OUT_0 : std_logic;
+signal CLK, limpa0, limpa4: std_logic;
 signal BarramentoR : std_logic_vector (larguraDados-1 downto 0);
 signal barramento_W : std_logic_vector (larguraDados-1 downto 0);
 signal barramento_End : std_logic_vector (larguraEnderecos-1 downto 0);
@@ -35,9 +35,10 @@ signal Botoes: std_logic_vector(3 downto 0);
 signal sete_segs : std_logic_vector(41 downto 0);
 signal saida_decoder012 : std_logic_vector (larguraDados-1 downto 0);
 signal saida_decoder678 : std_logic_vector (larguraDados-1 downto 0);
-signal saida_key : std_logic_vector (larguraDados-1 downto 0);
-signal teste : std_logic_vector(1 downto 0);
-signal saida_segundo : std_logic;
+signal saida_segundo,saida_rapida, saida_mux_tempo : std_logic;
+
+signal KEY_3_tratado, DEBOUNCER_OUT_3, KEY_2_tratado, DEBOUNCER_OUT_2, Reset_tratado, DEBOUNCER_OUT_reset  : std_logic;
+signal saida_key, saida_key3, saida_key2, saida_reset : std_logic_vector (larguraDados-1 downto 0);
 
 signal saida_logica_desvio : std_logic_vector(1 downto 0);
 signal flag_jmp : std_logic;
@@ -53,8 +54,8 @@ CLK <= CLOCK_50;
 --DetectorSub0: work.edgeDetector(bordaSubida) port map(clk => CLOCK_50, entrada => (not SW(9)), saida 	=> KEY_0_tratado );
 
 end generate;
-
-
+--=======================================================================================================================--
+--=======================================================================================================================--
   Processador : entity work.processador  generic map (larguraDados => larguraDados, larguraEnderecos => larguraEnderecos,larguraPalavra=>larguraPalavra)
           port map (CLK => CLK, 
 						barramento_R => BarramentoR, 
@@ -77,11 +78,13 @@ end generate;
 			 
 			 
 	Decoder678 :  entity work.decoder3x8 port map( entrada => barramento_End(8 downto 6), saida => saida_decoder678);			 
-	Decoder012 :  entity work.decoder3x8 port map( entrada => barramento_End(2 downto 0), saida => saida_decoder012);			 
-		
+	Decoder012 :  entity work.decoder3x8 port map( entrada => barramento_End(2 downto 0), saida => saida_decoder012);		
+	
+--=======================================================================================================================--		
+ --=======================================================================================================================--
  
 	BLOCO_7seg :  entity work.Segs7 
-					port map( dados_in => barramento_W(3 downto 0), 
+					port map( dados_in => barramento_W, 
 								decoder_1 => saida_decoder012, 
 								bloco => saida_decoder678(4), 
 								Wr => barramento_Ctrl(0), 
@@ -105,38 +108,54 @@ end generate;
 				 Rd => barramento_Ctrl(1), 
 				 clk => CLK, 
 				 A5 => barramento_End(5), 
-				 estado_chaves => Chaves, 
-				 estado_botoes => KEY, 
-				 limpa0 => limpa0, 
-				 limpa1 => limpa4);
+				 estado_chaves => Chaves);
  
--- 
---	baseTempo : entity work.divisorGenerico generic map(divisor => 5)
---				 port map(clk  => CLK,
---							saida_clk => saida_segundo);
-			
+--=======================================================================================================================--
+--=======================================================================================================================--			
  
-	limpa0 <= barramento_Ctrl(0) and barramento_End(8) and barramento_End(7) and barramento_End(6) and barramento_End(5) and barramento_End(4) and barramento_End(3) and barramento_End(2) and barramento_End(1) and barramento_End(0);
-	limpa4 <= barramento_Ctrl(0) and barramento_End(8) and barramento_End(7) and barramento_End(6) and barramento_End(5) and barramento_End(4) and barramento_End(3) and barramento_End(2) and barramento_End(1) and (not barramento_End(0));
- 				
-							
-	interfaceBaseTempo : entity work.divisorGenerico_e_Interface
+limpa4 <= barramento_Ctrl(0) and barramento_End(8) and barramento_End(7) and barramento_End(6) and barramento_End(5) and barramento_End(4) and barramento_End(3) and barramento_End(2) and barramento_End(1) and (not barramento_End(0));
+ 
+DetectorSub3: work.edgeDetector(bordaSubida) port map(clk => CLOCK_50, entrada => (not KEY(3)), saida 	=> KEY_3_tratado );
+FF_DEBOUNCER_3: entity work.flipflop port map(DIN => '1', DOUT=> DEBOUNCER_OUT_3, ENABLE	=> '1', CLK => KEY_3_tratado, RST	=> limpa4);                		   
+Buffer_k3 :  entity work.buffer_3_state_8portas port map(entrada => ("0000000" & DEBOUNCER_OUT_3) ,habilita=> (saida_decoder678(5) and barramento_Ctrl(1) and barramento_End(5) and saida_decoder012(3)), saida => saida_key3);				
+	
+DetectorSub2: work.edgeDetector(bordaSubida) port map(clk => CLOCK_50, entrada => (not KEY(2)), saida 	=> KEY_2_tratado );
+FF_DEBOUNCER_2: entity work.flipflop port map(DIN => '1', DOUT=> DEBOUNCER_OUT_2, ENABLE	=> '1', CLK => KEY_2_tratado, RST	=> limpa4);                		   
+Buffer_k2 :  entity work.buffer_3_state_8portas port map(entrada => ("0000000" & DEBOUNCER_OUT_2) ,habilita=> (saida_decoder678(5) and barramento_Ctrl(1) and barramento_End(5) and saida_decoder012(2)), saida => saida_key2);				
+
+DetectorSub_reset: work.edgeDetector(bordaSubida) port map(clk => CLOCK_50, entrada => (not FPGA_RESET_N), saida 	=> Reset_tratado );
+FF_DEBOUNCER_reset: entity work.flipflop port map(DIN => '1', DOUT=> DEBOUNCER_OUT_reset, ENABLE	=> '1', CLK => Reset_tratado, RST	=> limpa4);                		   
+Buffer_reset :  entity work.buffer_3_state_8portas port map(entrada => ("0000000" & DEBOUNCER_OUT_reset) ,habilita=> (saida_decoder678(5) and barramento_Ctrl(1) and barramento_End(5) and saida_decoder012(4)), saida => saida_reset);
+--=======================================================================================================================--
+--=======================================================================================================================--
+limpa0 <= barramento_Ctrl(0) and barramento_End(8) and barramento_End(7) and barramento_End(6) and barramento_End(5) and barramento_End(4) and barramento_End(3) and barramento_End(2) and barramento_End(1) and barramento_End(0);
+	
+interfaceBaseTempo_1hz : entity work.divisorGenerico_e_Interface generic map (divisor => 25000000)
               port map (clk => CLK,
               habilitaLeitura => '1',
               limpaLeitura => limpa0 ,
               leituraUmSegundo => saida_segundo);
 				  
+interfaceBaseTempo_rapida : entity work.divisorGenerico_e_Interface generic map (divisor => 125000) --20 segundos por segundo
+              port map (clk => CLK,
+              habilitaLeitura => '1',
+              limpaLeitura => limpa0 ,
+              leituraUmSegundo => saida_rapida);			
 				  
-	Buffer_k0 :  entity work.buffer_3_state_8portas port map(entrada => ("0000000" & saida_segundo), 
+MUX_tempo :  entity work.muxBit
+        port map( entradaA_MUX => saida_segundo,
+                 entradaB_MUX => saida_rapida,
+                 seletor_MUX => Chaves(9),
+                 saida_MUX => saida_mux_tempo);				  
+				  
+Buffer_tempo :  entity work.buffer_3_state_8portas port map(entrada => ("0000000" & saida_mux_tempo), 
 																	habilita=> (saida_decoder678(5) and barramento_Ctrl(1) and barramento_End(5) and saida_decoder012(0)), 
 																	saida => saida_key);		  
 			
 
 
 	--PC_OUT<=Pc;		 
-   LEDR(5 downto 0) <= Pc(5 downto 0);
-	LEDR(6) <= flag_jmp;
-	LEDR(9 downto 8)<= saida_logica_desvio;
+   LEDR <= Leds;
 	HEX0 <= sete_segs(6 downto 0);
 	HEX1 <= sete_segs(13 downto 7);
 	HEX2 <= sete_segs(20 downto 14);
@@ -146,6 +165,9 @@ end generate;
 	Chaves <= SW;
 	Botoes <= KEY;
    BarramentoR <= saida_key;
+	BarramentoR <= saida_key3;
+	BarramentoR <= saida_key2;
+	BarramentoR <= saida_reset;
 	PC_out <= Pc;
 	
 

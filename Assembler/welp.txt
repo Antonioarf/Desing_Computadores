@@ -4,6 +4,8 @@ LDA R0 @0 ; zera R0
 LDA R1 @0 ; zera R1
 LDA R2 @0 ; zera R2
 LDA R3 @0 ; zera R3
+STA R0 @510 ; limpa a leitura
+STA R0 @511 ; limpa a leitura
 
 STA R0 @0 ; salva 0 no endereco 0
 
@@ -23,7 +25,7 @@ LDI R0 $10 ; carrega 10 no r0
 STA R0 @10 ; salva 10 no endereco 10
 
 LDI R0 $24 ; carrega 24 no r0
-STA R0 @25 ; salva 24 no endereco 24
+STA R0 @24 ; salva 24 no endereco 24
 
 LDI R0 $60 ; carrega 60 no r0
 STA R0 @60 ; salva 60 no endereco 60
@@ -31,9 +33,10 @@ STA R0 @60 ; salva 60 no endereco 60
 LDI R0 $0 ; carrega 0 no R0
 STA R0 @20 ; alocacao do contador de segundos
 STA R0 @21 ; alocacao do contador de minutos
-STA R0 @22 ; alocacao do contador de minutos
-
-
+STA R0 @22 ; alocacao do contador de horas
+STA R0 @288 ; zera 7seg_0
+STA R0 @290 ; zera 7seg_1
+STA R0 @292 ; zera 7seg_2
 
 LOOP
 LDA R0 @352 ; carrega o valor lido do botao 0 no R0
@@ -41,8 +44,20 @@ CEQ R0 @0 ; se o botao nao ta apertado, volta para o comeco do loop
 JEQ PULO
 JMP SOMADOR0 ; se o botao  nao ta apertado, pula para a func
 
-
 PULO
+NOP
+LDA R0 @354
+CEQ R0 @1
+JSQ AJEITA_MIN
+
+LDA R0 @355 ; carrega o valor lido do botao 0 no R0
+CEQ R0 @1 ; se o botao nao ta apertado, volta para o comeco do loop
+JSQ AJEITA_HORA ; se o botao  nao ta apertado, pula para a func 
+
+LDA R0 @356
+CEQ R0 @1
+JEQ INIT
+
 NOP
 JMP LOOP
 NOP
@@ -82,4 +97,16 @@ STA R0 @292 ; coloca o valor na 7seg_0 TODO -> trocar para a func que lida com o
 JMP LOOP
 
 
+AJEITA_HORA
+LDA R2 @320 ; carrega o valor lido dos Switches no R2
+STA R2 @510 ; limpa a leitura
+STA R2 @292 ; Atualiza o valor da 7seg_2
+STA R2 @22 ; Atualiza o valor do contador de horas
+RET
 
+AJEITA_MIN
+LDA R2 @320 ; carrega o valor lido dos Switches no R2
+STA R2 @510 ; limpa a leitura
+STA R2 @290 ; Atualiza o valor da 7seg_1
+STA R2 @21 ; Atualiza o valor do contador de minutos
+RET

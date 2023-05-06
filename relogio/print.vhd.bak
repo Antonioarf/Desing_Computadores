@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity print is
+    port (
+        input_val: in unsigned(7 downto 0);
+        decimal1: out unsigned(3 downto 0);
+        decimal2: out unsigned(3 downto 0)
+    );
+end entity print;
+
+architecture behavioral of print is
+begin
+    decimal1 <= input_val/10;
+    decimal2 <= input_val mod 10;
+end architecture behavioral;

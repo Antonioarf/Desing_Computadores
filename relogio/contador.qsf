@@ -251,4 +251,6 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform6.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform7.vwf
 set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
 set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+set_global_assignment -name VHDL_FILE print.vhd
+set_global_assignment -name VHDL_FILE muxBit.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
