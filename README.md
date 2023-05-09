@@ -42,7 +42,25 @@ O diagrama abaixo mostra as conexões com os quatro barramentos principais reali
 A principal  mudança no hardware implementada foi a adição de uma unidade logica entre o barramento d escrita e os displays de 7 segmentos, fazendo com que seja transmitido um único numero em 8 bits, que é convertido para 2 barramentos de 4 bits, um contento a unidade e outro a dezena da representação decimal do valor inicial. Com isso, os 6 displays passam a operar em duplas, sempre mostrando as duas partes de um mesmo número. A principal vantagem desse componente foi o a simplificação do código, podendo que os mostradores de segundo, minutos e horas sejam armazenadas com um em um único endereço de memoria
 
 ![t2.drawio.png](Imgs/t2.drawio.png)
-
+```vhdl
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+entity print is
+port (
+input_val: in std_logic_vector(7 downto 0);
+dec: out std_logic_vector(3 downto 0);
+uni: out std_logic_vector(3 downto 0)
+);
+end entity print;
+architecture behavioral of print is
+signal unsigned_input: unsigned(7 downto 0);
+begin
+unsigned_input <= unsigned(input_val);
+dec <= std_logic_vector(unsigned_input/10)(3 downto 0);
+uni <= std_logic_vector(unsigned_input mod 10)(3 downto 0);
+end architecture behavioral;
+```
 Seguindo a arquitetura Registrador-Memoria, é necessário endereçar além da instrução e do imediato, um dos 4 registradores para ser utilizado na instrução, mesmo que a instrução não de fato utilize registradores, pelo barramento é preciso endereçar, fazendo com que a instrução tenha o formato abaixo, com a diferença que no processor do projeto, o endereço da RAM possui o mesmo tamanho da ROM, sendo descartáveis os bits 10 e 11 da imagem
 
 ![Untitled](Imgs/Untitled%201.png)
