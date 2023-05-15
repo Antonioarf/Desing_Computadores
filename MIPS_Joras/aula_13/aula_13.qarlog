@@ -1,0 +1,23 @@
+Quartus Prime Archive log --	C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/aulas/aula_13/aula_13.qarlog
+
+Archive:	C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/aulas/aula_13/aula_13.qar
+Date:		Tue May 02 11:34:13 2023
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/aulas/aula_13/ROMMIPS.vhd
+C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/aulas/aula_13/SomadorGenerico.vhd
+C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/aulas/aula_13/ULASomaSub.vhd
+C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/aulas/aula_13/Waveform.vwf
+C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/aulas/aula_13/Waveform1.vwf
+C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/aulas/aula_13/Waveform2.vwf
+C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/aulas/aula_13/aula_13.qpf
+C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/aulas/aula_13/aula_13.qsf
+C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/aulas/aula_13/aula_13.vhd
+C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/aulas/aula_13/bancoReg.vhd
+C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/aulas/aula_13/registradorGenerico.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 12 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
