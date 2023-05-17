@@ -1,5 +1,5 @@
 Analysis & Elaboration report for aula_13
-Tue May 16 20:48:21 2023
+Tue May 16 23:57:57 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -16,20 +16,56 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   8. Parameter Settings for User Entity Instance: bancoReg:bancoRegistradores
   9. Parameter Settings for User Entity Instance: muxGenerico2x1:mux_entrada_regs
  10. Parameter Settings for User Entity Instance: estendeSinalGenerico:estensor_sinal
- 11. Parameter Settings for User Entity Instance: ULASomaSub:ULA
- 12. Parameter Settings for User Entity Instance: RAMMIPS:RAM
- 13. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_Saida
- 14. Analysis & Elaboration Settings
- 15. Port Connectivity Checks: "conversorHex7Seg:DEC_5"
- 16. Port Connectivity Checks: "conversorHex7Seg:DEC_4"
- 17. Port Connectivity Checks: "conversorHex7Seg:DEC_3"
- 18. Port Connectivity Checks: "conversorHex7Seg:DEC_2"
- 19. Port Connectivity Checks: "conversorHex7Seg:DEC_1"
- 20. Port Connectivity Checks: "conversorHex7Seg:DEC_0"
- 21. Port Connectivity Checks: "RAMMIPS:RAM"
- 22. Port Connectivity Checks: "somadorGenerico:INC_PC"
- 23. Port Connectivity Checks: "registradorGenerico:REG_PC"
- 24. Analysis & Elaboration Messages
+ 11. Parameter Settings for User Entity Instance: muxGenerico2x1:mux_rt_exsig
+ 12. Parameter Settings for User Entity Instance: decoderULA:decoder_ula|muxGenerico2x1:mux_dec_ula
+ 13. Parameter Settings for User Entity Instance: ULAMips:ULA
+ 14. Parameter Settings for User Entity Instance: RAMMIPS:RAM
+ 15. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_ULA_Mem
+ 16. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_Saida_Placa
+ 17. Analysis & Elaboration Settings
+ 18. Port Connectivity Checks: "conversorHex7Seg:DEC_5"
+ 19. Port Connectivity Checks: "conversorHex7Seg:DEC_4"
+ 20. Port Connectivity Checks: "conversorHex7Seg:DEC_3"
+ 21. Port Connectivity Checks: "conversorHex7Seg:DEC_2"
+ 22. Port Connectivity Checks: "conversorHex7Seg:DEC_1"
+ 23. Port Connectivity Checks: "conversorHex7Seg:DEC_0"
+ 24. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA30"
+ 25. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA29"
+ 26. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA28"
+ 27. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA27"
+ 28. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA26"
+ 29. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA25"
+ 30. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA24"
+ 31. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA23"
+ 32. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA22"
+ 33. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA21"
+ 34. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA20"
+ 35. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA19"
+ 36. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA18"
+ 37. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA17"
+ 38. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA16"
+ 39. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA15"
+ 40. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA14"
+ 41. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA13"
+ 42. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA12"
+ 43. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA11"
+ 44. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA10"
+ 45. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA9"
+ 46. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA8"
+ 47. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA7"
+ 48. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA6"
+ 49. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA5"
+ 50. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA4"
+ 51. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA3"
+ 52. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA2"
+ 53. Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA1"
+ 54. Port Connectivity Checks: "ULAMips:ULA|ULA_31:ULA31"
+ 55. Port Connectivity Checks: "ULAMips:ULA"
+ 56. Port Connectivity Checks: "decoderULA:decoder_ula|muxGenerico2x1:mux_dec_ula"
+ 57. Port Connectivity Checks: "decoderInstru:decoder_instru"
+ 58. Port Connectivity Checks: "somadorGenerico:INC_PC"
+ 59. Port Connectivity Checks: "registradorGenerico:REG_PC"
+ 60. Analysis & Elaboration Messages
 
 
 
@@ -56,7 +92,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue May 16 20:48:21 2023       ;
+; Analysis & Elaboration Status ; Successful - Tue May 16 23:57:57 2023       ;
 ; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                 ; aula_13                                     ;
 ; Top-level Entity Name         ; aula_13                                     ;
@@ -163,13 +199,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ULASomaSub:ULA ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; larguradados   ; 32    ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:mux_rt_exsig ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decoderULA:decoder_ula|muxGenerico2x1:mux_dec_ula ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; larguradados   ; 3     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ULAMips:ULA ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; larguradados   ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -185,13 +241,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_Saida ;
-+----------------+-------+----------------------------------------------+
-; Parameter Name ; Value ; Type                                         ;
-+----------------+-------+----------------------------------------------+
-; larguradados   ; 32    ; Signed Integer                               ;
-+----------------+-------+----------------------------------------------+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_ULA_Mem ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_Saida_Placa ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -349,12 +415,312 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+----------------------+
 
 
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA30" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA29" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA28" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA27" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA26" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA25" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA24" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA23" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA22" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA21" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA20" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA19" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA18" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA17" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA16" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA15" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA14" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA13" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA12" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA11" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA10" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA9" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                    ;
++------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA8" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                    ;
++------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA7" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                    ;
++------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA6" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                    ;
++------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA5" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                    ;
++------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA4" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                    ;
++------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA3" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                    ;
++------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA2" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                    ;
++------+-------+----------+---------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_generica:ULA1" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; slt  ; Input ; Info     ; Stuck at GND                    ;
++------+-------+----------+---------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULAMips:ULA|ULA_31:ULA31"                                                                ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; slt       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; carry_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "RAMMIPS:RAM"                                                                            ;
+; Port Connectivity Checks: "ULAMips:ULA"                                                                            ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
-; dado_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decoderULA:decoder_ula|muxGenerico2x1:mux_dec_ula" ;
++--------------+-------+----------+---------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                     ;
++--------------+-------+----------+---------------------------------------------+
+; entradaa_mux ; Input ; Info     ; Stuck at VCC                                ;
++--------------+-------+----------+---------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decoderInstru:decoder_instru"                                                           ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; saida[5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; saida[2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; saida[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -385,7 +751,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue May 16 20:48:14 2023
+    Info: Processing started: Tue May 16 23:57:50 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off aula_13 -c aula_13 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -395,9 +761,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file aula_13
 Info (12021): Found 2 design units, including 1 entities, in source file bancoReg.vhd
     Info (12022): Found design unit 1: bancoReg-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/bancoReg.vhd Line: 30
     Info (12023): Found entity 1: bancoReg File: /home/antonio/Desktop/Desing_Computadores/MIPS/bancoReg.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file ULASomaSub.vhd
-    Info (12022): Found design unit 1: ULASomaSub-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULASomaSub.vhd Line: 14
-    Info (12023): Found entity 1: ULASomaSub File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULASomaSub.vhd Line: 5
+Warning (12019): Can't analyze file -- file ULASomaSub.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file registradorGenerico.vhd
     Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/registradorGenerico.vhd Line: 15
     Info (12023): Found entity 1: registradorGenerico File: /home/antonio/Desktop/Desing_Computadores/MIPS/registradorGenerico.vhd Line: 4
@@ -419,12 +783,37 @@ Info (12021): Found 2 design units, including 1 entities, in source file muxGene
 Info (12021): Found 2 design units, including 1 entities, in source file conversorHex7Seg.vhd
     Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/conversorHex7Seg.vhd Line: 17
     Info (12023): Found entity 1: conversorHex7Seg File: /home/antonio/Desktop/Desing_Computadores/MIPS/conversorHex7Seg.vhd Line: 4
+Info (12021): Found 3 design units, including 1 entities, in source file edgeDetector.vhd
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: /home/antonio/Desktop/Desing_Computadores/MIPS/edgeDetector.vhd Line: 10
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: /home/antonio/Desktop/Desing_Computadores/MIPS/edgeDetector.vhd Line: 23
+    Info (12023): Found entity 1: edgeDetector File: /home/antonio/Desktop/Desing_Computadores/MIPS/edgeDetector.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ULAMips.vhd
+    Info (12022): Found design unit 1: ULAMips-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULAMips.vhd Line: 16
+    Info (12023): Found entity 1: ULAMips File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULAMips.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ULA_generica.vhd
+    Info (12022): Found design unit 1: ULA_generica-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULA_generica.vhd Line: 15
+    Info (12023): Found entity 1: ULA_generica File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULA_generica.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file muxBit.vhd
+    Info (12022): Found design unit 1: muxBit-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/muxBit.vhd Line: 13
+    Info (12023): Found entity 1: muxBit File: /home/antonio/Desktop/Desing_Computadores/MIPS/muxBit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file soma_bit.vhd
+    Info (12022): Found design unit 1: soma_bit-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/soma_bit.vhd Line: 15
+    Info (12023): Found entity 1: soma_bit File: /home/antonio/Desktop/Desing_Computadores/MIPS/soma_bit.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file muxBit4x2.vhd
+    Info (12022): Found design unit 1: muxBit4x2-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/muxBit4x2.vhd Line: 13
+    Info (12023): Found entity 1: muxBit4x2 File: /home/antonio/Desktop/Desing_Computadores/MIPS/muxBit4x2.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ULA_31.vhd
+    Info (12022): Found design unit 1: ULA_31-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULA_31.vhd Line: 15
+    Info (12023): Found entity 1: ULA_31 File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULA_31.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file decoderInstru.vhd
+    Info (12022): Found design unit 1: decoderInstru-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/decoderInstru.vhd Line: 11
+    Info (12023): Found entity 1: decoderInstru File: /home/antonio/Desktop/Desing_Computadores/MIPS/decoderInstru.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file decoderULA.vhd
+    Info (12022): Found design unit 1: decoderULA-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/decoderULA.vhd Line: 12
+    Info (12023): Found entity 1: decoderULA File: /home/antonio/Desktop/Desing_Computadores/MIPS/decoderULA.vhd Line: 4
 Info (12127): Elaborating entity "aula_13" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at aula_13.vhd(41): used implicit default value for signal "sel_mux_entrada_reg" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 41
-Warning (10541): VHDL Signal Declaration warning at aula_13.vhd(47): used implicit default value for signal "we" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 47
-Warning (10541): VHDL Signal Declaration warning at aula_13.vhd(48): used implicit default value for signal "re" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 48
-Warning (10541): VHDL Signal Declaration warning at aula_13.vhd(49): used implicit default value for signal "ram_habilita" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 49
-Warning (10036): Verilog HDL or VHDL warning at aula_13.vhd(50): object "dado_lido" assigned a value but never read File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 50
+Warning (10036): Verilog HDL or VHDL warning at aula_13.vhd(47): object "saida_flag0" assigned a value but never read File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 47
+Warning (10541): VHDL Signal Declaration warning at aula_13.vhd(50): used implicit default value for signal "ram_habilita" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 50
 Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_PC" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 69
 Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:INC_PC" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 77
 Info (12128): Elaborating entity "ROMMIPS" for hierarchy "ROMMIPS:ROM" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 83
@@ -432,13 +821,23 @@ Warning (10541): VHDL Signal Declaration warning at ROMMIPS.vhd(18): used implic
 Info (12128): Elaborating entity "bancoReg" for hierarchy "bancoReg:bancoRegistradores" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 88
 Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:mux_entrada_regs" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 99
 Info (12128): Elaborating entity "estendeSinalGenerico" for hierarchy "estendeSinalGenerico:estensor_sinal" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 106
-Info (12128): Elaborating entity "ULASomaSub" for hierarchy "ULASomaSub:ULA" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 110
-Info (12128): Elaborating entity "RAMMIPS" for hierarchy "RAMMIPS:RAM" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 117
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUX_Saida" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 133
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:DEC_0" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 139
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:mux_rt_exsig" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 109
+Info (12128): Elaborating entity "decoderInstru" for hierarchy "decoderInstru:decoder_instru" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 116
+Info (12128): Elaborating entity "decoderULA" for hierarchy "decoderULA:decoder_ula" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 118
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "decoderULA:decoder_ula|muxGenerico2x1:mux_dec_ula" File: /home/antonio/Desktop/Desing_Computadores/MIPS/decoderULA.vhd Line: 35
+Info (12128): Elaborating entity "ULAMips" for hierarchy "ULAMips:ULA" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 125
+Warning (10540): VHDL Signal Declaration warning at ULAMips.vhd(17): used explicit default value for signal "zero" because signal was never assigned a value File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULAMips.vhd Line: 17
+Warning (10036): Verilog HDL or VHDL warning at ULAMips.vhd(21): object "carry_31" assigned a value but never read File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULAMips.vhd Line: 21
+Info (12128): Elaborating entity "ULA_31" for hierarchy "ULAMips:ULA|ULA_31:ULA31" File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULAMips.vhd Line: 27
+Info (12128): Elaborating entity "muxBit" for hierarchy "ULAMips:ULA|ULA_31:ULA31|muxBit:MUX_inverte" File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULA_31.vhd Line: 21
+Info (12128): Elaborating entity "soma_bit" for hierarchy "ULAMips:ULA|ULA_31:ULA31|soma_bit:Somador" File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULA_31.vhd Line: 24
+Info (12128): Elaborating entity "muxBit4x2" for hierarchy "ULAMips:ULA|ULA_31:ULA31|muxBit4x2:MUX_Selecao" File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULA_31.vhd Line: 33
+Info (12128): Elaborating entity "ULA_generica" for hierarchy "ULAMips:ULA|ULA_generica:ULA0" File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULAMips.vhd Line: 39
+Info (12128): Elaborating entity "RAMMIPS" for hierarchy "RAMMIPS:RAM" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 134
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:DEC_0" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 163
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 787 megabytes
-    Info: Processing ended: Tue May 16 20:48:21 2023
+    Info: Peak virtual memory: 790 megabytes
+    Info: Processing ended: Tue May 16 23:57:57 2023
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:17
 
