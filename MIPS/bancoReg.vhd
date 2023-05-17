@@ -36,7 +36,6 @@ function initMemory
         return memoria_t is variable tmp : memoria_t := (others => (others => '0'));
   begin
         -- Inicializa os endereços:
-        tmp(0) := x"AAAAAAAA";  -- Nao deve ter efeito.
         tmp(8)  := 32x"00";  -- $t0 = 0x00
         tmp(9)  := 32x"0A";  -- $t1 = 0x0A
         tmp(10) := 32x"0B";  -- $t2 = 0x0B

@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "04/30/2023 16:33:06"
+-- Generated on "05/17/2023 11:11:33"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          aula_13
 -- 
@@ -36,19 +36,33 @@ ARCHITECTURE aula_13_arch OF aula_13_vhd_vec_tst IS
 -- signals                                                   
 SIGNAL CLOCK_50 : STD_LOGIC;
 SIGNAL dados_out : STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL EscritaReg3 : STD_LOGIC;
+SIGNAL HEX0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX4 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX5 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL KEY : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL OP_ULA : STD_LOGIC;
+SIGNAL LEDR : STD_LOGIC_VECTOR(9 DOWNTO 0);
+SIGNAL OP_ULA : STD_LOGIC_VECTOR(2 DOWNTO 0);
 SIGNAL PC_OUT : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL SW : STD_LOGIC_VECTOR(9 DOWNTO 0);
 SIGNAL ULA_OUT : STD_LOGIC_VECTOR(31 DOWNTO 0);
 COMPONENT aula_13
 	PORT (
 	CLOCK_50 : IN STD_LOGIC;
 	dados_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	EscritaReg3 : IN STD_LOGIC;
+	HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	KEY : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	OP_ULA : IN STD_LOGIC;
+	LEDR : OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+	OP_ULA : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
 	PC_OUT : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
 	ULA_OUT : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;
@@ -58,10 +72,17 @@ BEGIN
 -- list connections between master ports and signals
 	CLOCK_50 => CLOCK_50,
 	dados_out => dados_out,
-	EscritaReg3 => EscritaReg3,
+	HEX0 => HEX0,
+	HEX1 => HEX1,
+	HEX2 => HEX2,
+	HEX3 => HEX3,
+	HEX4 => HEX4,
+	HEX5 => HEX5,
 	KEY => KEY,
+	LEDR => LEDR,
 	OP_ULA => OP_ULA,
 	PC_OUT => PC_OUT,
+	SW => SW,
 	ULA_OUT => ULA_OUT
 	);
 
@@ -76,18 +97,6 @@ LOOP
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_CLOCK_50;
-
--- EscritaReg3
-t_prcs_EscritaReg3: PROCESS
-BEGIN
-LOOP
-	EscritaReg3 <= '0';
-	WAIT FOR 10000 ps;
-	EscritaReg3 <= '1';
-	WAIT FOR 10000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
-END LOOP;
-END PROCESS t_prcs_EscritaReg3;
 -- KEY[3]
 t_prcs_KEY_3: PROCESS
 BEGIN
@@ -136,16 +145,4 @@ LOOP
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_KEY_0;
-
--- OP_ULA
-t_prcs_OP_ULA: PROCESS
-BEGIN
-LOOP
-	OP_ULA <= '0';
-	WAIT FOR 10000 ps;
-	OP_ULA <= '1';
-	WAIT FOR 10000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
-END LOOP;
-END PROCESS t_prcs_OP_ULA;
 END aula_13_arch;

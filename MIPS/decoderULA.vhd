@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity decoderULA is
-  port ( opcode : in std_logic_vector(5 downto 0);
+  port ( upcode : in std_logic_vector(5 downto 0);
 			funct : in std_logic_vector(5 downto 0);
 			tipo_r: in std_logic;
 			saida : out std_logic_vector(2 downto 0) --vira quatro com o inverte A
@@ -13,22 +13,25 @@ architecture comportamento of decoderULA is
 --upcodes
 constant LW  	: std_logic_vector(5 downto 0) := "100011";
 constant SW  	: std_logic_vector(5 downto 0) := "101011";
+constant BEQ  : std_logic_vector(5 downto 0) := "000100";
 
 --functs
 constant ADD 	: std_logic_vector(5 downto 0) := "100000";
 constant SUB  	: std_logic_vector(5 downto 0) := "100010";
 constant ANDD  : std_logic_vector(5 downto 0) := "100100";
 constant ORR	: std_logic_vector(5 downto 0) := "100101";
+constant SLT	: std_logic_vector(5 downto 0) := "101010";
  
 signal saida_funct, saida_upcode : std_logic_vector(2 downto 0);
 
 begin
+--logica a partir do upcode
+saida_upcode <= "110" when upcode = BEQ else "010"; 
+
 --logica a partir do funct
-saida_upcode <= "111"; 
-
-
 saida_funct <= "010" when funct = ADD else 
-					"110" when funct = SUB else 
+					"110" when funct = SUB else
+					"111" when funct = SLT else 	
 					"001" when funct = ORR else "000"; 
 
 			

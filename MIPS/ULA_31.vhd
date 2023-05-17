@@ -39,6 +39,6 @@ begin
 		saida_MUX => saida
     );
 	 
-	 overflow <= carry_out xor carry_in;
+	 overflow <= ((carry_out xor carry_in) xor soma);
 
 end architecture;

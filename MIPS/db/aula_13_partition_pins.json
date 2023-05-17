@@ -4,63 +4,319 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "dados_out[0]",
+					"name" : "HEX0[0]",
 					"strict" : false
 				},
 				{
-					"name" : "dados_out[1]",
+					"name" : "HEX0[1]",
 					"strict" : false
 				},
 				{
-					"name" : "dados_out[2]",
+					"name" : "HEX0[2]",
 					"strict" : false
 				},
 				{
-					"name" : "dados_out[3]",
+					"name" : "HEX0[3]",
 					"strict" : false
 				},
 				{
-					"name" : "dados_out[4]",
+					"name" : "HEX0[4]",
 					"strict" : false
 				},
 				{
-					"name" : "dados_out[5]",
+					"name" : "HEX0[5]",
 					"strict" : false
 				},
 				{
-					"name" : "dados_out[6]",
+					"name" : "HEX0[6]",
 					"strict" : false
 				},
 				{
-					"name" : "dados_out[7]",
+					"name" : "HEX1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "dados_out[11]",
+					"name" : "HEX1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "dados_out[12]",
+					"name" : "HEX1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "dados_out[14]",
+					"name" : "HEX1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "dados_out[16]",
+					"name" : "HEX1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "dados_out[19]",
+					"name" : "HEX1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "dados_out[22]",
+					"name" : "HEX1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "dados_out[24]",
+					"name" : "HEX2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "OP_ULA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "OP_ULA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "OP_ULA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[16]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[17]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[19]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[21]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[24]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[26]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[27]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[28]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[29]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[31]",
 					"strict" : false
 				},
 				{
@@ -312,11 +568,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "CLOCK_50",
+					"name" : "SW[0]",
 					"strict" : false
 				},
 				{
-					"name" : "OP_ULA",
+					"name" : "KEY[0]",
 					"strict" : false
 				}
 			]

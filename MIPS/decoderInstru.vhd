@@ -10,15 +10,15 @@ end entity;
 
 architecture comportamento of decoderInstru is
 -- GRUPO A
+constant UPCODE_R 	: std_logic_vector(5 downto 0) := "000000";
+--constant SUB  	: std_logic_vector(5 downto 0) := "000000";
+--constant ANDD  : std_logic_vector(5 downto 0) := "000000";
+--constant ORR	: std_logic_vector(5 downto 0) := "000000";
+--constant SLT  : std_logic_vector(5 downto 0) := "000000";
+
 constant LW  	: std_logic_vector(5 downto 0) := "100011";
 constant SW  	: std_logic_vector(5 downto 0) := "101011";
 
-constant ADD 	: std_logic_vector(5 downto 0) := "000000";
-constant SUB  	: std_logic_vector(5 downto 0) := "000000";
-constant ANDD  : std_logic_vector(5 downto 0) := "000000";
-constant ORR	: std_logic_vector(5 downto 0) := "000000";
-
-constant SLT  : std_logic_vector(5 downto 0) := "101010";
 constant BEQ  : std_logic_vector(5 downto 0) := "000100";
 constant JMP : std_logic_vector(5 downto 0) := "000010";
 
@@ -36,14 +36,14 @@ constant JR  : std_logic_vector(5 downto 0) := "000000";
 
 begin
 
-saida(0) <= '1' when (opcode = ADD) or (opcode = SUB) else '0'; -- muxPC
-saida(1) <= '1' when (opcode = ADD) or (opcode = SUB) else '0'; -- mux Reg 2 e 3
-saida(2) <= '1' when (opcode = ADD) or (opcode = SUB) else '0'; -- hab escrita reg 3
-saida(3) <= '1' when (opcode = ADD) or (opcode = SUB) else '0'; -- mux antes ULA (R2 e ExSig)
-saida(4) <= '1' when (opcode = ADD) or (opcode = SUB) else '0'; -- mux retorno (ULA e RAM)
-saida(5) <= '1' when (opcode = ADD) or (opcode = SUB) else '0'; -- BEQ
-saida(6) <= '1' when (opcode = ADD) or (opcode = SUB) else '0'; -- hab leitura RAM
-saida(7) <= '1' when (opcode = ADD) or (opcode = SUB) else '0'; -- hab escrita RAM
+saida(0) <= '1' when (opcode = JMP)									else '0'; -- muxPC
+saida(1) <= '1' when (opcode = UPCODE_R)							else '0'; -- mux Reg 2 e 3
+saida(2) <= '1' when (opcode = UPCODE_R) or (opcode = LW) 	else '0'; -- hab escrita reg 3
+saida(3) <= '1' when (opcode = SW) or (opcode = LW) 			else '0'; -- mux antes ULA (R2 e ExSig)
+saida(4) <= '1' when (opcode = LW)									else '0'; -- mux retorno (ULA e RAM)
+saida(5) <= '1' when (opcode = BEQ) 								else '0'; -- BEQ
+saida(6) <= '1' when (opcode = LW)  								else '0'; -- hab leitura RAM
+saida(7) <= '1' when (opcode = SW) 									else '0'; -- hab escrita RAM
 
-tipo_r 	<= '1' when (opcode = ADD) or (opcode = SUB)  else '0'; -- tanto faz com qual q compara
+tipo_r 	<= '1' when (opcode = UPCODE_R)  else '0'; -- tanto faz com qual q compara
 end architecture;
