@@ -44,7 +44,7 @@ function initMemory
         tmp(13) := 32x"16";  -- $t5 = 0x16
         return tmp;
     end initMemory;
-
+	 
     -- Declaracao dos registradores:
     shared variable registrador : memoria_t := initMemory;
     constant zero : std_logic_vector(larguraDados-1 downto 0) := (others => '0');

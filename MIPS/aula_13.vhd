@@ -59,6 +59,12 @@ architecture arquitetura of aula_13 is
   signal saida_soma_shift : std_logic_vector(larguraDados -1 downto 0);
   signal shift_PC_imediato : std_logic_vector(larguraDados -1 downto 0);
 
+  signal entrada_ifid, saida_ifid : std_logic_vector(64-1 downto 0);
+  signal inst_pipe_1 : std_logic_vector(larguraDados -1 downto 0);
+  
+  signal entrada_idex, saida_idex : std_logic_vector(146-1 downto 0);
+  
+  
 begin
 -- Para simular, fica mais simples tirar o edgeDetector
 gravar:  if simulacao generate
@@ -72,40 +78,92 @@ end generate;
 --delcaracao de componentes aqui
 
 ---==========================================================================================---		  
+
 ROM: entity work.ROMMIPS generic map( dataWidth => larguraDados, addrWidth => larguraEnderecos)
 	  port map (Endereco => REG_PC_OUT,
 		Dado => inst);
 
-		  	  
+INC_PC:  entity work.somadorGenerico  generic map (larguraDados => larguraDados)
+        port map( entradaA => REG_PC_OUT,
+		  entradaB => 32x"4", 
+		  saida => saida_incrementa);	
+
+shift_PC_imediato(31 downto 28) <=  saida_incrementa(31 downto 28);
+shift_PC_imediato(27 downto 0) <=  inst(25 downto 0) & "00";		  
+		  
+MUX_Entrada_PC :  entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
+        port map( entradaA_MUX => saida_mux_beq,
+                 entradaB_MUX =>  shift_PC_imediato,
+                 seletor_MUX => Sinais_Controle(0) , --buscar la na frente
+                 saida_MUX => REG_PC_IN);	
+					  
+REG_PC : entity work.registradorGenerico  generic map (larguraDados => larguraDados)
+          port map (DIN => REG_PC_IN, 
+			 DOUT => REG_PC_OUT, 
+			 ENABLE => '1' , 
+			 CLK => CLK, 
+			 RST => '0' );
+
+---==========================================================================================---
+--PIPILINE 1
+entrada_ifid(63 downto 32) <= saida_incrementa;
+entrada_ifid(31 downto 0) <= inst;
+
+REG_ifid : entity work.registradorGenerico  generic map (larguraDados => 64)
+          port map (ENABLE => '1' ,CLK => CLK, RST => '0',
+			 DIN => entrada_ifid, 
+			 DOUT => saida_ifid 
+			  );
+inst_pipe_1 <= saida_ifid(31 downto 0);
+			  
+---==========================================================================================---
+
 bancoRegistradores: entity work.bancoReg generic map ( larguraDados => larguraDados, larguraEndBancoRegs => 5)
 						port map( clk => CLK,
-						enderecoA => inst(25 downto 21),
-						enderecoB => inst(20 downto 16),
-						enderecoC => saida_mux_entrada_regs,
-						dadoEscritaC => dado_retorno,
-						escreveC =>  Sinais_Controle(2),
+						enderecoA => inst_pipe_1(25 downto 21),
+						enderecoB => inst_pipe_1(20 downto 16),
+						enderecoC => saida_mux_entrada_regs,  --vem depois
+						dadoEscritaC => dado_retorno,  --tnm vem depois]
+						escreveC =>  Sinais_Controle(2), --buscar la depois
 						saidaA => REG_rs,
 						saidaB => REG_rt);
 						
-						
-mux_entrada_regs:  entity work.muxGenerico2x1 generic map (larguraDados => 5)
-        port map( entradaA_MUX => inst(20 downto 16),
-                 entradaB_MUX =>  inst(15 downto 11),
-                 seletor_MUX => Sinais_Controle(1),
-                 saida_MUX => saida_mux_entrada_regs);					
-	
-	
 estensor_sinal : entity work.estendeSinalGenerico   generic map (larguraDadoEntrada => 16, larguraDadoSaida => larguraDados)
-          port map (estendeSinal_IN => inst(15 downto 0), estendeSinal_OUT => saida_estensor);
-										
-mux_rt_exsig:  entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
-        port map( entradaA_MUX => REG_rt,
-                 entradaB_MUX =>  saida_estensor,
-                 seletor_MUX => Sinais_Controle(3),
-                 saida_MUX => saida_mux_ula);	
-					  
+          port map (estendeSinal_IN => inst_pipe_1(15 downto 0), estendeSinal_OUT => saida_estensor);						
+	
+decoder_instru :  entity work.decoderInstru port map( opcode =>inst_pipe_1(31 downto 26) , saida => Sinais_Controle,tipo_r =>tipo_r);
+
+
 ---==========================================================================================---
-decoder_instru :  entity work.decoderInstru port map( opcode =>inst(31 downto 26) , saida => Sinais_Controle,tipo_r =>tipo_r);
+--PIPILINE 2
+entrada_idex(145 downto 138) <= Sinais_Controle; --/8
+entrada_idex(137 downto 106) <= saida_ifid(63 downto 32);
+entrada_idex(105 downto 74) <= REG_rs;
+entrada_idex(73 downto 42) <= REG_rt;
+entrada_idex(41 downto 10) <= saida_estensor;
+entrada_idex(9 downto 5) <= inst_pipe_1(20 downto 16);
+entrada_idex(4 downto 0) <= inst_pipe_1(15 downto 11);
+
+
+REG_idex : entity work.registradorGenerico  generic map (larguraDados => 146)
+          port map (ENABLE => '1' ,CLK => CLK, RST => '0',
+			 DIN => entrada_idex, 
+			 DOUT => saida_idex 
+			  );
+
+rd_pipe <=saida_idex(4 downto 0);		  
+rt_pipe <=saida_idex(9 downto 5);
+
+
+sinais_controle_pipe1 <= saida_idex(145 downto 138);
+---==========================================================================================---
+
+
+saida_shift_ext<= saida_estensor(29 downto 0) & "00";
+
+soma_pc_etx :  entity work.somadorGenerico  generic map (larguraDados => larguraDados)
+        port map( entradaA => saida_incrementa, entradaB =>  saida_shift_ext, saida => saida_soma_shift);
+
 
 decoder_ula : entity work.decoderULA port map(
 							upcode =>inst(31 downto 26),
@@ -120,8 +178,30 @@ ULA : entity work.ULAMips  generic map(larguraDados => larguraDados) port map (
 		 saida => saida_ULA, 
 		 sel => controle_ula(1 downto 0),
 		 inverteB => controle_ula(2),
-		 flagZero => saida_flag0);						
-				
+		 flagZero => saida_flag0);			
+
+mux_rt_exsig:  entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
+        port map( entradaA_MUX => REG_rt,
+                 entradaB_MUX =>  saida_estensor,
+                 seletor_MUX => Sinais_Controle(3),
+                 saida_MUX => saida_mux_ula);	
+					  
+					  
+mux_entrada_regs:  entity work.muxGenerico2x1 generic map (larguraDados => 5)
+        port map( entradaA_MUX => inst(20 downto 16),
+                 entradaB_MUX =>  inst(15 downto 11),
+                 seletor_MUX => Sinais_Controle(1),
+                 saida_MUX => saida_mux_entrada_regs);					
+	
+
+
+	
+MUX_BEQ :  entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
+        port map( entradaA_MUX => saida_incrementa,
+                 entradaB_MUX => saida_soma_shift ,
+                 seletor_MUX => (Sinais_Controle(5) and saida_flag0) ,
+                 saida_MUX => saida_mux_beq);	
+
 					
 RAM : entity work.RAMMIPS generic map(dataWidth => larguraDados, addrWidth => 32, memoryAddrWidth => 6 )
 		port map( clk => CLK,
@@ -132,47 +212,30 @@ RAM : entity work.RAMMIPS generic map(dataWidth => larguraDados, addrWidth => 32
 			 re => Sinais_Controle(6), 
 			 habilita => ram_habilita);
 
+			 
+			 
+ ---==========================================================================================---
+--PIPILINE 4
+
+---==========================================================================================---
+
 MUX_ULA_Mem :  entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
         port map( entradaA_MUX => saida_ULA,
                  entradaB_MUX =>  dado_lido,
                  seletor_MUX => Sinais_Controle(4) ,
                  saida_MUX => dado_retorno);		
----==========================================================================================---
+
+					  
 			 
 			
-INC_PC:  entity work.somadorGenerico  generic map (larguraDados => larguraDados)
-        port map( entradaA => REG_PC_OUT,
-		  entradaB => 32x"4", 
-		  saida => saida_incrementa);	
+
 		  
-shift_PC_imediato(31 downto 28) <=  saida_incrementa(31 downto 28);
-shift_PC_imediato(27 downto 0) <=  inst(25 downto 0) & "00";
-
-saida_shift_ext<= saida_estensor(29 downto 0) & "00";
 
 
-soma_pc_etx :  entity work.somadorGenerico  generic map (larguraDados => larguraDados)
-        port map( entradaA => saida_incrementa, entradaB =>  saida_shift_ext, saida => saida_soma_shift);
-
-MUX_BEQ :  entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
-        port map( entradaA_MUX => saida_incrementa,
-                 entradaB_MUX => saida_soma_shift ,
-                 seletor_MUX => (Sinais_Controle(5) and saida_flag0) ,
-                 saida_MUX => saida_mux_beq);	
 
 
-MUX_Entrada_PC :  entity work.muxGenerico2x1 generic map (larguraDados => larguraDados)
-        port map( entradaA_MUX => saida_mux_beq,
-                 entradaB_MUX =>  shift_PC_imediato,
-                 seletor_MUX => Sinais_Controle(0) ,
-                 saida_MUX => REG_PC_IN);	
-					  
-REG_PC : entity work.registradorGenerico  generic map (larguraDados => larguraDados)
-          port map (DIN => REG_PC_IN, 
-			 DOUT => REG_PC_OUT, 
-			 ENABLE => '1' , 
-			 CLK => CLK, 
-			 RST => '0' );
+
+
 
 ---==========================================================================================---			 
 OP_ULA <= controle_ula;
