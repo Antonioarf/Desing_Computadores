@@ -14,6 +14,12 @@ architecture comportamento of decoderULA is
 constant LW  	: std_logic_vector(5 downto 0) := "100011";
 constant SW  	: std_logic_vector(5 downto 0) := "101011";
 constant BEQ  : std_logic_vector(5 downto 0) := "000100";
+constant BNE : std_logic_vector(5 downto 0) 		:= "000101";
+
+constant ADDI  : std_logic_vector(5 downto 0) 	:= "001000";
+constant ANDI : std_logic_vector(5 downto 0) 	:= "001100";
+constant ORI  : std_logic_vector(5 downto 0) 	:= "001101";
+constant SLTI  : std_logic_vector(5 downto 0) 	:= "001010";
 
 --functs
 constant ADD 	: std_logic_vector(5 downto 0) := "100000";
@@ -26,7 +32,11 @@ signal saida_funct, saida_upcode : std_logic_vector(2 downto 0);
 
 begin
 --logica a partir do upcode
-saida_upcode <= "110" when upcode = BEQ else "010"; 
+saida_upcode <= "110" when (upcode = BEQ)or(upcode = BNE) else
+                "001" when upcode = ORI else
+					 "111" when upcode = SLTI else 
+                "000" when upcode = ANDI else
+                "010"; 
 
 --logica a partir do funct
 saida_funct <= "010" when funct = ADD else 

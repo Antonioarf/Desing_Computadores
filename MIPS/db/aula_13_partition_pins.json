@@ -288,6 +288,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "ROM_OUT[18]",
+					"strict" : false
+				},
+				{
 					"name" : "ROM_OUT[19]",
 					"strict" : false
 				},
@@ -296,7 +300,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "ROM_OUT[22]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[23]",
+					"strict" : false
+				},
+				{
 					"name" : "ROM_OUT[24]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_OUT[25]",
 					"strict" : false
 				},
 				{
@@ -445,6 +461,14 @@
 				},
 				{
 					"name" : "ULA_OUT[31]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[1]",
 					"strict" : false
 				},
 				{

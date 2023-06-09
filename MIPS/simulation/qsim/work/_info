@@ -10,7 +10,7 @@ z2
 cModel Technology
 dC:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/aulas/aula_13/simulation/qsim
 Eaula_13
-Z0 w1684335152
+Z0 w1686271145
 Z1 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
 Z2 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
 Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
@@ -20,7 +20,7 @@ Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z9 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 54
+!i122 74
 Z10 d/home/antonio/Desktop/Desing_Computadores/MIPS/simulation/qsim
 Z11 8aula_13.vho
 Z12 Faula_13.vho
@@ -30,9 +30,9 @@ V_bOz7RoBWPTl;encT5FOF3
 !s100 ;QIAY8_XVd@ecUbJhnI813
 Z13 OV;C;2020.1;71
 32
-Z14 !s110 1684335153
+Z14 !s110 1686271146
 !i10b 1
-Z15 !s108 1684335153.000000
+Z15 !s108 1686271146.000000
 Z16 !s90 -work|work|aula_13.vho|
 Z17 !s107 aula_13.vho|
 !i113 1
@@ -49,11 +49,11 @@ R7
 R8
 R9
 DEx4 work 7 aula_13 0 22 _bOz7RoBWPTl;encT5FOF3
-!i122 54
-l1247
-L58 13609
-VVU?R?1f8;I8:6W2;Zkaza3
-!s100 UMQ<1Oez<<JE@?XAWDKW?1
+!i122 74
+l2760
+L58 29081
+V;T0oQK[LA;EOeXI8=_C]_3
+!s100 olP_7C@Vz4kD`LfX6ZFK70
 R13
 32
 R14
@@ -65,13 +65,13 @@ R17
 R18
 R19
 Eaula_13_vhd_vec_tst
-Z20 w1684335151
+Z20 w1686271144
 R7
 R8
-!i122 55
+!i122 75
 R10
-Z21 8Waveform7.vwf.vht
-Z22 FWaveform7.vwf.vht
+Z21 8Waveform15.vwf.vht
+Z22 FWaveform15.vwf.vht
 l0
 L32 1
 V;`9VnDkg?`gFa<eU:DhzI3
@@ -81,8 +81,8 @@ R13
 R14
 !i10b 1
 R15
-Z23 !s90 -work|work|Waveform7.vwf.vht|
-!s107 Waveform7.vwf.vht|
+Z23 !s90 -work|work|Waveform15.vwf.vht|
+!s107 Waveform15.vwf.vht|
 !i113 1
 R18
 R19
@@ -90,18 +90,18 @@ Aaula_13_arch
 R7
 R8
 Z24 DEx4 work 19 aula_13_vhd_vec_tst 0 22 ;`9VnDkg?`gFa<eU:DhzI3
-!i122 55
+!i122 75
 l69
 Z25 L34 115
-Z26 V9V6@LhR85mRiSHFKToX[h1
-Z27 !s100 ?e[miJK>=YNW@bkG6f_k;2
+V9V6@LhR85mRiSHFKToX[h1
+!s100 ?e[miJK>=YNW@bkG6f_k;2
 R13
 32
 R14
 !i10b 1
 R15
 R23
-Z28 !s107 Waveform7.vwf.vht|
+Z26 !s107 Waveform15.vwf.vht|
 !i113 1
 R18
 R19
