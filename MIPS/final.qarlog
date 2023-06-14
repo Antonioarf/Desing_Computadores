@@ -1,0 +1,41 @@
+Quartus Prime Archive log --	/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/final.qarlog
+
+Archive:	/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/final.qar
+Date:		Sat Jun 10 21:33:57 2023
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ROMMIPS.vhd
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/SomadorGenerico.vhd
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ULAMips.vhd
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ULA_31.vhd
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ULA_generica.vhd
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/Waveform10.vwf
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/Waveform11.vwf
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/Waveform12.vwf
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/Waveform13.vwf
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/Waveform14.vwf
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/Waveform15.vwf
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/Waveform8.vwf
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/Waveform9.vwf
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.qpf
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.qsf
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/bancoReg.vhd
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/conversorHex7Seg.vhd
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/decoderInstru.vhd
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/decoderULA.vhd
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/edgeDetector.vhd
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/estendeSinalGenerico.vhd
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/muxBit.vhd
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/muxBit4x2.vhd
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/muxGenerico2x1.vhd
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/muxGenerico4x2.vhd
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/registradorGenerico.vhd
+/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/soma_bit.vhd
+/home/antonio/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 30 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

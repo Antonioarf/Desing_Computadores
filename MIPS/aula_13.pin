@@ -79,17 +79,17 @@ GND                          : A1        :        :                   :         
 MSEL2                        : A2        :        :                   :         : 9A        :                
 VCCBAT                       : A3        : power  :                   : 1.2V    :           :                
 nCONFIG                      : A4        :        :                   :         : 9A        :                
-ROM_OUT[18]                  : A5        : output : 2.5 V             :         : 8A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A5        :        :                   :         : 8A        :                
 VCCIO8A                      : A6        : power  :                   : 2.5V    : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A7        :        :                   :         : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A8        :        :                   :         : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A9        :        :                   :         : 8A        :                
-ROM_OUT[29]                  : A10       : output : 2.5 V             :         : 8A        : N              
+PC_OUT[16]                   : A9        : output : 2.5 V             :         : 8A        : N              
+PC_OUT[27]                   : A10       : output : 2.5 V             :         : 8A        : N              
 GND                          : A11       : gnd    :                   :         :           :                
-PC_OUT[13]                   : A12       : output : 2.5 V             :         : 7A        : N              
-ROM_OUT[9]                   : A13       : output : 2.5 V             :         : 7A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A14       :        :                   :         : 7A        :                
-PC_OUT[29]                   : A15       : output : 2.5 V             :         : 7A        : N              
+ROM_OUT[17]                  : A12       : output : 2.5 V             :         : 7A        : N              
+ROM_OUT[29]                  : A13       : output : 2.5 V             :         : 7A        : N              
+ULA_OUT[29]                  : A14       : output : 2.5 V             :         : 7A        : N              
+ROM_OUT[10]                  : A15       : output : 2.5 V             :         : 7A        : N              
 VCCIO7A                      : A16       : power  :                   : 2.5V    : 7A        :                
 NC                           : A17       :        :                   :         :           :                
 NC                           : A18       :        :                   :         :           :                
@@ -145,18 +145,18 @@ GND                          : B1        : gnd    :                   :         
 GND                          : B2        : gnd    :                   :         :           :                
 DNU                          : B3        :        :                   :         :           :                
 DNU                          : B4        :        :                   :         :           :                
-ROM_OUT[22]                  : B5        : output : 2.5 V             :         : 8A        : N              
-ROM_OUT[30]                  : B6        : output : 2.5 V             :         : 8A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : B7        :        :                   :         : 8A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B5        :        :                   :         : 8A        :                
+ROM_OUT[6]                   : B6        : output : 2.5 V             :         : 8A        : N              
+ROM_OUT[13]                  : B7        : output : 2.5 V             :         : 8A        : N              
 VREFB8AN0                    : B8        : power  :                   :         : 8A        :                
 GND                          : B9        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B10       :        :                   :         : 8A        :                
-PC_OUT[9]                    : B11       : output : 2.5 V             :         : 7A        : N              
-ULA_OUT[17]                  : B12       : output : 2.5 V             :         : 7A        : N              
-ULA_OUT[13]                  : B13       : output : 2.5 V             :         : 7A        : N              
+PC_OUT[25]                   : B10       : output : 2.5 V             :         : 8A        : N              
+ULA_OUT[30]                  : B11       : output : 2.5 V             :         : 7A        : N              
+ROM_OUT[28]                  : B12       : output : 2.5 V             :         : 7A        : N              
+ROM_OUT[25]                  : B13       : output : 2.5 V             :         : 7A        : N              
 GND                          : B14       : gnd    :                   :         :           :                
-ROM_OUT[24]                  : B15       : output : 2.5 V             :         : 7A        : N              
-ROM_OUT[11]                  : B16       : output : 2.5 V             :         : 7A        : N              
+ROM_OUT[2]                   : B15       : output : 2.5 V             :         : 7A        : N              
+ROM_OUT[12]                  : B16       : output : 2.5 V             :         : 7A        : N              
 NC                           : B17       :        :                   :         :           :                
 NC                           : B18       :        :                   :         :           :                
 VCCIO7A                      : B19       : power  :                   : 2.5V    : 7A        :                
@@ -168,17 +168,17 @@ HEX5[5]                      : C2        : output : 3.3-V LVTTL       :         
 GND                          : C3        : gnd    :                   :         :           :                
 GND                          : C4        : gnd    :                   :         :           :                
 GND                          : C5        :        :                   :         : 9A        :                
-ROM_OUT[8]                   : C6        : output : 2.5 V             :         : 8A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C6        :        :                   :         : 8A        :                
 VCCIO8A                      : C7        : power  :                   : 2.5V    : 8A        :                
-ROM_OUT[25]                  : C8        : output : 2.5 V             :         : 8A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C8        :        :                   :         : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C9        :        :                   :         : 8A        :                
 VCCPD7A8A                    : C10       : power  :                   : 2.5V    : 7A, 8A    :                
-ULA_OUT[25]                  : C11       : output : 2.5 V             :         : 7A        : N              
+ULA_OUT[10]                  : C11       : output : 2.5 V             :         : 7A        : N              
 VCCIO7A                      : C12       : power  :                   : 2.5V    : 7A        :                
-PC_OUT[22]                   : C13       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C13       :        :                   :         : 7A        :                
 VREFB7AN0                    : C14       : power  :                   :         : 7A        :                
-ROM_OUT[20]                  : C15       : output : 2.5 V             :         : 7A        : N              
-ROM_OUT[14]                  : C16       : output : 2.5 V             :         : 7A        : N              
+PC_OUT[8]                    : C15       : output : 2.5 V             :         : 7A        : N              
+ROM_OUT[7]                   : C16       : output : 2.5 V             :         : 7A        : N              
 GND                          : C17       : gnd    :                   :         :           :                
 NC                           : C18       :        :                   :         :           :                
 NC                           : C19       :        :                   :         :           :                
@@ -190,18 +190,18 @@ GND                          : D2        : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : D3        :        :                   :         : 2A        :                
 VCCIO2A                      : D4        : power  :                   : 3.3V    : 2A        :                
 GND                          : D5        : gnd    :                   :         :           :                
-ROM_OUT[12]                  : D6        : output : 2.5 V             :         : 8A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D6        :        :                   :         : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D7        :        :                   :         : 8A        :                
 VCCPD7A8A                    : D8        : power  :                   : 2.5V    : 7A, 8A    :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D9        :        :                   :         : 8A        :                
+PC_OUT[5]                    : D9        : output : 2.5 V             :         : 8A        : N              
 GND                          : D10       : gnd    :                   :         :           :                
 VCC_AUX                      : D11       : power  :                   : 2.5V    :           :                
-ROM_OUT[1]                   : D12       : output : 2.5 V             :         : 7A        : N              
-OP_ULA[2]                    : D13       : output : 2.5 V             :         : 7A        : N              
+ROM_OUT[22]                  : D12       : output : 2.5 V             :         : 7A        : N              
+ULA_OUT[27]                  : D13       : output : 2.5 V             :         : 7A        : N              
 VCCPD7A8A                    : D14       : power  :                   : 2.5V    : 7A, 8A    :                
 VCCIO7A                      : D15       : power  :                   : 2.5V    : 7A        :                
 VCCPD7A8A                    : D16       : power  :                   : 2.5V    : 7A, 8A    :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D17       :        :                   :         : 7A        :                
+ROM_OUT[8]                   : D17       : output : 2.5 V             :         : 7A        : N              
 VCC_AUX                      : D18       : power  :                   : 2.5V    :           :                
 NC                           : D19       :        :                   :         :           :                
 GND                          : D20       : gnd    :                   :         :           :                
@@ -213,16 +213,16 @@ GND                          : E3        : gnd    :                   :         
 GND                          : E4        : gnd    :                   :         :           :                
 MSEL3                        : E5        :        :                   :         : 9A        :                
 VCC_AUX                      : E6        : power  :                   : 2.5V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E7        :        :                   :         : 8A        :                
+ROM_OUT[30]                  : E7        : output : 2.5 V             :         : 8A        : N              
 VCCIO8A                      : E8        : power  :                   : 2.5V    : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E9        :        :                   :         : 8A        :                
-ULA_OUT[5]                   : E10       : output : 2.5 V             :         : 8A        : N              
+PC_OUT[1]                    : E9        : output : 2.5 V             :         : 8A        : N              
+ROM_OUT[11]                  : E10       : output : 2.5 V             :         : 8A        : N              
 VCCPD7A8A                    : E11       : power  :                   : 2.5V    : 7A, 8A    :                
-PC_OUT[23]                   : E12       : output : 2.5 V             :         : 7A        : N              
+ULA_OUT[22]                  : E12       : output : 2.5 V             :         : 7A        : N              
 GND                          : E13       : gnd    :                   :         :           :                
-ULA_OUT[4]                   : E14       : output : 2.5 V             :         : 7A        : N              
-ROM_OUT[17]                  : E15       : output : 2.5 V             :         : 7A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : E16       :        :                   :         : 7A        :                
+ULA_OUT[3]                   : E14       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E15       :        :                   :         : 7A        :                
+ULA_OUT[6]                   : E16       : output : 2.5 V             :         : 7A        : N              
 DNU                          : E17       :        :                   :         :           :                
 VCCIO7A                      : E18       : power  :                   : 2.5V    : 7A        :                
 NC                           : E19       :        :                   :         :           :                
@@ -237,13 +237,13 @@ GND                          : F5        : gnd    :                   :         
 GND                          : F6        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F7        :        :                   :         : 8A        :                
 VCCPGM                       : F8        : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
-ROM_OUT[15]                  : F9        : output : 2.5 V             :         : 8A        : N              
-ROM_OUT[26]                  : F10       : output : 2.5 V             :         : 8A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F9        :        :                   :         : 8A        :                
+PC_OUT[20]                   : F10       : output : 2.5 V             :         : 8A        : N              
 VCCIO7A                      : F11       : power  :                   : 2.5V    : 7A        :                
-OP_ULA[1]                    : F12       : output : 2.5 V             :         : 7A        : N              
-PC_OUT[1]                    : F13       : output : 2.5 V             :         : 7A        : N              
-ULA_OUT[3]                   : F14       : output : 2.5 V             :         : 7A        : N              
-ULA_OUT[12]                  : F15       : output : 2.5 V             :         : 7A        : N              
+PC_OUT[19]                   : F12       : output : 2.5 V             :         : 7A        : N              
+ULA_OUT[24]                  : F13       : output : 2.5 V             :         : 7A        : N              
+ROM_OUT[20]                  : F14       : output : 2.5 V             :         : 7A        : N              
+ROM_OUT[5]                   : F15       : output : 2.5 V             :         : 7A        : N              
 GND                          : F16       : gnd    :                   :         :           :                
 GND                          : F17       :        :                   :         : 7A        :                
 NC                           : F18       :        :                   :         :           :                
@@ -256,19 +256,19 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : G2        :        :                   :      
 GND                          : G3        : gnd    :                   :         :           :                
 GND                          : G4        : gnd    :                   :         :           :                
 nCE                          : G5        :        :                   :         : 9A        :                
-PC_OUT[0]                    : G6        : output : 2.5 V             :         : 8A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G6        :        :                   :         : 8A        :                
 VCCIO8A                      : G7        : power  :                   : 2.5V    : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G8        :        :                   :         : 8A        :                
+PC_OUT[22]                   : G8        : output : 2.5 V             :         : 8A        : N              
 GND                          : G9        : gnd    :                   :         :           :                
-ROM_OUT[0]                   : G10       : output : 2.5 V             :         : 8A        : N              
-PC_OUT[26]                   : G11       : output : 2.5 V             :         : 7A        : N              
-ULA_OUT[22]                  : G12       : output : 2.5 V             :         : 7A        : N              
-ULA_OUT[15]                  : G13       : output : 2.5 V             :         : 7A        : N              
+ULA_OUT[25]                  : G10       : output : 2.5 V             :         : 8A        : N              
+ULA_OUT[21]                  : G11       : output : 2.5 V             :         : 7A        : N              
+PC_OUT[24]                   : G12       : output : 2.5 V             :         : 7A        : N              
+PC_OUT[18]                   : G13       : output : 2.5 V             :         : 7A        : N              
 VCCIO7A                      : G14       : power  :                   : 2.5V    : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G15       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G16       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G17       :        :                   :         : 7A        :                
-ROM_OUT[4]                   : G18       : output : 2.5 V             :         : 7A        : N              
+ULA_OUT[9]                   : G17       : output : 2.5 V             :         : 7A        : N              
+ULA_OUT[5]                   : G18       : output : 2.5 V             :         : 7A        : N              
 GND                          : G19       : gnd    :                   :         :           :                
 NC                           : G20       :        :                   :         :           :                
 NC                           : G21       :        :                   :         :           :                
@@ -280,15 +280,15 @@ GND                          : H4        : gnd    :                   :         
 nSTATUS                      : H5        :        :                   :         : 9A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H6        :        :                   :         : 8A        :                
 GND                          : H7        : gnd    :                   :         :           :                
-PC_OUT[31]                   : H8        : output : 2.5 V             :         : 8A        : N              
-ULA_OUT[29]                  : H9        : output : 2.5 V             :         : 8A        : N              
-PC_OUT[3]                    : H10       : output : 2.5 V             :         : 7A        : N              
-PC_OUT[8]                    : H11       : output : 2.5 V             :         : 7A        : N              
+PC_OUT[30]                   : H8        : output : 2.5 V             :         : 8A        : N              
+ULA_OUT[26]                  : H9        : output : 2.5 V             :         : 8A        : N              
+PC_OUT[6]                    : H10       : output : 2.5 V             :         : 7A        : N              
+PC_OUT[3]                    : H11       : output : 2.5 V             :         : 7A        : N              
 GND                          : H12       : gnd    :                   :         :           :                
-ROM_OUT[21]                  : H13       : output : 2.5 V             :         : 7A        : N              
-PC_OUT[19]                   : H14       : output : 2.5 V             :         : 7A        : N              
-ULA_OUT[7]                   : H15       : output : 2.5 V             :         : 7A        : N              
-PC_OUT[16]                   : H16       : output : 2.5 V             :         : 7A        : N              
+ULA_OUT[19]                  : H13       : output : 2.5 V             :         : 7A        : N              
+ULA_OUT[12]                  : H14       : output : 2.5 V             :         : 7A        : N              
+ULA_OUT[14]                  : H15       : output : 2.5 V             :         : 7A        : N              
+PC_OUT[7]                    : H16       : output : 2.5 V             :         : 7A        : N              
 VCCIO7A                      : H17       : power  :                   : 2.5V    : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H18       :        :                   :         : 7A        :                
 VCCA_FPLL                    : H19       : power  :                   : 2.5V    :           :                
@@ -301,19 +301,19 @@ GND                          : J3        : gnd    :                   :         
 VCC                          : J4        : power  :                   : 1.1V    :           :                
 GND                          : J5        : gnd    :                   :         :           :                
 MSEL1                        : J6        :        :                   :         : 9A        :                
-ULA_OUT[20]                  : J7        : output : 2.5 V             :         : 8A        : N              
-ULA_OUT[31]                  : J8        : output : 2.5 V             :         : 8A        : N              
+PC_OUT[29]                   : J7        : output : 2.5 V             :         : 8A        : N              
+ULA_OUT[28]                  : J8        : output : 2.5 V             :         : 8A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : J9        :        :                   :         : 8A        :                
 VCC                          : J10       : power  :                   : 1.1V    :           :                
-ROM_OUT[16]                  : J11       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J11       :        :                   :         : 7A        :                
 VCC                          : J12       : power  :                   : 1.1V    :           :                
-ULA_OUT[2]                   : J13       : output : 2.5 V             :         : 7A        : N              
+ULA_OUT[4]                   : J13       : output : 2.5 V             :         : 7A        : N              
 VCC                          : J14       : power  :                   : 1.1V    :           :                
 GND                          : J15       : gnd    :                   :         :           :                
 VCC                          : J16       : power  :                   : 1.1V    :           :                
-ROM_OUT[13]                  : J17       : output : 2.5 V             :         : 7A        : N              
-ROM_OUT[10]                  : J18       : output : 2.5 V             :         : 7A        : N              
-PC_OUT[15]                   : J19       : output : 2.5 V             :         : 7A        : N              
+ROM_OUT[21]                  : J17       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J18       :        :                   :         : 7A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J19       :        :                   :         : 7A        :                
 GND                          : J20       : gnd    :                   :         :           :                
 NC                           : J21       :        :                   :         :           :                
 NC                           : J22       :        :                   :         :           :                
@@ -323,29 +323,29 @@ VCC                          : K3        : power  :                   : 1.1V    
 GND                          : K4        : gnd    :                   :         :           :                
 VCC                          : K5        : power  :                   : 1.1V    :           :                
 CONF_DONE                    : K6        :        :                   :         : 9A        :                
-ULA_OUT[8]                   : K7        : output : 2.5 V             :         : 8A        : N              
+ROM_OUT[26]                  : K7        : output : 2.5 V             :         : 8A        : N              
 GND                          : K8        : gnd    :                   :         :           :                
-OP_ULA[0]                    : K9        : output : 2.5 V             :         : 7A        : N              
+ULA_OUT[20]                  : K9        : output : 2.5 V             :         : 7A        : N              
 GND                          : K10       : gnd    :                   :         :           :                
 VCC                          : K11       : power  :                   : 1.1V    :           :                
 GND                          : K12       : gnd    :                   :         :           :                
 VCC                          : K13       : power  :                   : 1.1V    :           :                
 GND                          : K14       : gnd    :                   :         :           :                
 VCC                          : K15       : power  :                   : 1.1V    :           :                
-ULA_OUT[14]                  : K16       : output : 2.5 V             :         : 7A        : N              
+ROM_OUT[14]                  : K16       : output : 2.5 V             :         : 7A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : K17       :        :                   :         : 5B        :                
 VCCIO5B                      : K18       : power  :                   : 2.5V    : 5B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K19       :        :                   :         : 7A        :                
-ROM_OUT[5]                   : K20       : output : 2.5 V             :         : 7A        : N              
-ROM_OUT[27]                  : K21       : output : 2.5 V             :         : 5B        : N              
-ROM_OUT[7]                   : K22       : output : 2.5 V             :         : 5B        : N              
+ROM_OUT[9]                   : K19       : output : 2.5 V             :         : 7A        : N              
+PC_OUT[13]                   : K20       : output : 2.5 V             :         : 7A        : N              
+PC_OUT[10]                   : K21       : output : 2.5 V             :         : 5B        : N              
+PC_OUT[9]                    : K22       : output : 2.5 V             :         : 5B        : N              
 LEDR[9]                      : L1        : output : 3.3-V LVTTL       :         : 2A        : Y              
 LEDR[8]                      : L2        : output : 3.3-V LVTTL       :         : 2A        : Y              
 GND                          : L3        : gnd    :                   :         :           :                
 VCC                          : L4        : power  :                   : 1.1V    :           :                
 GND                          : L5        : gnd    :                   :         :           :                
 MSEL0                        : L6        :        :                   :         : 9A        :                
-ROM_OUT[31]                  : L7        : output : 2.5 V             :         : 8A        : N              
+ROM_OUT[15]                  : L7        : output : 2.5 V             :         : 8A        : N              
 PC_OUT[14]                   : L8        : output : 2.5 V             :         : 7A        : N              
 DNU                          : L9        :        :                   :         :           :                
 VCC                          : L10       : power  :                   : 1.1V    :           :                
@@ -355,12 +355,12 @@ GND                          : L13       : gnd    :                   :         
 VCC                          : L14       : power  :                   : 1.1V    :           :                
 GND                          : L15       : gnd    :                   :         :           :                
 VCC                          : L16       : power  :                   : 1.1V    :           :                
-ROM_OUT[28]                  : L17       : output : 2.5 V             :         : 5B        : N              
-PC_OUT[25]                   : L18       : output : 2.5 V             :         : 5B        : N              
-ULA_OUT[24]                  : L19       : output : 2.5 V             :         : 5B        : N              
+PC_OUT[21]                   : L17       : output : 2.5 V             :         : 5B        : N              
+PC_OUT[28]                   : L18       : output : 2.5 V             :         : 5B        : N              
+ULA_OUT[13]                  : L19       : output : 2.5 V             :         : 5B        : N              
 VREFB5BN0                    : L20       : power  :                   :         : 5B        :                
 GND                          : L21       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L22       :        :                   :         : 5B        :                
+ULA_OUT[23]                  : L22       : output : 2.5 V             :         : 5B        : N              
 GND                          : M1        : gnd    :                   :         :           :                
 GND                          : M2        : gnd    :                   :         :           :                
 VCCA_FPLL                    : M3        : power  :                   : 2.5V    :           :                
@@ -376,19 +376,19 @@ GND                          : M12       : gnd    :                   :         
 VCC                          : M13       : power  :                   : 1.1V    :           :                
 GND                          : M14       : gnd    :                   :         :           :                
 VCC                          : M15       : power  :                   : 1.1V    :           :                
-ULA_OUT[30]                  : M16       : output : 2.5 V             :         : 5B        : N              
+PC_OUT[11]                   : M16       : output : 2.5 V             :         : 5B        : N              
 VCCPD5B                      : M17       : power  :                   : 2.5V    : 5B        :                
-PC_OUT[18]                   : M18       : output : 2.5 V             :         : 5B        : N              
+PC_OUT[31]                   : M18       : output : 2.5 V             :         : 5B        : N              
 VCCIO5B                      : M19       : power  :                   : 2.5V    : 5B        :                
-PC_OUT[10]                   : M20       : output : 2.5 V             :         : 5B        : N              
-ROM_OUT[6]                   : M21       : output : 2.5 V             :         : 5B        : N              
-ROM_OUT[2]                   : M22       : output : 2.5 V             :         : 5B        : N              
+PC_OUT[17]                   : M20       : output : 2.5 V             :         : 5B        : N              
+PC_OUT[0]                    : M21       : output : 2.5 V             :         : 5B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M22       :        :                   :         : 5B        :                
 LEDR[5]                      : N1        : output : 3.3-V LVTTL       :         : 2A        : Y              
 LEDR[4]                      : N2        : output : 3.3-V LVTTL       :         : 2A        : Y              
 GND                          : N3        : gnd    :                   :         :           :                
 VCC                          : N4        : power  :                   : 1.1V    :           :                
 GND                          : N5        : gnd    :                   :         :           :                
-ULA_OUT[16]                  : N6        : output : 2.5 V             :         : 3A        : N              
+ULA_OUT[31]                  : N6        : output : 2.5 V             :         : 3A        : N              
 GND                          : N7        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N8        :        :                   :         : 3B        :                
 HEX5[0]                      : N9        : output : 3.3-V LVTTL       :         : 3B        : Y              
@@ -398,20 +398,20 @@ VCC                          : N12       : power  :                   : 1.1V    
 GND                          : N13       : gnd    :                   :         :           :                
 VCC                          : N14       : power  :                   : 1.1V    :           :                
 GND                          : N15       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N16       :        :                   :         : 5B        :                
+ULA_OUT[1]                   : N16       : output : 2.5 V             :         : 5B        : N              
 GND                          : N17       : gnd    :                   :         :           :                
 VCCPD5B                      : N18       : power  :                   : 2.5V    : 5B        :                
-PC_OUT[17]                   : N19       : output : 2.5 V             :         : 5B        : N              
-ROM_OUT[23]                  : N20       : output : 2.5 V             :         : 5B        : N              
-ULA_OUT[6]                   : N21       : output : 2.5 V             :         : 5B        : N              
+ROM_OUT[27]                  : N19       : output : 2.5 V             :         : 5B        : N              
+ROM_OUT[4]                   : N20       : output : 2.5 V             :         : 5B        : N              
+ROM_OUT[31]                  : N21       : output : 2.5 V             :         : 5B        : N              
 GND                          : N22       : gnd    :                   :         :           :                
 GND                          : P1        : gnd    :                   :         :           :                
 GND                          : P2        : gnd    :                   :         :           :                
 VCC                          : P3        : power  :                   : 1.1V    :           :                
 GND                          : P4        : gnd    :                   :         :           :                
 TMS                          : P5        : input  :                   :         : 3A        :                
-PC_OUT[27]                   : P6        : output : 2.5 V             :         : 3A        : N              
-PC_OUT[6]                    : P7        : output : 2.5 V             :         : 3A        : N              
+ROM_OUT[19]                  : P6        : output : 2.5 V             :         : 3A        : N              
+PC_OUT[12]                   : P7        : output : 2.5 V             :         : 3A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : P8        :        :                   :         : 3B        :                
 HEX4[6]                      : P9        : output : 3.3-V LVTTL       :         : 3B        : Y              
 GND                          : P10       : gnd    :                   :         :           :                
@@ -420,20 +420,20 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : P12       :        :                   :      
 VCC                          : P13       : power  :                   : 1.1V    :           :                
 HEX5[3]                      : P14       : output : 3.3-V LVTTL       :         : 4A        : Y              
 VCC                          : P15       : power  :                   : 1.1V    :           :                
-ULA_OUT[9]                   : P16       : output : 2.5 V             :         : 5A        : N              
-PC_OUT[21]                   : P17       : output : 2.5 V             :         : 5A        : N              
-ULA_OUT[18]                  : P18       : output : 2.5 V             :         : 5A        : N              
-ULA_OUT[1]                   : P19       : output : 2.5 V             :         : 5A        : N              
+ULA_OUT[16]                  : P16       : output : 2.5 V             :         : 5A        : N              
+ROM_OUT[3]                   : P17       : output : 2.5 V             :         : 5A        : N              
+ULA_OUT[8]                   : P18       : output : 2.5 V             :         : 5A        : N              
+ROM_OUT[1]                   : P19       : output : 2.5 V             :         : 5A        : N              
 VCCIO5A                      : P20       : power  :                   : 2.5V    : 5A        :                
 VCCPD5A                      : P21       : power  :                   : 2.5V    : 5A        :                
-ULA_OUT[23]                  : P22       : output : 2.5 V             :         : 5A        : N              
+ULA_OUT[15]                  : P22       : output : 2.5 V             :         : 5A        : N              
 VCCIO2A                      : R1        : power  :                   : 3.3V    : 2A        :                
 VCCPD1A2A                    : R2        : power  :                   : 3.3V    : 1A, 2A    :                
 GND                          : R3        : gnd    :                   :         :           :                
 nCSO, DATA4                  : R4        :        :                   :         : 3A        :                
-ULA_OUT[19]                  : R5        : output : 2.5 V             :         : 3A        : N              
-PC_OUT[20]                   : R6        : output : 2.5 V             :         : 3A        : N              
-ROM_OUT[3]                   : R7        : output : 2.5 V             :         : 3A        : N              
+ULA_OUT[2]                   : R5        : output : 2.5 V             :         : 3A        : N              
+PC_OUT[26]                   : R6        : output : 2.5 V             :         : 3A        : N              
+ROM_OUT[23]                  : R7        : output : 2.5 V             :         : 3A        : N              
 VCCIO3B                      : R8        : power  :                   : 3.3V    : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R9        :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R10       :        :                   :         : 3B        :                
@@ -441,21 +441,21 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : R11       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : R12       :        :                   :         : 3B        :                
 GND                          : R13       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R14       :        :                   :         : 4A        :                
-ULA_OUT[26]                  : R15       : output : 2.5 V             :         : 5A        : N              
-PC_OUT[30]                   : R16       : output : 2.5 V             :         : 5A        : N              
-ULA_OUT[10]                  : R17       : output : 2.5 V             :         : 5A        : N              
+ULA_OUT[17]                  : R15       : output : 2.5 V             :         : 5A        : N              
+ROM_OUT[0]                   : R16       : output : 2.5 V             :         : 5A        : N              
+PC_OUT[15]                   : R17       : output : 2.5 V             :         : 5A        : N              
 VCCIO5A                      : R18       : power  :                   : 2.5V    : 5A        :                
 VCCPGM                       : R19       : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
 VREFB5AN0                    : R20       : power  :                   :         : 5A        :                
-PC_OUT[11]                   : R21       : output : 2.5 V             :         : 5A        : N              
-PC_OUT[5]                    : R22       : output : 2.5 V             :         : 5A        : N              
+ULA_OUT[0]                   : R21       : output : 2.5 V             :         : 5A        : N              
+OP_ULA[1]                    : R22       : output : 2.5 V             :         : 5A        : N              
 GND                          : T1        : gnd    :                   :         :           :                
 GND                          : T2        : gnd    :                   :         :           :                
 VCCA_FPLL                    : T3        : power  :                   : 2.5V    :           :                
 AS_DATA3, DATA3              : T4        :        :                   :         : 3A        :                
 VCCA_FPLL                    : T5        : power  :                   : 2.5V    :           :                
 VCCIO3A                      : T6        : power  :                   : 2.5V    : 3A        :                
-ULA_OUT[0]                   : T7        : output : 2.5 V             :         : 3A        : N              
+ROM_OUT[18]                  : T7        : output : 2.5 V             :         : 3A        : N              
 ULA_OUT[11]                  : T8        : output : 2.5 V             :         : 3A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : T9        :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T10       :        :                   :         : 3B        :                
@@ -463,22 +463,22 @@ VCCIO3B                      : T11       : power  :                   : 3.3V    
 SW[3]                        : T12       : input  : 3.3-V LVTTL       :         : 4A        : Y              
 SW[2]                        : T13       : input  : 3.3-V LVTTL       :         : 4A        : Y              
 HEX5[2]                      : T14       : output : 3.3-V LVTTL       :         : 4A        : Y              
-PC_OUT[4]                    : T15       : output : 2.5 V             :         : 5A        : N              
+ULA_OUT[18]                  : T15       : output : 2.5 V             :         : 5A        : N              
 GND                          : T16       : gnd    :                   :         :           :                
-PC_OUT[7]                    : T17       : output : 2.5 V             :         : 5A        : N              
-ROM_OUT[19]                  : T18       : output : 2.5 V             :         : 5A        : N              
-PC_OUT[28]                   : T19       : output : 2.5 V             :         : 5A        : N              
-PC_OUT[2]                    : T20       : output : 2.5 V             :         : 5A        : N              
+ROM_OUT[24]                  : T17       : output : 2.5 V             :         : 5A        : N              
+PC_OUT[2]                    : T18       : output : 2.5 V             :         : 5A        : N              
+PC_OUT[4]                    : T19       : output : 2.5 V             :         : 5A        : N              
+OP_ULA[0]                    : T20       : output : 2.5 V             :         : 5A        : N              
 GND                          : T21       : gnd    :                   :         :           :                
-PC_OUT[12]                   : T22       : output : 2.5 V             :         : 5A        : N              
+OP_ULA[2]                    : T22       : output : 2.5 V             :         : 5A        : N              
 LEDR[7]                      : U1        : output : 3.3-V LVTTL       :         : 2A        : Y              
 LEDR[6]                      : U2        : output : 3.3-V LVTTL       :         : 2A        : Y              
 GND                          : U3        : gnd    :                   :         :           :                
 GND                          : U4        : gnd    :                   :         :           :                
 GND                          : U5        : gnd    :                   :         :           :                
-PC_OUT[24]                   : U6        : output : 2.5 V             :         : 3A        : N              
+ROM_OUT[16]                  : U6        : output : 2.5 V             :         : 3A        : N              
 KEY[0]                       : U7        : input  : 3.3-V LVTTL       :         : 3A        : Y              
-ULA_OUT[28]                  : U8        : output : 2.5 V             :         : 3A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U8        :        :                   :         : 3A        :                
 GND                          : U9        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U10       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U11       :        :                   :         : 3B        :                
@@ -498,7 +498,7 @@ GND                          : V2        : gnd    :                   :         
 DCLK                         : V3        :        :                   :         : 3A        :                
 GND                          : V4        : gnd    :                   :         :           :                
 TCK                          : V5        : input  :                   :         : 3A        :                
-ULA_OUT[27]                  : V6        : output : 2.5 V             :         : 3A        : N              
+ULA_OUT[7]                   : V6        : output : 2.5 V             :         : 3A        : N              
 GND                          : V7        : gnd    :                   :         :           :                
 VCCPGM                       : V8        : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : V9        :        :                   :         : 3B        :                
@@ -522,7 +522,7 @@ GND                          : W4        : gnd    :                   :         
 TDI                          : W5        : input  :                   :         : 3A        :                
 VCCPD3A                      : W6        : power  :                   : 2.5V    : 3A        :                
 VCC_AUX                      : W7        : power  :                   : 2.5V    :           :                
-ULA_OUT[21]                  : W8        : output : 2.5 V             :         : 3A        : N              
+PC_OUT[23]                   : W8        : output : 2.5 V             :         : 3A        : N              
 KEY[1]                       : W9        : input  : 3.3-V LVTTL       :         : 3A        : Y              
 VCCIO3B                      : W10       : power  :                   : 3.3V    : 3B        :                
 VCCPD3B4A                    : W11       : power  :                   : 3.3V    : 3B, 4A    :                

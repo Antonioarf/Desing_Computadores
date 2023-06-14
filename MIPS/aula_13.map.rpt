@@ -1,5 +1,5 @@
 Analysis & Synthesis report for aula_13
-Thu Jun  8 21:37:30 2023
+Sat Jun 10 21:29:32 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -106,7 +106,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Jun  8 21:37:30 2023       ;
+; Analysis & Synthesis Status     ; Successful - Sat Jun 10 21:29:32 2023       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; aula_13                                     ;
 ; Top-level Entity Name           ; aula_13                                     ;
@@ -227,36 +227,36 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                   ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                            ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
-; aula_13.vhd                      ; yes             ; User VHDL File  ; /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd              ;         ;
-; ULAMips.vhd                      ; yes             ; User VHDL File  ; /home/antonio/Desktop/Desing_Computadores/MIPS/ULAMips.vhd              ;         ;
-; ULA_generica.vhd                 ; yes             ; User VHDL File  ; /home/antonio/Desktop/Desing_Computadores/MIPS/ULA_generica.vhd         ;         ;
-; ULA_31.vhd                       ; yes             ; User VHDL File  ; /home/antonio/Desktop/Desing_Computadores/MIPS/ULA_31.vhd               ;         ;
-; SomadorGenerico.vhd              ; yes             ; User VHDL File  ; /home/antonio/Desktop/Desing_Computadores/MIPS/SomadorGenerico.vhd      ;         ;
-; soma_bit.vhd                     ; yes             ; User VHDL File  ; /home/antonio/Desktop/Desing_Computadores/MIPS/soma_bit.vhd             ;         ;
-; ROMMIPS.vhd                      ; yes             ; User VHDL File  ; /home/antonio/Desktop/Desing_Computadores/MIPS/ROMMIPS.vhd              ;         ;
-; registradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/antonio/Desktop/Desing_Computadores/MIPS/registradorGenerico.vhd  ;         ;
-; RAMMIPS.vhd                      ; yes             ; User VHDL File  ; /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd              ;         ;
-; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/Desing_Computadores/MIPS/muxGenerico2x1.vhd       ;         ;
-; muxBit4x2.vhd                    ; yes             ; User VHDL File  ; /home/antonio/Desktop/Desing_Computadores/MIPS/muxBit4x2.vhd            ;         ;
-; muxBit.vhd                       ; yes             ; User VHDL File  ; /home/antonio/Desktop/Desing_Computadores/MIPS/muxBit.vhd               ;         ;
-; estendeSinalGenerico.vhd         ; yes             ; User VHDL File  ; /home/antonio/Desktop/Desing_Computadores/MIPS/estendeSinalGenerico.vhd ;         ;
-; decoderULA.vhd                   ; yes             ; User VHDL File  ; /home/antonio/Desktop/Desing_Computadores/MIPS/decoderULA.vhd           ;         ;
-; decoderInstru.vhd                ; yes             ; User VHDL File  ; /home/antonio/Desktop/Desing_Computadores/MIPS/decoderInstru.vhd        ;         ;
-; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; /home/antonio/Desktop/Desing_Computadores/MIPS/conversorHex7Seg.vhd     ;         ;
-; bancoReg.vhd                     ; yes             ; User VHDL File  ; /home/antonio/Desktop/Desing_Computadores/MIPS/bancoReg.vhd             ;         ;
-; muxGenerico4x2.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/Desing_Computadores/MIPS/muxGenerico4x2.vhd       ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                              ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
+; aula_13.vhd                      ; yes             ; User VHDL File  ; /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd              ;         ;
+; ULAMips.vhd                      ; yes             ; User VHDL File  ; /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ULAMips.vhd              ;         ;
+; ULA_generica.vhd                 ; yes             ; User VHDL File  ; /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ULA_generica.vhd         ;         ;
+; ULA_31.vhd                       ; yes             ; User VHDL File  ; /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ULA_31.vhd               ;         ;
+; SomadorGenerico.vhd              ; yes             ; User VHDL File  ; /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/SomadorGenerico.vhd      ;         ;
+; soma_bit.vhd                     ; yes             ; User VHDL File  ; /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/soma_bit.vhd             ;         ;
+; ROMMIPS.vhd                      ; yes             ; User VHDL File  ; /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ROMMIPS.vhd              ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/registradorGenerico.vhd  ;         ;
+; RAMMIPS.vhd                      ; yes             ; User VHDL File  ; /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd              ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/muxGenerico2x1.vhd       ;         ;
+; muxBit4x2.vhd                    ; yes             ; User VHDL File  ; /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/muxBit4x2.vhd            ;         ;
+; muxBit.vhd                       ; yes             ; User VHDL File  ; /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/muxBit.vhd               ;         ;
+; estendeSinalGenerico.vhd         ; yes             ; User VHDL File  ; /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/estendeSinalGenerico.vhd ;         ;
+; decoderULA.vhd                   ; yes             ; User VHDL File  ; /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/decoderULA.vhd           ;         ;
+; decoderInstru.vhd                ; yes             ; User VHDL File  ; /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/decoderInstru.vhd        ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/conversorHex7Seg.vhd     ;         ;
+; bancoReg.vhd                     ; yes             ; User VHDL File  ; /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/bancoReg.vhd             ;         ;
+; muxGenerico4x2.vhd               ; yes             ; User VHDL File  ; /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/muxGenerico4x2.vhd       ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -1816,7 +1816,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -1826,163 +1826,163 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Jun  8 21:37:19 2023
+    Info: Processing started: Sat Jun 10 21:29:21 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off aula_13 -c aula_13
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file aula_13.vhd
-    Info (12022): Found design unit 1: aula_13-arquitetura File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 27
-    Info (12023): Found entity 1: aula_13 File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 5
+    Info (12022): Found design unit 1: aula_13-arquitetura File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 27
+    Info (12023): Found entity 1: aula_13 File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ULAMips.vhd
-    Info (12022): Found design unit 1: ULAMips-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULAMips.vhd Line: 16
-    Info (12023): Found entity 1: ULAMips File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULAMips.vhd Line: 5
+    Info (12022): Found design unit 1: ULAMips-comportamento File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ULAMips.vhd Line: 16
+    Info (12023): Found entity 1: ULAMips File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ULAMips.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ULA_generica.vhd
-    Info (12022): Found design unit 1: ULA_generica-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULA_generica.vhd Line: 15
-    Info (12023): Found entity 1: ULA_generica File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULA_generica.vhd Line: 5
+    Info (12022): Found design unit 1: ULA_generica-comportamento File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ULA_generica.vhd Line: 15
+    Info (12023): Found entity 1: ULA_generica File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ULA_generica.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ULA_31.vhd
-    Info (12022): Found design unit 1: ULA_31-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULA_31.vhd Line: 15
-    Info (12023): Found entity 1: ULA_31 File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULA_31.vhd Line: 5
+    Info (12022): Found design unit 1: ULA_31-comportamento File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ULA_31.vhd Line: 15
+    Info (12023): Found entity 1: ULA_31 File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ULA_31.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file SomadorGenerico.vhd
-    Info (12022): Found design unit 1: somadorGenerico-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/SomadorGenerico.vhd Line: 17
-    Info (12023): Found entity 1: somadorGenerico File: /home/antonio/Desktop/Desing_Computadores/MIPS/SomadorGenerico.vhd Line: 5
+    Info (12022): Found design unit 1: somadorGenerico-comportamento File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/SomadorGenerico.vhd Line: 17
+    Info (12023): Found entity 1: somadorGenerico File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/SomadorGenerico.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file soma_bit.vhd
-    Info (12022): Found design unit 1: soma_bit-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/soma_bit.vhd Line: 15
-    Info (12023): Found entity 1: soma_bit File: /home/antonio/Desktop/Desing_Computadores/MIPS/soma_bit.vhd Line: 5
+    Info (12022): Found design unit 1: soma_bit-comportamento File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/soma_bit.vhd Line: 15
+    Info (12023): Found entity 1: soma_bit File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/soma_bit.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ROMMIPS.vhd
-    Info (12022): Found design unit 1: ROMMIPS-assincrona File: /home/antonio/Desktop/Desing_Computadores/MIPS/ROMMIPS.vhd Line: 15
-    Info (12023): Found entity 1: ROMMIPS File: /home/antonio/Desktop/Desing_Computadores/MIPS/ROMMIPS.vhd Line: 5
+    Info (12022): Found design unit 1: ROMMIPS-assincrona File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ROMMIPS.vhd Line: 15
+    Info (12023): Found entity 1: ROMMIPS File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ROMMIPS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file registradorGenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/registradorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: registradorGenerico File: /home/antonio/Desktop/Desing_Computadores/MIPS/registradorGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/registradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/registradorGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file RAMMIPS.vhd
-    Info (12022): Found design unit 1: RAMMIPS-assincrona File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 18
-    Info (12023): Found entity 1: RAMMIPS File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 5
+    Info (12022): Found design unit 1: RAMMIPS-assincrona File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 18
+    Info (12023): Found entity 1: RAMMIPS File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico2x1.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/muxGenerico2x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: /home/antonio/Desktop/Desing_Computadores/MIPS/muxGenerico2x1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/muxGenerico2x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file muxBit4x2.vhd
-    Info (12022): Found design unit 1: muxBit4x2-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/muxBit4x2.vhd Line: 13
-    Info (12023): Found entity 1: muxBit4x2 File: /home/antonio/Desktop/Desing_Computadores/MIPS/muxBit4x2.vhd Line: 4
+    Info (12022): Found design unit 1: muxBit4x2-comportamento File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/muxBit4x2.vhd Line: 13
+    Info (12023): Found entity 1: muxBit4x2 File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/muxBit4x2.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file muxBit.vhd
-    Info (12022): Found design unit 1: muxBit-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/muxBit.vhd Line: 13
-    Info (12023): Found entity 1: muxBit File: /home/antonio/Desktop/Desing_Computadores/MIPS/muxBit.vhd Line: 4
+    Info (12022): Found design unit 1: muxBit-comportamento File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/muxBit.vhd Line: 13
+    Info (12023): Found entity 1: muxBit File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/muxBit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file estendeSinalGenerico.vhd
-    Info (12022): Found design unit 1: estendeSinalGenerico-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/estendeSinalGenerico.vhd Line: 20
-    Info (12023): Found entity 1: estendeSinalGenerico File: /home/antonio/Desktop/Desing_Computadores/MIPS/estendeSinalGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: estendeSinalGenerico-comportamento File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/estendeSinalGenerico.vhd Line: 20
+    Info (12023): Found entity 1: estendeSinalGenerico File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/estendeSinalGenerico.vhd Line: 4
 Info (12021): Found 3 design units, including 1 entities, in source file edgeDetector.vhd
-    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: /home/antonio/Desktop/Desing_Computadores/MIPS/edgeDetector.vhd Line: 10
-    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: /home/antonio/Desktop/Desing_Computadores/MIPS/edgeDetector.vhd Line: 23
-    Info (12023): Found entity 1: edgeDetector File: /home/antonio/Desktop/Desing_Computadores/MIPS/edgeDetector.vhd Line: 4
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/edgeDetector.vhd Line: 10
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/edgeDetector.vhd Line: 23
+    Info (12023): Found entity 1: edgeDetector File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/edgeDetector.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file decoderULA.vhd
-    Info (12022): Found design unit 1: decoderULA-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/decoderULA.vhd Line: 12
-    Info (12023): Found entity 1: decoderULA File: /home/antonio/Desktop/Desing_Computadores/MIPS/decoderULA.vhd Line: 4
+    Info (12022): Found design unit 1: decoderULA-comportamento File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/decoderULA.vhd Line: 12
+    Info (12023): Found entity 1: decoderULA File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/decoderULA.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file decoderInstru.vhd
-    Info (12022): Found design unit 1: decoderInstru-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/decoderInstru.vhd Line: 12
-    Info (12023): Found entity 1: decoderInstru File: /home/antonio/Desktop/Desing_Computadores/MIPS/decoderInstru.vhd Line: 4
+    Info (12022): Found design unit 1: decoderInstru-comportamento File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/decoderInstru.vhd Line: 12
+    Info (12023): Found entity 1: decoderInstru File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/decoderInstru.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file conversorHex7Seg.vhd
-    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/conversorHex7Seg.vhd Line: 17
-    Info (12023): Found entity 1: conversorHex7Seg File: /home/antonio/Desktop/Desing_Computadores/MIPS/conversorHex7Seg.vhd Line: 4
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/conversorHex7Seg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file bancoReg.vhd
-    Info (12022): Found design unit 1: bancoReg-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/bancoReg.vhd Line: 30
-    Info (12023): Found entity 1: bancoReg File: /home/antonio/Desktop/Desing_Computadores/MIPS/bancoReg.vhd Line: 7
+    Info (12022): Found design unit 1: bancoReg-comportamento File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/bancoReg.vhd Line: 30
+    Info (12023): Found entity 1: bancoReg File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/bancoReg.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico4x2.vhd
-    Info (12022): Found design unit 1: muxGenerico4x2-comportamento File: /home/antonio/Desktop/Desing_Computadores/MIPS/muxGenerico4x2.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico4x2 File: /home/antonio/Desktop/Desing_Computadores/MIPS/muxGenerico4x2.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico4x2-comportamento File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/muxGenerico4x2.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico4x2 File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/muxGenerico4x2.vhd Line: 4
 Info (12127): Elaborating entity "aula_13" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at aula_13.vhd(48): used implicit default value for signal "ram_habilita" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 48
-Info (12128): Elaborating entity "ROMMIPS" for hierarchy "ROMMIPS:ROM" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 80
-Warning (10541): VHDL Signal Declaration warning at ROMMIPS.vhd(18): used implicit default value for signal "memROM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/antonio/Desktop/Desing_Computadores/MIPS/ROMMIPS.vhd Line: 18
-Info (12128): Elaborating entity "bancoReg" for hierarchy "bancoReg:bancoRegistradores" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 85
-Info (12128): Elaborating entity "muxGenerico4x2" for hierarchy "muxGenerico4x2:mux_entrada_regs" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 97
-Info (12128): Elaborating entity "estendeSinalGenerico" for hierarchy "estendeSinalGenerico:estensor_sinal" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 105
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:mux_rt_exsig" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 109
-Info (12128): Elaborating entity "decoderInstru" for hierarchy "decoderInstru:decoder_instru" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 116
-Info (12128): Elaborating entity "decoderULA" for hierarchy "decoderULA:decoder_ula" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 118
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "decoderULA:decoder_ula|muxGenerico2x1:mux_dec_ula" File: /home/antonio/Desktop/Desing_Computadores/MIPS/decoderULA.vhd Line: 48
-Info (12128): Elaborating entity "ULAMips" for hierarchy "ULAMips:ULA" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 125
-Warning (10540): VHDL Signal Declaration warning at ULAMips.vhd(17): used explicit default value for signal "zero" because signal was never assigned a value File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULAMips.vhd Line: 17
-Warning (10036): Verilog HDL or VHDL warning at ULAMips.vhd(21): object "carry_31" assigned a value but never read File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULAMips.vhd Line: 21
-Info (12128): Elaborating entity "ULA_31" for hierarchy "ULAMips:ULA|ULA_31:ULA31" File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULAMips.vhd Line: 27
-Info (12128): Elaborating entity "muxBit" for hierarchy "ULAMips:ULA|ULA_31:ULA31|muxBit:MUX_inverte" File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULA_31.vhd Line: 21
-Info (12128): Elaborating entity "soma_bit" for hierarchy "ULAMips:ULA|ULA_31:ULA31|soma_bit:Somador" File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULA_31.vhd Line: 24
-Info (12128): Elaborating entity "muxBit4x2" for hierarchy "ULAMips:ULA|ULA_31:ULA31|muxBit4x2:MUX_Selecao" File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULA_31.vhd Line: 33
-Info (12128): Elaborating entity "ULA_generica" for hierarchy "ULAMips:ULA|ULA_generica:ULA0" File: /home/antonio/Desktop/Desing_Computadores/MIPS/ULAMips.vhd Line: 39
-Info (12128): Elaborating entity "RAMMIPS" for hierarchy "RAMMIPS:RAM" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 134
-Info (12128): Elaborating entity "muxGenerico4x2" for hierarchy "muxGenerico4x2:MUX_ULA_Mem" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 143
-Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:INC_PC" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 153
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_PC" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 185
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:DEC_0" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 204
+Warning (10541): VHDL Signal Declaration warning at aula_13.vhd(48): used implicit default value for signal "ram_habilita" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 48
+Info (12128): Elaborating entity "ROMMIPS" for hierarchy "ROMMIPS:ROM" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 80
+Warning (10541): VHDL Signal Declaration warning at ROMMIPS.vhd(18): used implicit default value for signal "memROM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ROMMIPS.vhd Line: 18
+Info (12128): Elaborating entity "bancoReg" for hierarchy "bancoReg:bancoRegistradores" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 85
+Info (12128): Elaborating entity "muxGenerico4x2" for hierarchy "muxGenerico4x2:mux_entrada_regs" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 97
+Info (12128): Elaborating entity "estendeSinalGenerico" for hierarchy "estendeSinalGenerico:estensor_sinal" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 105
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:mux_rt_exsig" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 109
+Info (12128): Elaborating entity "decoderInstru" for hierarchy "decoderInstru:decoder_instru" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 116
+Info (12128): Elaborating entity "decoderULA" for hierarchy "decoderULA:decoder_ula" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 118
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "decoderULA:decoder_ula|muxGenerico2x1:mux_dec_ula" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/decoderULA.vhd Line: 48
+Info (12128): Elaborating entity "ULAMips" for hierarchy "ULAMips:ULA" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 125
+Warning (10540): VHDL Signal Declaration warning at ULAMips.vhd(17): used explicit default value for signal "zero" because signal was never assigned a value File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ULAMips.vhd Line: 17
+Warning (10036): Verilog HDL or VHDL warning at ULAMips.vhd(21): object "carry_31" assigned a value but never read File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ULAMips.vhd Line: 21
+Info (12128): Elaborating entity "ULA_31" for hierarchy "ULAMips:ULA|ULA_31:ULA31" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ULAMips.vhd Line: 27
+Info (12128): Elaborating entity "muxBit" for hierarchy "ULAMips:ULA|ULA_31:ULA31|muxBit:MUX_inverte" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ULA_31.vhd Line: 21
+Info (12128): Elaborating entity "soma_bit" for hierarchy "ULAMips:ULA|ULA_31:ULA31|soma_bit:Somador" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ULA_31.vhd Line: 24
+Info (12128): Elaborating entity "muxBit4x2" for hierarchy "ULAMips:ULA|ULA_31:ULA31|muxBit4x2:MUX_Selecao" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ULA_31.vhd Line: 33
+Info (12128): Elaborating entity "ULA_generica" for hierarchy "ULAMips:ULA|ULA_generica:ULA0" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ULAMips.vhd Line: 39
+Info (12128): Elaborating entity "RAMMIPS" for hierarchy "RAMMIPS:RAM" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 134
+Info (12128): Elaborating entity "muxGenerico4x2" for hierarchy "muxGenerico4x2:MUX_ULA_Mem" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 143
+Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:INC_PC" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 153
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:REG_PC" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 185
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:DEC_0" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 204
 Info (276014): Found 3 instances of uninferred RAM logic
-    Info (276007): RAM logic "RAMMIPS:RAM|memRAM" is uninferred due to asynchronous read logic File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 21
-    Info (276007): RAM logic "bancoReg:bancoRegistradores|registrador" is uninferred due to asynchronous read logic File: /home/antonio/Desktop/Desing_Computadores/MIPS/bancoReg.vhd Line: 49
-    Info (276004): RAM logic "ROMMIPS:ROM|memROM" is uninferred due to inappropriate RAM size File: /home/antonio/Desktop/Desing_Computadores/MIPS/ROMMIPS.vhd Line: 18
-Warning (113028): 46 out of 64 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 3 warnings found, and 3 warnings are reported. File: /home/antonio/Desktop/Desing_Computadores/MIPS/ROMcontent.mif Line: 1
-    Warning (113026): Memory Initialization File Address 16 is not initialized File: /home/antonio/Desktop/Desing_Computadores/MIPS/ROMcontent.mif Line: 1
-    Warning (113027): Addresses ranging from 18 to 30 are not initialized File: /home/antonio/Desktop/Desing_Computadores/MIPS/ROMcontent.mif Line: 1
-    Warning (113027): Addresses ranging from 32 to 63 are not initialized File: /home/antonio/Desktop/Desing_Computadores/MIPS/ROMcontent.mif Line: 1
+    Info (276007): RAM logic "RAMMIPS:RAM|memRAM" is uninferred due to asynchronous read logic File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 21
+    Info (276007): RAM logic "bancoReg:bancoRegistradores|registrador" is uninferred due to asynchronous read logic File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/bancoReg.vhd Line: 49
+    Info (276004): RAM logic "ROMMIPS:ROM|memROM" is uninferred due to inappropriate RAM size File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ROMMIPS.vhd Line: 18
+Warning (113028): 46 out of 64 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 3 warnings found, and 3 warnings are reported. File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ROMcontent.mif Line: 1
+    Warning (113026): Memory Initialization File Address 16 is not initialized File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ROMcontent.mif Line: 1
+    Warning (113027): Addresses ranging from 18 to 30 are not initialized File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ROMcontent.mif Line: 1
+    Warning (113027): Addresses ranging from 32 to 63 are not initialized File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/ROMcontent.mif Line: 1
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[12]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[11]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[10]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[9]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[8]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[7]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[6]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[5]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[4]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[3]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[2]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[1]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[0]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[13]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[14]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[15]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[16]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[17]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[18]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[19]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[20]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[21]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[22]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[23]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[24]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[25]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[26]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[27]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[28]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[29]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[30]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[31]" feeding internal logic into a wire File: /home/antonio/Desktop/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[12]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[11]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[10]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[9]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[8]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[7]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[6]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[5]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[4]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[3]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[2]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[1]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[0]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[13]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[14]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[15]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[16]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[17]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[18]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[19]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[20]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[21]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[22]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[23]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[24]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[25]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[26]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[27]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[28]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[29]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[30]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "RAMMIPS:RAM|Dado_out[31]" feeding internal logic into a wire File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/RAMMIPS.vhd Line: 13
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 16
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 16
-    Warning (13410): Pin "ROM_OUT[20]" is stuck at GND File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 20
-    Warning (13410): Pin "ROM_OUT[30]" is stuck at GND File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 20
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 16
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 16
+    Warning (13410): Pin "ROM_OUT[20]" is stuck at GND File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 20
+    Warning (13410): Pin "ROM_OUT[30]" is stuck at GND File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 20
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 13 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 12
-    Warning (15610): No output dependent on input pin "SW[1]" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 13
-    Warning (15610): No output dependent on input pin "SW[2]" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 13
-    Warning (15610): No output dependent on input pin "SW[3]" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 13
-    Warning (15610): No output dependent on input pin "SW[4]" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 13
-    Warning (15610): No output dependent on input pin "SW[5]" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 13
-    Warning (15610): No output dependent on input pin "SW[6]" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 13
-    Warning (15610): No output dependent on input pin "SW[7]" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 13
-    Warning (15610): No output dependent on input pin "SW[8]" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 13
-    Warning (15610): No output dependent on input pin "SW[9]" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 13
-    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 14
-    Warning (15610): No output dependent on input pin "KEY[2]" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 14
-    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/antonio/Desktop/Desing_Computadores/MIPS/aula_13.vhd Line: 14
+    Warning (15610): No output dependent on input pin "CLOCK_50" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 12
+    Warning (15610): No output dependent on input pin "SW[1]" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 13
+    Warning (15610): No output dependent on input pin "SW[2]" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 13
+    Warning (15610): No output dependent on input pin "SW[3]" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 13
+    Warning (15610): No output dependent on input pin "SW[4]" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 13
+    Warning (15610): No output dependent on input pin "SW[5]" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 13
+    Warning (15610): No output dependent on input pin "SW[6]" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 13
+    Warning (15610): No output dependent on input pin "SW[7]" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 13
+    Warning (15610): No output dependent on input pin "SW[8]" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 13
+    Warning (15610): No output dependent on input pin "SW[9]" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 13
+    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 14
+    Warning (15610): No output dependent on input pin "KEY[2]" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 14
+    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/aula_13.vhd Line: 14
 Info (21057): Implemented 1451 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 151 output pins
     Info (21061): Implemented 1285 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 61 warnings
-    Info: Peak virtual memory: 504 megabytes
-    Info: Processing ended: Thu Jun  8 21:37:30 2023
+    Info: Peak virtual memory: 483 megabytes
+    Info: Processing ended: Sat Jun 10 21:29:32 2023
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Total CPU time (on all processors): 00:00:21
 
 

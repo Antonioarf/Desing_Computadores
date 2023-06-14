@@ -1,5 +1,5 @@
 Archive Project report for aula_13
-Tue May 02 11:34:13 2023
+Sat Jun 10 21:33:57 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Tue May 02 11:34:13 2023 ;
+; Archive Project Status ; Successful - Sat Jun 10 21:33:57 2023 ;
 ; Revision Name          ; aula_13                               ;
 ; Top-level Entity Name  ; aula_13                               ;
 ; Family                 ; Cyclone V                             ;
@@ -51,38 +51,56 @@ Info: File Set 'Source control' contains:
     Info: Automatically detected source files
 Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
 Info: Archive will store files relative to the closest common parent directory
-Info (13213): Using common directory C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/aulas/aula_13/
+Info (13213): Using common directory /home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive 'C:/Users/joras/Desktop/DeskTop/INSPER/6_semestre/DesComp/aulas/aula_13/aula_13.qar'
+Info: Generated archive '/home/antonio/Desktop/Insper/6_SEMESTRE/Desing_Computadores/MIPS/final.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'aula_13.archive.rpt'
-Info (23030): Evaluation of Tcl script c:/intelfpga_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info (23030): Evaluation of Tcl script /home/antonio/intelFPGA_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4825 megabytes
-    Info: Processing ended: Tue May 02 11:34:13 2023
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 580 megabytes
+    Info: Processing ended: Sat Jun 10 21:33:57 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 
-+--------------------------------------------------------------+
-; Files Archived                                               ;
-+--------------------------------------------------------------+
-; File Name                                                    ;
-+--------------------------------------------------------------+
-; aula_13.qpf                                                  ;
-; aula_13.qsf                                                  ;
-; aula_13.vhd                                                  ;
-; bancoReg.vhd                                                 ;
-; c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf ;
-; registradorGenerico.vhd                                      ;
-; ROMMIPS.vhd                                                  ;
-; SomadorGenerico.vhd                                          ;
-; ULASomaSub.vhd                                               ;
-; Waveform.vwf                                                 ;
-; Waveform1.vwf                                                ;
-; Waveform2.vwf                                                ;
-+--------------------------------------------------------------+
++---------------------------------------------------------------------------+
+; Files Archived                                                            ;
++---------------------------------------------------------------------------+
+; File Name                                                                 ;
++---------------------------------------------------------------------------+
+; /home/antonio/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf ;
+; aula_13.qpf                                                               ;
+; aula_13.qsf                                                               ;
+; aula_13.vhd                                                               ;
+; bancoReg.vhd                                                              ;
+; conversorHex7Seg.vhd                                                      ;
+; decoderInstru.vhd                                                         ;
+; decoderULA.vhd                                                            ;
+; edgeDetector.vhd                                                          ;
+; estendeSinalGenerico.vhd                                                  ;
+; muxBit.vhd                                                                ;
+; muxBit4x2.vhd                                                             ;
+; muxGenerico2x1.vhd                                                        ;
+; muxGenerico4x2.vhd                                                        ;
+; RAMMIPS.vhd                                                               ;
+; registradorGenerico.vhd                                                   ;
+; ROMMIPS.vhd                                                               ;
+; soma_bit.vhd                                                              ;
+; SomadorGenerico.vhd                                                       ;
+; ULA_31.vhd                                                                ;
+; ULA_generica.vhd                                                          ;
+; ULAMips.vhd                                                               ;
+; Waveform8.vwf                                                             ;
+; Waveform9.vwf                                                             ;
+; Waveform10.vwf                                                            ;
+; Waveform11.vwf                                                            ;
+; Waveform12.vwf                                                            ;
+; Waveform13.vwf                                                            ;
+; Waveform14.vwf                                                            ;
+; Waveform15.vwf                                                            ;
++---------------------------------------------------------------------------+
 
 
